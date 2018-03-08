@@ -1,0 +1,897 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingType",
+      "instances": [
+        {
+          "name": "CoreBridge",
+          "thingTypeCode": "coreBridge",
+          "archived": false,
+          "autoCreate": true,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "CoreBridge"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "EdgeBridge",
+          "thingTypeCode": "edgeBridge",
+          "archived": false,
+          "autoCreate": true,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "EdgeBridge"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "age",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt_cep",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt_lazy_load",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt_mongo",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt_native",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt_new",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt_total",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "new_things",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "source",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "things",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tsCoreIn",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "uptime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt_cache",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "que_idle_count",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "que_pop_count",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "que_size_to",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "que_size_blog",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "que_size_ooo",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "que_period_to",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "CoreBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "age",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lastDetects",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lastLocates",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lpt",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "new_things",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "socketTimeoutCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "socketTimeouts",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "source",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "things",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tsEdgeIn",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "name": "uptime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EdgeBridge"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,1 @@
+UPDATE edgeboxrule SET outputconfig='{}' WHERE output='ReportGeneratorSubscriber';

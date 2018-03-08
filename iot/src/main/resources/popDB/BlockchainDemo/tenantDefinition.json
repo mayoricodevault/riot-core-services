@@ -1,0 +1,135 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Blockchain Azure Cloud",
+          "code": "BAC",
+          "description": "",
+          "hierarchyName": ">Blockchain Azure Cloud",
+          "treeLevel": 2,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "BAC"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroupTypes",
+      "innerClass": "GroupType",
+      "instances": [
+        {
+          "name": "Consortium",
+          "code": "Consortium",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "BAC"
+          },
+          "description": null,
+          "archived": false,
+          "parent": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Network Retail Supply Chain",
+          "code": "NRSC",
+          "description": null,
+          "hierarchyName": ">Blockchain Azure Cloud>NRSC",
+          "treeLevel": 3,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Consortium"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "BAC"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "BAC"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "BAC"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        }
+      ]
+    }
+
+  ],
+  "postProcess": [
+  ]
+}

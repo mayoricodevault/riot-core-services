@@ -1,0 +1,31 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "logicalReader",
+      "innerClass": "LogicalReader",
+      "instances": [
+        {"name":"LR100",
+         "code":"LR100",
+          "group":{
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "zoneIn":{
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "Enance"
+          },
+          "zoneOut":{
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "Po1"
+          }
+        }
+      ]
+    }],
+  "postProcess": [
+  ]
+}

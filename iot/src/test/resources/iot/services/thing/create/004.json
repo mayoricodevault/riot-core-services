@@ -1,0 +1,13 @@
+{
+  "group": ">mojix>SM",
+  "name": "CT004",
+  "serialNumber": "CT004",
+  "udfs": {
+    "zoneNativeUDF": {
+      "value": "Enance"
+    }
+  },
+  "thingTypeCode": "CustomTT001",
+  "children": [
+  ]
+}

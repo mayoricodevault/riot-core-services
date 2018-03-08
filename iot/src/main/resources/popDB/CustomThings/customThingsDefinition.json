@@ -1,0 +1,35 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "CustomThings",
+      "innerClass": "CustomThing",
+      "instances": [
+        {
+          "name": "RFID9876543210",
+          "serial": "RFID9876543210",
+          "thingTypeCode": "default_rfid_thingtype",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "doorEvent": {
+              "value": "Open"
+            },
+            "eNode": {
+              "value": "EN001A"
+            },
+            "status": {
+              "value": "Available"
+            },
+            "image": {
+              "type": "image",
+              "value": "thingImage.jpg"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "group": ">mojix>SM",
+  "name": "CT006",
+  "serialNumber": "CT006",
+  "udfs": {
+    "thingTypeAttribute": {
+      "value": "CTA006"
+    },
+    "zoneNativeUDF": {
+      "value": "Enance"
+    }
+  },
+  "thingTypeCode": "CustomTT003",
+  "children": []
+}

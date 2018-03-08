@@ -1,0 +1,83 @@
+{
+  "_id": 58,
+  "groupTypeId": 3,
+  "groupTypeName": "Store",
+  "groupTypeCode": "Store",
+  "groupId": 3,
+  "groupCode": "SM",
+  "groupName": "Santa Monica",
+  "thingTypeId": 47,
+  "thingTypeCode": "CustomTT004",
+  "thingTypeName": "CustomTT004",
+  "name": "CT007",
+  "serialNumber": "CT007",
+  "modifiedTime": "2017-07-27T15:09:46.115Z",
+  "createdTime": "2017-07-27T15:09:46.115Z",
+  "time": "2017-07-27T15:09:46.032Z",
+  "attributeSequence": {
+    "thingTypeFieldId": 215,
+    "time": "2017-07-27T15:09:46.032Z",
+    "value": 1.0
+  },
+  "strStdUDF": {
+    "thingTypeFieldId": 212,
+    "time": "2017-07-27T15:09:46.032Z",
+    "value": "a default string"
+  },
+  "expressionUDF": {
+    "thingTypeFieldId": 216,
+    "time": "2017-07-27T15:09:46.032Z",
+    "value": 0
+  },
+  "zoneNativeUDF": {
+    "thingTypeFieldId": 213,
+    "time": "2017-07-27T15:09:46.032Z",
+    "value": {
+      "code": "Enance",
+      "zoneGroupTime": "2017-07-27T15:09:46.032Z",
+      "facilityMap": "Map Store Santa Monica",
+      "zoneGroup": "Off-Site",
+      "facilityMapTime": "2017-07-27T15:09:46.032Z",
+      "name": "Entrance",
+      "zoneTypeTime": "2017-07-27T15:09:46.032Z",
+      "zoneType": "DefaultZoneType2",
+      "id": 1
+    }
+  },
+  "thingTypeAttribute": {
+    "thingTypeFieldId": 214,
+    "time": "2017-07-27T15:09:46.032Z",
+    "value": {
+      "_id": 57,
+      "groupTypeId": 3,
+      "groupTypeName": "Store",
+      "groupTypeCode": "Store",
+      "groupId": 3,
+      "groupCode": "SM",
+      "groupName": "Santa Monica",
+      "thingTypeId": 11,
+      "thingTypeCode": "Colour",
+      "thingTypeName": "ColorFile",
+      "name": "CTA007",
+      "serialNumber": "CTA007",
+      "modifiedTime": "2017-07-27T15:08:06.172Z",
+      "createdTime": "2017-07-27T15:08:06.172Z",
+      "time": "2017-07-27T15:08:06.161Z",
+      "Action": {
+        "thingTypeFieldId": 78,
+        "time": "2017-07-27T15:08:06.161Z",
+        "value": "an action from Thing Type As Attribute"
+      },
+      "Description": {
+        "thingTypeFieldId": 80,
+        "time": "2017-07-27T15:08:06.161Z",
+        "value": "node"
+      },
+      "ColorCode": {
+        "thingTypeFieldId": 79,
+        "time": "2017-07-27T15:08:06.161Z",
+        "value": "0"
+      }
+    }
+  }
+}

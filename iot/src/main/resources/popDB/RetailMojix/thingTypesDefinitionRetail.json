@@ -1,0 +1,3253 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingType",
+      "instances": [
+        {
+          "name": "Replenishment",
+          "thingTypeCode": "replenishment",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Hot Replenishment",
+          "thingTypeCode": "hotReplenishment",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Sell Thru Replenishment",
+          "thingTypeCode": "sellThruReplenishment",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Dressing Room",
+          "thingTypeCode": "dressingRoom",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "replenishId",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishFrontZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishBackZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishBackCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishFrontCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishLastDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemStoreCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemStoreName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemUPCCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemUPCCategoryName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemSizeUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishQuantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishMaxUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishMinUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemMaterialUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemBrandUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemPriceUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemColorUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemColorHexadecimalUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemFrontImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemBackImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemSideImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+
+        {
+          "name": "itemSKUCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemSKUCategoryName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemSizeSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },        
+        {
+          "name": "replenishMaxSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "replenishMinSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemMaterialSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemBrandSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemPriceSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemColorSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemColorHexadecimalSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemFrontImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemBackImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        },
+        {
+          "name": "itemSideImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "replenishId",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishFrontZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishBackZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishBackCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishFrontCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishBoxCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishLastDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemStoreCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemStoreName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemUPCCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemUPCCategoryName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemSizeUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishQuantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishMaxUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishMinUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemMaterialUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemBrandUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemPriceUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemColorUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemColorHexadecimalUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemFrontImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemBackImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemSideImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+
+        {
+          "name": "itemSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemSKUCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemSKUCategoryName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemSizeSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },       
+        {
+          "name": "replenishMaxSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "replenishMinSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemMaterialSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemBrandSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemPriceSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemColorSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemColorHexadecimalSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemFrontImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemBackImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        },
+        {
+          "name": "itemSideImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          }
+        }       
+        
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "replenishId",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "replenishSoldZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "replenishSoldCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "replenishLastDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "replenishSoldHour",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemStoreCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemStoreName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemUPCCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemUPCCategoryName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemSizeUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemMaterialUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemBrandUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemPriceUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemColorUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemColorHexadecimalUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemFrontImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemBackImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemSideImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+
+        {
+          "name": "itemSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemSKUCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemSKUCategoryName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemSizeSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemMaterialSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemBrandSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemPriceSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemColorSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemColorHexadecimalSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemFrontImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemBackImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        },
+        {
+          "name": "itemSideImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "replenishId",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishFrontZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishDressingZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishDressingCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishFrontCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishLastDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishRoom",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemStoreCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemStoreName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        
+        {
+          "name": "itemUPCCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemUPCCategoryName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemSizeUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishQuantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishMaxUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishMinUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemMaterialUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemBrandUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemPriceUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemColorUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemColorHexadecimalUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemFrontImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemBackImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemSideImageUPC",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+
+        {
+          "name": "itemSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemSKUCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemSKUCategoryName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemSizeSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },        
+        {
+          "name": "replenishMaxSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "replenishMinSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemMaterialSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemBrandSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemPriceSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "defaultValue": "0",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemColorSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemColorHexadecimalSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemFrontImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemBackImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        },
+        {
+          "name": "itemSideImageSKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "-",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "DressingRoom"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}
+

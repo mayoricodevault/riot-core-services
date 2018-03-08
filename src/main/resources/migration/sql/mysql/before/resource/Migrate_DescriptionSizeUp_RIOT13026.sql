@@ -1,0 +1,1 @@
+ALTER TABLE `riot_main`.`resource` MODIFY description VARCHAR(500);

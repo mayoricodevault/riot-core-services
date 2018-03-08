@@ -1,0 +1,11 @@
+{
+  "group": ">mojix>SM",
+  "name": "CT002",
+  "serialNumber": "CT002",
+  "udfs": {
+    "eNode": {
+      "value": "An Enode String"
+    }
+  },
+  "thingTypeCode": "default_rfid_thingtype"
+}

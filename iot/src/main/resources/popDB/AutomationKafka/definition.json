@@ -1,0 +1,13 @@
+{
+  "dependsOn": "",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "bridgesAndConnections",
+      "definitionFile": "bridgesDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

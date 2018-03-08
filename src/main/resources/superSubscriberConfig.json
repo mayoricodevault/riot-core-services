@@ -1,0 +1,78 @@
+[
+  {
+    "name": "com.tierconnect.riot.bridges.rules.actions.ThingPropertySetterSubcriber",
+    "active": 1,
+    "config": "status=$zone"
+  },
+  {
+    "name": "com.tierconnect.riot.bridges.rules.actions.AlienReaderGPIOSubscriber3",
+    "active": 1,
+    "config": {
+      "ip": "10.100.1.61",
+      "port": 23,
+      "username": "alien",
+      "password": "password",
+      "times": {
+        "lightOn": 5000,
+        "buzzerOn": 4000,
+        "buzzerOff": 3000
+      },
+      "lightPinMap": {
+        "light1": 0,
+        "light2": 2,
+        "light3": 3,
+        "light4": 4
+      },
+      "buzzerPinMap": {
+        "buzzer1": 1
+      },
+      "zoneLightBuzzerMap": {
+        "Stockroom": [
+          "light1",
+          "buzzer1"
+        ],
+        "Salesfloor": [
+          "light2",
+          "buzzer1"
+        ],
+        "PoS": [
+          "light3",
+          "buzzer1"
+        ],
+        "Entrance": [
+          "light4",
+          "buzzer1"
+        ]
+      }
+    }
+  },
+  {
+    "name": "com.tierconnect.riot.bridges.rules.actions.RestEndpointSubscriber",
+    "active": 1,
+    "config": {
+      "method": "POST",
+      "protocol": "http",
+      "host": "localhost",
+      "port": 8080,
+      "path": "/riot-core-services/api/thingBridge/test/testRestEndpointSubscriber",
+      "headers": {
+        "Api_key": "root"
+      },
+      "basicAuth": {
+        "username": "myname",
+        "password": "mypasss"
+      },
+      "body": "zone=$serialNumber"
+    }
+  },
+  {
+    "name": "com.tierconnect.riot.bridges.rules.actions.MQTTPushSubscriber",
+    "active": 1,
+    "config": {
+      "host": "localhost",
+      "port": 1883,
+      "topic": "MQTTDemo",
+      "mqtt-body": "Serial Number: ${serialNumber}. Hi. This is the mqtt message for thing ${name}"
+    }
+  }
+]

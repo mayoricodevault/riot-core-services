@@ -1,0 +1,88 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "mlBusinessModel",
+      "innerClass": "MlBusinessModel",
+      "instances": [
+        {
+          "name": "Money Mapping",
+          "modifiedDate": "newDate"
+        },
+        {
+          "name": "Conversion Rate",
+          "modifiedDate": "newDate"
+        },
+        {
+          "name": "Health Care Models",
+          "modifiedDate": "newDate"
+        }
+      ]
+    },
+    {
+      "moduleName": "mlBusinessModelPredictor",
+      "innerClass": "MlBusinessModelPredictor",
+      "instances": [
+        {
+          "name": "Date",
+          "businessModel": {
+            "innerClass": "MlBusinessModel",
+            "getter": "getByName",
+            "params": "Money Mapping"
+          }
+        },
+        {
+          "name": "Zone",
+          "businessModel": {
+            "innerClass": "MlBusinessModel",
+            "getter": "getByName",
+            "params": "Money Mapping"
+          }
+        },
+        {
+          "name": "Date",
+          "businessModel": {
+            "innerClass": "MlBusinessModel",
+            "getter": "getByName",
+            "params": "Conversion Rate"
+          }
+        },
+        {
+          "name": "Zone",
+          "businessModel": {
+            "innerClass": "MlBusinessModel",
+            "getter": "getByName",
+            "params": "Conversion Rate"
+          }
+        },
+        {
+          "name": "ProductType",
+          "businessModel": {
+            "innerClass": "MlBusinessModel",
+            "getter": "getByName",
+            "params": "Conversion Rate"
+          }
+        },
+        {
+          "name": "Date",
+          "businessModel": {
+            "innerClass": "MlBusinessModel",
+            "getter": "getByName",
+            "params": "Health Care Models"
+          }
+        },
+        {
+          "name": "Zone",
+          "businessModel": {
+            "innerClass": "MlBusinessModel",
+            "getter": "getByName",
+            "params": "Health Care Models"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

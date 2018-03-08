@@ -1,0 +1,1177 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName":"folder",
+      "innerClass":"Folder",
+      "instances":[
+        {
+          "sequence": 2,
+          "lastModificationDate": "newDate",
+          "code": "vizix_tutorials",
+          "name": "ViZix Tutorials",
+          "typeElement": "report",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "createdByUser":{
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "creationDate": "newDate"
+        }
+      ]
+    },
+    {
+      "moduleName": "reportDefinition",
+      "innerClass": "ReportDefinition",
+      "instances": [
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_tutorials"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Mongo Filters Query (Now)",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_tutorials"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Mongo Filters Query (Custom)",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_tutorials"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Mongo Example #1a",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_tutorials"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Mongo Example #1b",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_tutorials"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Mongo Example #1c",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_tutorials"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Mongo Example #2",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_tutorials"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Mongo TimeZone Test",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_tutorials"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "SQL Report Example",
+          "reportType": "tableConnection",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        }
+      ]
+    },
+    {
+      "moduleName": "reportCustomFilter",
+      "innerClass": "ReportCustomFilter",
+      "instances": [
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "MY FILTER PARAM 1",
+          "operator": ">",
+          "propertyName": "myFilterParm1",
+          "value": "2500",
+          "dataTypeId": 4,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SQL Report Example"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableConnection"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "MY FILTER PARAM 2",
+          "operator": "=",
+          "propertyName": "myFilterParm2",
+          "value": "String Parameter",
+          "dataTypeId": 1,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SQL Report Example"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableConnection"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "reportDefinitionConfig",
+      "innerClass": "ReportDefinitionConfig",
+      "instances": [
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "filters_query_now.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Now)"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Now)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "filters_query_custom.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "raw_query_report_1a.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1a"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1a"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "raw_query_report_1b.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1b"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1b"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "raw_query_report_1c.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1c"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1c"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "raw_query_report_2.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #2"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #2"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "raw_query_timezone_test.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo TimeZone Test"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo TimeZone Test"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName":"reportFilter",
+      "innerClass":"ReportFilter",
+      "instances":[
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Tenant Group",
+          "operator": "<",
+          "propertyName": "group.id",
+          "value": {
+            "innerMethod": "getGroupId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Now)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Date",
+          "operator": "",
+          "propertyName": "relativeDate",
+          "value": "NOW",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Now)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Now)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "shift",
+          "operator": "isNotEmpty",
+          "propertyName": "shift",
+          "value": "",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Now)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "shift"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Tenant Group",
+          "operator": "<",
+          "propertyName": "group.id",
+          "value": {
+            "innerMethod": "getGroupId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Date",
+          "operator": "",
+          "propertyName": "relativeDate",
+          "value": "CUSTOM",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "Date",
+          "operator": ">=",
+          "propertyName": "startDate",
+          "value": "1483300233000",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "Date",
+          "operator": "<=",
+          "propertyName": "endDate",
+          "value": "1514749838999",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "editable": true,
+          "fieldType": 9,
+          "label": "zone",
+          "operator": "isNotEmpty",
+          "propertyName": "zone",
+          "value": "",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "editable": true,
+          "fieldType": 7,
+          "label": "shift",
+          "operator": "isEmpty",
+          "propertyName": "shift",
+          "value": "",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "shift"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 8,
+          "editable": true,
+          "fieldType": 4,
+          "label": "registered",
+          "operator": ">",
+          "propertyName": "registered",
+          "value": "5",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

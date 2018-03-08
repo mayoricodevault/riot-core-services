@@ -1,0 +1,871 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "things",
+      "innerClass": "Thing",
+      "instances": [
+        {
+          "name": "RFID1234567890",
+          "serial": "RFID1234567890",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "GPS1234567890",
+          "serial": "GPS1234567890",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Jacket1",
+          "serial": "J00001",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000473",
+          "serial": "000000000000000000473",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Jacket2",
+          "serial": "J00002",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000474",
+          "serial": "000000000000000000474",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Jacket3",
+          "serial": "J00003",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000475",
+          "serial": "000000000000000000475",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Jacket4",
+          "serial": "J00004",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000476",
+          "serial": "000000000000000000476",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Jacket5",
+          "serial": "J00005",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000477",
+          "serial": "000000000000000000477",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Pants1",
+          "serial": "P00001",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000478",
+          "serial": "000000000000000000478",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Pants2",
+          "serial": "P00002",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000479",
+          "serial": "000000000000000000479",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Pants3",
+          "serial": "P00003",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000480",
+          "serial": "000000000000000000480",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Pants4",
+          "serial": "P00004",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000481",
+          "serial": "000000000000000000481",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Pants5",
+          "serial": "P00005",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000482",
+          "serial": "000000000000000000482",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "ShippingOrder1",
+          "serial": "SO00001",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "ShippingOrder2",
+          "serial": "SO00002",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "ShippingOrder3",
+          "serial": "SO00003",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "ShippingOrder4",
+          "serial": "SO00004",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "ShippingOrder5",
+          "serial": "SO00005",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000483",
+          "serial": "000000000000000000483",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000484",
+          "serial": "000000000000000000484",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000485",
+          "serial": "000000000000000000485",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000486",
+          "serial": "000000000000000000486",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000487",
+          "serial": "000000000000000000487",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000001",
+          "serial": "000000000000000000001",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "parent": {
+            "innerClass": "Thing",
+            "getter": "getBySerialAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "000000000000000000483"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "asset_code"
+              }
+            ]
+          },
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000002",
+          "serial": "000000000000000000002",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "parent": {
+            "innerClass": "Thing",
+            "getter": "getBySerialAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "000000000000000000484"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "asset_code"
+              }
+            ]
+          },
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000003",
+          "serial": "000000000000000000003",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "parent": {
+            "innerClass": "Thing",
+            "getter": "getBySerialAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "000000000000000000485"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "asset_code"
+              }
+            ]
+          },
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000004",
+          "serial": "000000000000000000004",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "parent": {
+            "innerClass": "Thing",
+            "getter": "getBySerialAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "000000000000000000486"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "asset_code"
+              }
+            ]
+          },
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "000000000000000000005",
+          "serial": "000000000000000000005",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "parent": {
+            "innerClass": "Thing",
+            "getter": "getBySerialAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "000000000000000000487"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "asset_code"
+              }
+            ]
+          },
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

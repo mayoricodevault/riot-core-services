@@ -1,0 +1,253 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "roleResources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STR_400"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "starflex_status_code"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "flextag_code"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - Discovered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - Discovered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - Discovered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Unique Tags - Discovered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        }
+
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

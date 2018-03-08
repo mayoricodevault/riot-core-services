@@ -1,0 +1,29 @@
+
+
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "shift",
+      "innerClass": "Shift",
+      "instances": [
+        {
+          "name": "DAY-M-W",
+          "code": "DAY-M-W",
+          "startTimeOfDay": 800,
+          "endTimeOfDay": 1700,
+          "daysOfWeek": "23456",
+          "active": true,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

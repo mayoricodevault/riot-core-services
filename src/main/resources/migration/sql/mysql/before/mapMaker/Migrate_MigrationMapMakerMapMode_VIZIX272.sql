@@ -1,0 +1,1 @@
+ALTER TABLE `riot_main`.`localMap` ADD (`latOriginNominal` DOUBLE, `lonOriginNominal` DOUBLE, `xNominal` DOUBLE, `yNominal` DOUBLE, `modifiedTime` BIGINT(20));

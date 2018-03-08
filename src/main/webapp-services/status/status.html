@@ -1,0 +1,85 @@
+<html>
+
+<head>
+
+<script src="jquery-1.8.2.min.js"></script>
+<script src="highcharts.js"></script>
+
+<script src="status.js"></script>
+
+<style>
+body {
+  background-color: #ececec;
+  font-family: 'Century Gothic', arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+.chart {
+    display: inline-block;
+    min-width: 300px; 
+    width: 45%;
+    height: 300px; 
+    margin: 0 0 16px 4%;
+}
+.highcharts-container rect {
+    background-color: #ececec;  
+}
+.highcharts-title {
+  text-transform: uppercase;
+  font-size: 1.48em !important;
+  font-weight: normal;
+  font-family: 'Century Gothic', arial, sans-serif;
+}
+.highcharts-yaxis-title {
+ font-family: 'Century Gothic', arial, sans-serif; 
+}
+.highcharts-legend-item text {
+ font-family: 'Century Gothic', arial, sans-serif; 
+ font-size: 0.84em !important;
+}
+.time-selector {
+  margin: 24px 4%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="time-selector">
+Select Time: <select onchange="selectMinutes( this )" onload="alert('test')">
+  <option value=""></option>
+  <option value="5">5 mins</option>
+  <option value="15">15 mins</option>
+  <option value="30">30 mins</option>
+  <option value="60">60 mins</option>
+  <option value="120">2 hours</option>
+  <option value="180">3 hours</option>
+  <option value="300">5 hours</option>
+  <option value="480">8 hours</option>
+  <option value="720">12 hours</option>
+</select>
+</div>
+
+<div id="container" class="chart"></div>
+<div id="container2" class="chart"></div>
+
+<div id="container6" class="chart"></div>
+<div id="container9" class="chart"></div>
+
+<div id="container7" class="chart"></div>
+<div id="container5" class="chart"></div>
+
+<div id="container4" class="chart"></div>
+<div id="container8" class="chart"></div>
+
+<div id="container3" class="chart"></div>
+<div id="container10" class="chart"></div>
+
+<div id="container11" class="chart"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+ALTER TABLE [dbo].[group0] ADD [hierarchyName] varchar(512) GO

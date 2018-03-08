@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8"><style>/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+}
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+.span12 {
+  width: 940px;
+}
+.span11 {
+  width: 860px;
+}
+.span10 {
+  width: 780px;
+}
+.span9 {
+  width: 700px;
+}
+.span8 {
+  width: 620px;
+}
+.span7 {
+  width: 540px;
+}
+.span6 {
+  width: 460px;
+}
+.span5 {
+  width: 380px;
+}
+.span4 {
+  width: 300px;
+}
+.span3 {
+  width: 220px;
+}
+.span2 {
+  width: 140px;
+}
+.span1 {
+  width: 60px;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container:after {
+  clear: both;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+small {
+  font-size: 85%;
+}
+h1 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+h1 {
+  line-height: 40px;
+}
+h1 {
+  font-size: 38.5px;
+}
+h1 small {
+  font-size: 24.5px;
+}
+body {
+  margin-top: 90px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -480px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  z-index: 10;
+}
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
+  font-size: 14px;
+  line-height: 24px;
+}
+.switch {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #666;
+}
+.switch input {
+  margin-right: 0.3em;
+}
+.codesOn .i-name {
+  display: none;
+}
+.codesOn .i-code {
+  display: inline;
+}
+.i-code {
+  display: none;
+}
+@font-face {
+      font-family: 'mojix-retail';
+      src: url('./font/mojix-retail.eot?50511582');
+      src: url('./font/mojix-retail.eot?50511582#iefix') format('embedded-opentype'),
+           url('./font/mojix-retail.woff?50511582') format('woff'),
+           url('./font/mojix-retail.ttf?50511582') format('truetype'),
+           url('./font/mojix-retail.svg?50511582#mojix-retail') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "mojix-retail";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+     </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/mojix-retail-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>
+        mojix-retail
+         <small>font demo</small>
+      </h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div id="icons" class="container">
+      <div class="row">
+        <div title="Code: 0xe800" class="the-icons span3"><i class="demo-icon mojix-retail-replenishment">&#xe800;</i> <span class="i-name">mojix-retail-replenishment</span><span class="i-code">0xe800</span></div>
+        <div title="Code: 0xe801" class="the-icons span3"><i class="demo-icon mojix-retail-dressing-room">&#xe801;</i> <span class="i-name">mojix-retail-dressing-room</span><span class="i-code">0xe801</span></div>
+        <div title="Code: 0xe802" class="the-icons span3"><i class="demo-icon mojix-retail-settings">&#xe802;</i> <span class="i-name">mojix-retail-settings</span><span class="i-code">0xe802</span></div>
+        <div title="Code: 0xe803" class="the-icons span3"><i class="demo-icon mojix-retail-alarm">&#xe803;</i> <span class="i-name">mojix-retail-alarm</span><span class="i-code">0xe803</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe804" class="the-icons span3"><i class="demo-icon mojix-retail-angle-left">&#xe804;</i> <span class="i-name">mojix-retail-angle-left</span><span class="i-code">0xe804</span></div>
+        <div title="Code: 0xe805" class="the-icons span3"><i class="demo-icon mojix-retail-women-collection">&#xe805;</i> <span class="i-name">mojix-retail-women-collection</span><span class="i-code">0xe805</span></div>
+        <div title="Code: 0xe806" class="the-icons span3"><i class="demo-icon mojix-retail-women-bottoms">&#xe806;</i> <span class="i-name">mojix-retail-women-bottoms</span><span class="i-code">0xe806</span></div>
+        <div title="Code: 0xe807" class="the-icons span3"><i class="demo-icon mojix-retail-men-knit">&#xe807;</i> <span class="i-name">mojix-retail-men-knit</span><span class="i-code">0xe807</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe808" class="the-icons span3"><i class="demo-icon mojix-retail-women-tops">&#xe808;</i> <span class="i-name">mojix-retail-women-tops</span><span class="i-code">0xe808</span></div>
+        <div title="Code: 0xe809" class="the-icons span3"><i class="demo-icon mojix-retail-women-dresses">&#xe809;</i> <span class="i-name">mojix-retail-women-dresses</span><span class="i-code">0xe809</span></div>
+        <div title="Code: 0xe80a" class="the-icons span3"><i class="demo-icon mojix-retail-women-formal">&#xe80a;</i> <span class="i-name">mojix-retail-women-formal</span><span class="i-code">0xe80a</span></div>
+        <div title="Code: 0xe80b" class="the-icons span3"><i class="demo-icon mojix-retail-women-casual">&#xe80b;</i> <span class="i-name">mojix-retail-women-casual</span><span class="i-code">0xe80b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe80c" class="the-icons span3"><i class="demo-icon mojix-retail-women-lingerie">&#xe80c;</i> <span class="i-name">mojix-retail-women-lingerie</span><span class="i-code">0xe80c</span></div>
+        <div title="Code: 0xe80d" class="the-icons span3"><i class="demo-icon mojix-retail-women-accessories">&#xe80d;</i> <span class="i-name">mojix-retail-women-accessories</span><span class="i-code">0xe80d</span></div>
+        <div title="Code: 0xe80e" class="the-icons span3"><i class="demo-icon mojix-retail-search">&#xe80e;</i> <span class="i-name">mojix-retail-search</span><span class="i-code">0xe80e</span></div>
+        <div title="Code: 0xe80f" class="the-icons span3"><i class="demo-icon mojix-retail-back-arrow">&#xe80f;</i> <span class="i-name">mojix-retail-back-arrow</span><span class="i-code">0xe80f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe810" class="the-icons span3"><i class="demo-icon mojix-retail-next-arrow">&#xe810;</i> <span class="i-name">mojix-retail-next-arrow</span><span class="i-code">0xe810</span></div>
+        <div title="Code: 0xe811" class="the-icons span3"><i class="demo-icon mojix-retail-check">&#xe811;</i> <span class="i-name">mojix-retail-check</span><span class="i-code">0xe811</span></div>
+        <div title="Code: 0xe812" class="the-icons span3"><i class="demo-icon mojix-retail-delete">&#xe812;</i> <span class="i-name">mojix-retail-delete</span><span class="i-code">0xe812</span></div>
+        <div title="Code: 0xe813" class="the-icons span3"><i class="demo-icon mojix-retail-done">&#xe813;</i> <span class="i-name">mojix-retail-done</span><span class="i-code">0xe813</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe814" class="the-icons span3"><i class="demo-icon mojix-retail-close">&#xe814;</i> <span class="i-name">mojix-retail-close</span><span class="i-code">0xe814</span></div>
+        <div title="Code: 0xe815" class="the-icons span3"><i class="demo-icon mojix-retail-hot-replenish">&#xe815;</i> <span class="i-name">mojix-retail-hot-replenish</span><span class="i-code">0xe815</span></div>
+        <div title="Code: 0xe816" class="the-icons span3"><i class="demo-icon mojix-retail-sell-thru">&#xe816;</i> <span class="i-name">mojix-retail-sell-thru</span><span class="i-code">0xe816</span></div>
+        <div title="Code: 0xe817" class="the-icons span3"><i class="demo-icon mojix-retail-edit">&#xe817;</i> <span class="i-name">mojix-retail-edit</span><span class="i-code">0xe817</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe818" class="the-icons span3"><i class="demo-icon mojix-retail-men-tops">&#xe818;</i> <span class="i-name">mojix-retail-men-tops</span><span class="i-code">0xe818</span></div>
+        <div title="Code: 0xe819" class="the-icons span3"><i class="demo-icon mojix-retail-men-bottoms">&#xe819;</i> <span class="i-name">mojix-retail-men-bottoms</span><span class="i-code">0xe819</span></div>
+        <div title="Code: 0xe81b" class="the-icons span3"><i class="demo-icon mojix-retail-lock-circle">&#xe81b;</i> <span class="i-name">mojix-retail-lock-circle</span><span class="i-code">0xe81b</span></div>
+        <div title="Code: 0xe81c" class="the-icons span3"><i class="demo-icon mojix-retail-eye">&#xe81c;</i> <span class="i-name">mojix-retail-eye</span><span class="i-code">0xe81c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe81d" class="the-icons span3"><i class="demo-icon mojix-retail-men-casual">&#xe81d;</i> <span class="i-name">mojix-retail-men-casual</span><span class="i-code">0xe81d</span></div>
+        <div title="Code: 0xe81e" class="the-icons span3"><i class="demo-icon mojix-retail-men-pijamas">&#xe81e;</i> <span class="i-name">mojix-retail-men-pijamas</span><span class="i-code">0xe81e</span></div>
+        <div title="Code: 0xe81f" class="the-icons span3"><i class="demo-icon mojix-retail-camera">&#xe81f;</i> <span class="i-name">mojix-retail-camera</span><span class="i-code">0xe81f</span></div>
+        <div title="Code: 0xe820" class="the-icons span3"><i class="demo-icon mojix-retail-sendto">&#xe820;</i> <span class="i-name">mojix-retail-sendto</span><span class="i-code">0xe820</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe821" class="the-icons span3"><i class="demo-icon mojix-retail-men-accessories">&#xe821;</i> <span class="i-name">mojix-retail-men-accessories</span><span class="i-code">0xe821</span></div>
+        <div title="Code: 0xe822" class="the-icons span3"><i class="demo-icon mojix-retail-men-collection">&#xe822;</i> <span class="i-name">mojix-retail-men-collection</span><span class="i-code">0xe822</span></div>
+        <div title="Code: 0xe823" class="the-icons span3"><i class="demo-icon mojix-retail-kids-boys">&#xe823;</i> <span class="i-name">mojix-retail-kids-boys</span><span class="i-code">0xe823</span></div>
+        <div title="Code: 0xe824" class="the-icons span3"><i class="demo-icon mojix-retail-kids-girls">&#xe824;</i> <span class="i-name">mojix-retail-kids-girls</span><span class="i-code">0xe824</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe825" class="the-icons span3"><i class="demo-icon mojix-retail-circle">&#xe825;</i> <span class="i-name">mojix-retail-circle</span><span class="i-code">0xe825</span></div>
+        <div title="Code: 0xe826" class="the-icons span3"><i class="demo-icon mojix-retail-logout">&#xe826;</i> <span class="i-name">mojix-retail-logout</span><span class="i-code">0xe826</span></div>
+        <div title="Code: 0xe827" class="the-icons span3"><i class="demo-icon mojix-retail-thief">&#xe827;</i> <span class="i-name">mojix-retail-thief</span><span class="i-code">0xe827</span></div>
+        <div title="Code: 0xe828" class="the-icons span3"><i class="demo-icon mojix-retail-schoolwear">&#xe828;</i> <span class="i-name">mojix-retail-schoolwear</span><span class="i-code">0xe828</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe829" class="the-icons span3"><i class="demo-icon mojix-retail-mens-nightwear">&#xe829;</i> <span class="i-name">mojix-retail-mens-nightwear</span><span class="i-code">0xe829</span></div>
+        <div title="Code: 0xe82a" class="the-icons span3"><i class="demo-icon mojix-retail-formal-tops">&#xe82a;</i> <span class="i-name">mojix-retail-formal-tops</span><span class="i-code">0xe82a</span></div>
+        <div title="Code: 0xe82b" class="the-icons span3"><i class="demo-icon mojix-retail-home-accessories">&#xe82b;</i> <span class="i-name">mojix-retail-home-accessories</span><span class="i-code">0xe82b</span></div>
+        <div title="Code: 0xe82c" class="the-icons span3"><i class="demo-icon mojix-retail-dress-up-access">&#xe82c;</i> <span class="i-name">mojix-retail-dress-up-access</span><span class="i-code">0xe82c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe82d" class="the-icons span3"><i class="demo-icon mojix-retail-handbags-access">&#xe82d;</i> <span class="i-name">mojix-retail-handbags-access</span><span class="i-code">0xe82d</span></div>
+        <div title="Code: 0xe82e" class="the-icons span3"><i class="demo-icon mojix-retail-gifts-and-toys">&#xe82e;</i> <span class="i-name">mojix-retail-gifts-and-toys</span><span class="i-code">0xe82e</span></div>
+        <div title="Code: 0xe82f" class="the-icons span3"><i class="demo-icon mojix-retail-hosiery">&#xe82f;</i> <span class="i-name">mojix-retail-hosiery</span><span class="i-code">0xe82f</span></div>
+        <div title="Code: 0xe830" class="the-icons span3"><i class="demo-icon mojix-retail-ladies-slippers">&#xe830;</i> <span class="i-name">mojix-retail-ladies-slippers</span><span class="i-code">0xe830</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe831" class="the-icons span3"><i class="demo-icon mojix-retail-maternity">&#xe831;</i> <span class="i-name">mojix-retail-maternity</span><span class="i-code">0xe831</span></div>
+        <div title="Code: 0xe832" class="the-icons span3"><i class="demo-icon mojix-retail-per-una-sleepwear">&#xe832;</i> <span class="i-name">mojix-retail-per-una-sleepwear</span><span class="i-code">0xe832</span></div>
+        <div title="Code: 0xe833" class="the-icons span3"><i class="demo-icon mojix-retail-beauty-brands">&#xe833;</i> <span class="i-name">mojix-retail-beauty-brands</span><span class="i-code">0xe833</span></div>
+        <div title="Code: 0xe834" class="the-icons span3"><i class="demo-icon mojix-retail-body-solutions">&#xe834;</i> <span class="i-name">mojix-retail-body-solutions</span><span class="i-code">0xe834</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe835" class="the-icons span3"><i class="demo-icon mojix-retail-casual-bottoms">&#xe835;</i> <span class="i-name">mojix-retail-casual-bottoms</span><span class="i-code">0xe835</span></div>
+        <div title="Code: 0xe836" class="the-icons span3"><i class="demo-icon mojix-retail-kids-pijamas">&#xe836;</i> <span class="i-name">mojix-retail-kids-pijamas</span><span class="i-code">0xe836</span></div>
+        <div title="Code: 0xe837" class="the-icons span3"><i class="demo-icon mojix-retail-category">&#xe837;</i> <span class="i-name">mojix-retail-category</span><span class="i-code">0xe837</span></div>
+        <div title="Code: 0xe838" class="the-icons span3"><i class="demo-icon mojix-retail-location">&#xe838;</i> <span class="i-name">mojix-retail-location</span><span class="i-code">0xe838</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe839" class="the-icons span3"><i class="demo-icon mojix-retail-arrow">&#xe839;</i> <span class="i-name">mojix-retail-arrow</span><span class="i-code">0xe839</span></div>
+        <div title="Code: 0xe83a" class="the-icons span3"><i class="demo-icon mojix-retail-wizard">&#xe83a;</i> <span class="i-name">mojix-retail-wizard</span><span class="i-code">0xe83a</span></div>
+        <div title="Code: 0xe83b" class="the-icons span3"><i class="demo-icon mojix-retail-kids-accessories">&#xe83b;</i> <span class="i-name">mojix-retail-kids-accessories</span><span class="i-code">0xe83b</span></div>
+        <div title="Code: 0xe83c" class="the-icons span3"><i class="demo-icon mojix-retail-kids-school">&#xe83c;</i> <span class="i-name">mojix-retail-kids-school</span><span class="i-code">0xe83c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe83d" class="the-icons span3"><i class="demo-icon mojix-retail-kids-toys">&#xe83d;</i> <span class="i-name">mojix-retail-kids-toys</span><span class="i-code">0xe83d</span></div>
+        <div title="Code: 0xe83e" class="the-icons span3"><i class="demo-icon mojix-retail-home">&#xe83e;</i> <span class="i-name">mojix-retail-home</span><span class="i-code">0xe83e</span></div>
+        <div title="Code: 0xe83f" class="the-icons span3"><i class="demo-icon mojix-retail-home-furniture">&#xe83f;</i> <span class="i-name">mojix-retail-home-furniture</span><span class="i-code">0xe83f</span></div>
+        <div title="Code: 0xe840" class="the-icons span3"><i class="demo-icon mojix-retail-other-gifts">&#xe840;</i> <span class="i-name">mojix-retail-other-gifts</span><span class="i-code">0xe840</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe841" class="the-icons span3"><i class="demo-icon mojix-retail-beauty">&#xe841;</i> <span class="i-name">mojix-retail-beauty</span><span class="i-code">0xe841</span></div>
+        <div title="Code: 0xe842" class="the-icons span3"><i class="demo-icon mojix-retail-all">&#xe842;</i> <span class="i-name">mojix-retail-all</span><span class="i-code">0xe842</span></div>
+        <div title="Code: 0xe843" class="the-icons span3"><i class="demo-icon mojix-retail-rep-oos">&#xe843;</i> <span class="i-name">mojix-retail-rep-oos</span><span class="i-code">0xe843</span></div>
+        <div title="Code: 0xe844" class="the-icons span3"><i class="demo-icon mojix-retail-rep-retire">&#xe844;</i> <span class="i-name">mojix-retail-rep-retire</span><span class="i-code">0xe844</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe845" class="the-icons span3"><i class="demo-icon mojix-retail-rep-sellthru">&#xe845;</i> <span class="i-name">mojix-retail-rep-sellthru</span><span class="i-code">0xe845</span></div>
+        <div title="Code: 0xe846" class="the-icons span3"><i class="demo-icon mojix-retail-report-rep-inventory">&#xe846;</i> <span class="i-name">mojix-retail-report-rep-inventory</span><span class="i-code">0xe846</span></div>
+        <div title="Code: 0xe847" class="the-icons span3"><i class="demo-icon mojix-retail-list-report">&#xe847;</i> <span class="i-name">mojix-retail-list-report</span><span class="i-code">0xe847</span></div>
+        <div title="Code: 0xe848" class="the-icons span3"><i class="demo-icon mojix-retail-filter">&#xe848;</i> <span class="i-name">mojix-retail-filter</span><span class="i-code">0xe848</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe849" class="the-icons span3"><i class="demo-icon mojix-retail-expand">&#xe849;</i> <span class="i-name">mojix-retail-expand</span><span class="i-code">0xe849</span></div>
+        <div title="Code: 0xe84a" class="the-icons span3"><i class="demo-icon mojix-retail-page">&#xe84a;</i> <span class="i-name">mojix-retail-page</span><span class="i-code">0xe84a</span></div>
+        <div title="Code: 0xe84b" class="the-icons span3"><i class="demo-icon mojix-retail-tools-outline">&#xe84b;</i> <span class="i-name">mojix-retail-tools-outline</span><span class="i-code">0xe84b</span></div>
+        <div title="Code: 0xe84c" class="the-icons span3"><i class="demo-icon mojix-retail-settings-fill">&#xe84c;</i> <span class="i-name">mojix-retail-settings-fill</span><span class="i-code">0xe84c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe84d" class="the-icons span3"><i class="demo-icon mojix-retail-settings-outline">&#xe84d;</i> <span class="i-name">mojix-retail-settings-outline</span><span class="i-code">0xe84d</span></div>
+        <div title="Code: 0xe84e" class="the-icons span3"><i class="demo-icon mojix-retail-tasks-fill">&#xe84e;</i> <span class="i-name">mojix-retail-tasks-fill</span><span class="i-code">0xe84e</span></div>
+        <div title="Code: 0xe84f" class="the-icons span3"><i class="demo-icon mojix-retail-theft-alert-fill">&#xe84f;</i> <span class="i-name">mojix-retail-theft-alert-fill</span><span class="i-code">0xe84f</span></div>
+        <div title="Code: 0xe850" class="the-icons span3"><i class="demo-icon mojix-retail-theft-alert-outline">&#xe850;</i> <span class="i-name">mojix-retail-theft-alert-outline</span><span class="i-code">0xe850</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe851" class="the-icons span3"><i class="demo-icon mojix-retail-tools-fill">&#xe851;</i> <span class="i-name">mojix-retail-tools-fill</span><span class="i-code">0xe851</span></div>
+        <div title="Code: 0xe852" class="the-icons span3"><i class="demo-icon mojix-retail-reports-outline">&#xe852;</i> <span class="i-name">mojix-retail-reports-outline</span><span class="i-code">0xe852</span></div>
+        <div title="Code: 0xe853" class="the-icons span3"><i class="demo-icon mojix-retail-reports-fill">&#xe853;</i> <span class="i-name">mojix-retail-reports-fill</span><span class="i-code">0xe853</span></div>
+        <div title="Code: 0xe854" class="the-icons span3"><i class="demo-icon mojix-retail-money-mapping">&#xe854;</i> <span class="i-name">mojix-retail-money-mapping</span><span class="i-code">0xe854</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe855" class="the-icons span3"><i class="demo-icon mojix-retail-report-rep-inventory-outline">&#xe855;</i> <span class="i-name">mojix-retail-report-rep-inventory-outline</span><span class="i-code">0xe855</span></div>
+        <div title="Code: 0xe856" class="the-icons span3"><i class="demo-icon mojix-retail-rep-sellthru-outline">&#xe856;</i> <span class="i-name">mojix-retail-rep-sellthru-outline</span><span class="i-code">0xe856</span></div>
+        <div title="Code: 0xe857" class="the-icons span3"><i class="demo-icon mojix-retail-rep-retire-outline">&#xe857;</i> <span class="i-name">mojix-retail-rep-retire-outline</span><span class="i-code">0xe857</span></div>
+        <div title="Code: 0xe858" class="the-icons span3"><i class="demo-icon mojix-retail-rep-oos-outline">&#xe858;</i> <span class="i-name">mojix-retail-rep-oos-outline</span><span class="i-code">0xe858</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe859" class="the-icons span3"><i class="demo-icon mojix-retail-invalid-fixture">&#xe859;</i> <span class="i-name">mojix-retail-invalid-fixture</span><span class="i-code">0xe859</span></div>
+        <div title="Code: 0xe85a" class="the-icons span3"><i class="demo-icon mojix-retail-list-fixture">&#xe85a;</i> <span class="i-name">mojix-retail-list-fixture</span><span class="i-code">0xe85a</span></div>
+        <div title="Code: 0xe85b" class="the-icons span3"><i class="demo-icon mojix-retail-autograph">&#xe85b;</i> <span class="i-name">mojix-retail-autograph</span><span class="i-code">0xe85b</span></div>
+        <div title="Code: 0xe85c" class="the-icons span3"><i class="demo-icon mojix-retail-babywear">&#xe85c;</i> <span class="i-name">mojix-retail-babywear</span><span class="i-code">0xe85c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe85d" class="the-icons span3"><i class="demo-icon mojix-retail-bathrooms">&#xe85d;</i> <span class="i-name">mojix-retail-bathrooms</span><span class="i-code">0xe85d</span></div>
+        <div title="Code: 0xe85e" class="the-icons span3"><i class="demo-icon mojix-retail-bedding">&#xe85e;</i> <span class="i-name">mojix-retail-bedding</span><span class="i-code">0xe85e</span></div>
+        <div title="Code: 0xe85f" class="the-icons span3"><i class="demo-icon mojix-retail-location-1">&#xe85f;</i> <span class="i-name">mojix-retail-location-1</span><span class="i-code">0xe85f</span></div>
+        <div title="Code: 0xe860" class="the-icons span3"><i class="demo-icon mojix-retail-bob-twiggy">&#xe860;</i> <span class="i-name">mojix-retail-bob-twiggy</span><span class="i-code">0xe860</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe861" class="the-icons span3"><i class="demo-icon mojix-retail-boyswear">&#xe861;</i> <span class="i-name">mojix-retail-boyswear</span><span class="i-code">0xe861</span></div>
+        <div title="Code: 0xe862" class="the-icons span3"><i class="demo-icon mojix-retail-bras">&#xe862;</i> <span class="i-name">mojix-retail-bras</span><span class="i-code">0xe862</span></div>
+        <div title="Code: 0xe863" class="the-icons span3"><i class="demo-icon mojix-retail-classics">&#xe863;</i> <span class="i-name">mojix-retail-classics</span><span class="i-code">0xe863</span></div>
+        <div title="Code: 0xe864" class="the-icons span3"><i class="demo-icon mojix-retail-collection">&#xe864;</i> <span class="i-name">mojix-retail-collection</span><span class="i-code">0xe864</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe865" class="the-icons span3"><i class="demo-icon mojix-retail-dresses">&#xe865;</i> <span class="i-name">mojix-retail-dresses</span><span class="i-code">0xe865</span></div>
+        <div title="Code: 0xe866" class="the-icons span3"><i class="demo-icon mojix-retail-footwear-slipprs">&#xe866;</i> <span class="i-name">mojix-retail-footwear-slipprs</span><span class="i-code">0xe866</span></div>
+        <div title="Code: 0xe867" class="the-icons span3"><i class="demo-icon mojix-retail-girlswear">&#xe867;</i> <span class="i-name">mojix-retail-girlswear</span><span class="i-code">0xe867</span></div>
+        <div title="Code: 0xe868" class="the-icons span3"><i class="demo-icon mojix-retail-cosmetics-skincare">&#xe868;</i> <span class="i-name">mojix-retail-cosmetics-skincare</span><span class="i-code">0xe868</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe869" class="the-icons span3"><i class="demo-icon mojix-retail-holiday">&#xe869;</i> <span class="i-name">mojix-retail-holiday</span><span class="i-code">0xe869</span></div>
+        <div title="Code: 0xe86a" class="the-icons span3"><i class="demo-icon mojix-retail-household-electricals">&#xe86a;</i> <span class="i-name">mojix-retail-household-electricals</span><span class="i-code">0xe86a</span></div>
+        <div title="Code: 0xe86b" class="the-icons span3"><i class="demo-icon mojix-retail-find-epc">&#xe86b;</i> <span class="i-name">mojix-retail-find-epc</span><span class="i-code">0xe86b</span></div>
+        <div title="Code: 0xe86c" class="the-icons span3"><i class="demo-icon mojix-retail-jewellery">&#xe86c;</i> <span class="i-name">mojix-retail-jewellery</span><span class="i-code">0xe86c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe86d" class="the-icons span3"><i class="demo-icon mojix-retail-kids-footwear">&#xe86d;</i> <span class="i-name">mojix-retail-kids-footwear</span><span class="i-code">0xe86d</span></div>
+        <div title="Code: 0xe86e" class="the-icons span3"><i class="demo-icon mojix-retail-kids-hosiery">&#xe86e;</i> <span class="i-name">mojix-retail-kids-hosiery</span><span class="i-code">0xe86e</span></div>
+        <div title="Code: 0xe86f" class="the-icons span3"><i class="demo-icon mojix-retail-kids-nightwear">&#xe86f;</i> <span class="i-name">mojix-retail-kids-nightwear</span><span class="i-code">0xe86f</span></div>
+        <div title="Code: 0xe870" class="the-icons span3"><i class="demo-icon mojix-retail-kids-underwear">&#xe870;</i> <span class="i-name">mojix-retail-kids-underwear</span><span class="i-code">0xe870</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe871" class="the-icons span3"><i class="demo-icon mojix-retail-knickers-vests">&#xe871;</i> <span class="i-name">mojix-retail-knickers-vests</span><span class="i-code">0xe871</span></div>
+        <div title="Code: 0xe872" class="the-icons span3"><i class="demo-icon mojix-retail-knitwear">&#xe872;</i> <span class="i-name">mojix-retail-knitwear</span><span class="i-code">0xe872</span></div>
+        <div title="Code: 0xe873" class="the-icons span3"><i class="demo-icon mojix-retail-ladies-suits-and-jackets">&#xe873;</i> <span class="i-name">mojix-retail-ladies-suits-and-jackets</span><span class="i-code">0xe873</span></div>
+        <div title="Code: 0xe874" class="the-icons span3"><i class="demo-icon mojix-retail-leisurewear">&#xe874;</i> <span class="i-name">mojix-retail-leisurewear</span><span class="i-code">0xe874</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe875" class="the-icons span3"><i class="demo-icon mojix-retail-lighting">&#xe875;</i> <span class="i-name">mojix-retail-lighting</span><span class="i-code">0xe875</span></div>
+        <div title="Code: 0xe876" class="the-icons span3"><i class="demo-icon mojix-retail-limited-collection">&#xe876;</i> <span class="i-name">mojix-retail-limited-collection</span><span class="i-code">0xe876</span></div>
+        <div title="Code: 0xe877" class="the-icons span3"><i class="demo-icon mojix-retail-luggage">&#xe877;</i> <span class="i-name">mojix-retail-luggage</span><span class="i-code">0xe877</span></div>
+        <div title="Code: 0xe878" class="the-icons span3"><i class="demo-icon mojix-retail-mens-accessories">&#xe878;</i> <span class="i-name">mojix-retail-mens-accessories</span><span class="i-code">0xe878</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe879" class="the-icons span3"><i class="demo-icon mojix-retail-mens-casual-shirts">&#xe879;</i> <span class="i-name">mojix-retail-mens-casual-shirts</span><span class="i-code">0xe879</span></div>
+        <div title="Code: 0xe87a" class="the-icons span3"><i class="demo-icon mojix-retail-mens-footwear-slippers">&#xe87a;</i> <span class="i-name">mojix-retail-mens-footwear-slippers</span><span class="i-code">0xe87a</span></div>
+        <div title="Code: 0xe87b" class="the-icons span3"><i class="demo-icon mojix-retail-mens-formal-shirts">&#xe87b;</i> <span class="i-name">mojix-retail-mens-formal-shirts</span><span class="i-code">0xe87b</span></div>
+        <div title="Code: 0xe87c" class="the-icons span3"><i class="demo-icon mojix-retail-mens-jackets">&#xe87c;</i> <span class="i-name">mojix-retail-mens-jackets</span><span class="i-code">0xe87c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe87d" class="the-icons span3"><i class="demo-icon mojix-retail-mens-knitwear">&#xe87d;</i> <span class="i-name">mojix-retail-mens-knitwear</span><span class="i-code">0xe87d</span></div>
+        <div title="Code: 0xe87e" class="the-icons span3"><i class="demo-icon mojix-retail-mens-leisurewear">&#xe87e;</i> <span class="i-name">mojix-retail-mens-leisurewear</span><span class="i-code">0xe87e</span></div>
+        <div title="Code: 0xe87f" class="the-icons span3"><i class="demo-icon mojix-retail-women-knit">&#xe87f;</i> <span class="i-name">mojix-retail-women-knit</span><span class="i-code">0xe87f</span></div>
+        <div title="Code: 0xe880" class="the-icons span3"><i class="demo-icon mojix-retail-mens-outerwear">&#xe880;</i> <span class="i-name">mojix-retail-mens-outerwear</span><span class="i-code">0xe880</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe881" class="the-icons span3"><i class="demo-icon mojix-retail-mens-socks">&#xe881;</i> <span class="i-name">mojix-retail-mens-socks</span><span class="i-code">0xe881</span></div>
+        <div title="Code: 0xe882" class="the-icons span3"><i class="demo-icon mojix-retail-mens-suits">&#xe882;</i> <span class="i-name">mojix-retail-mens-suits</span><span class="i-code">0xe882</span></div>
+        <div title="Code: 0xe883" class="the-icons span3"><i class="demo-icon mojix-retail-mens-ties-formal-accessories">&#xe883;</i> <span class="i-name">mojix-retail-mens-ties-formal-accessories</span><span class="i-code">0xe883</span></div>
+        <div title="Code: 0xe884" class="the-icons span3"><i class="demo-icon mojix-retail-mens-trousers">&#xe884;</i> <span class="i-name">mojix-retail-mens-trousers</span><span class="i-code">0xe884</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe885" class="the-icons span3"><i class="demo-icon mojix-retail-mens-underwear">&#xe885;</i> <span class="i-name">mojix-retail-mens-underwear</span><span class="i-code">0xe885</span></div>
+        <div title="Code: 0xe886" class="the-icons span3"><i class="demo-icon mojix-retail-outerwear">&#xe886;</i> <span class="i-name">mojix-retail-outerwear</span><span class="i-code">0xe886</span></div>
+        <div title="Code: 0xe887" class="the-icons span3"><i class="demo-icon mojix-retail-per-una-womenswear">&#xe887;</i> <span class="i-name">mojix-retail-per-una-womenswear</span><span class="i-code">0xe887</span></div>
+        <div title="Code: 0xe888" class="the-icons span3"><i class="demo-icon mojix-retail-petite-plus">&#xe888;</i> <span class="i-name">mojix-retail-petite-plus</span><span class="i-code">0xe888</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe889" class="the-icons span3"><i class="demo-icon mojix-retail-tasks-outline">&#xe889;</i> <span class="i-name">mojix-retail-tasks-outline</span><span class="i-code">0xe889</span></div>
+        <div title="Code: 0xe88a" class="the-icons span3"><i class="demo-icon mojix-retail-sleepwear">&#xe88a;</i> <span class="i-name">mojix-retail-sleepwear</span><span class="i-code">0xe88a</span></div>
+        <div title="Code: 0xe88b" class="the-icons span3"><i class="demo-icon mojix-retail-soft-furnishing">&#xe88b;</i> <span class="i-name">mojix-retail-soft-furnishing</span><span class="i-code">0xe88b</span></div>
+        <div title="Code: 0xe88c" class="the-icons span3"><i class="demo-icon mojix-retail-take-home-furniture">&#xe88c;</i> <span class="i-name">mojix-retail-take-home-furniture</span><span class="i-code">0xe88c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe88d" class="the-icons span3"><i class="demo-icon mojix-retail-toddler-boys">&#xe88d;</i> <span class="i-name">mojix-retail-toddler-boys</span><span class="i-code">0xe88d</span></div>
+        <div title="Code: 0xe88e" class="the-icons span3"><i class="demo-icon mojix-retail-toddler-girls">&#xe88e;</i> <span class="i-name">mojix-retail-toddler-girls</span><span class="i-code">0xe88e</span></div>
+        <div title="Code: 0xe88f" class="the-icons span3"><i class="demo-icon mojix-retail-tops">&#xe88f;</i> <span class="i-name">mojix-retail-tops</span><span class="i-code">0xe88f</span></div>
+        <div title="Code: 0xe890" class="the-icons span3"><i class="demo-icon mojix-retail-trousers-skirts">&#xe890;</i> <span class="i-name">mojix-retail-trousers-skirts</span><span class="i-code">0xe890</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe894" class="the-icons span3"><i class="demo-icon mojix-retail-area">&#xe894;</i> <span class="i-name">mojix-retail-area</span><span class="i-code">0xe894</span></div>
+        <div title="Code: 0xe896" class="the-icons span3"><i class="demo-icon mojix-retail-city-select">&#xe896;</i> <span class="i-name">mojix-retail-city-select</span><span class="i-code">0xe896</span></div>
+        <div title="Code: 0xe897" class="the-icons span3"><i class="demo-icon mojix-retail-scanned-tag">&#xe897;</i> <span class="i-name">mojix-retail-scanned-tag</span><span class="i-code">0xe897</span></div>
+        <div title="Code: 0xe898" class="the-icons span3"><i class="demo-icon mojix-retail-section">&#xe898;</i> <span class="i-name">mojix-retail-section</span><span class="i-code">0xe898</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe899" class="the-icons span3"><i class="demo-icon mojix-retail-shop">&#xe899;</i> <span class="i-name">mojix-retail-shop</span><span class="i-code">0xe899</span></div>
+        <div title="Code: 0xe89a" class="the-icons span3"><i class="demo-icon mojix-retail-space">&#xe89a;</i> <span class="i-name">mojix-retail-space</span><span class="i-code">0xe89a</span></div>
+        <div title="Code: 0xe89b" class="the-icons span3"><i class="demo-icon mojix-retail-square-empty">&#xe89b;</i> <span class="i-name">mojix-retail-square-empty</span><span class="i-code">0xe89b</span></div>
+        <div title="Code: 0xe89c" class="the-icons span3"><i class="demo-icon mojix-retail-square-fill">&#xe89c;</i> <span class="i-name">mojix-retail-square-fill</span><span class="i-code">0xe89c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe89d" class="the-icons span3"><i class="demo-icon mojix-retail-scan-fixture">&#xe89d;</i> <span class="i-name">mojix-retail-scan-fixture</span><span class="i-code">0xe89d</span></div>
+        <div title="Code: 0xe89e" class="the-icons span3"><i class="demo-icon mojix-retail-ip-address">&#xe89e;</i> <span class="i-name">mojix-retail-ip-address</span><span class="i-code">0xe89e</span></div>
+        <div title="Code: 0xe89f" class="the-icons span3"><i class="demo-icon mojix-retail-mcon-setup">&#xe89f;</i> <span class="i-name">mojix-retail-mcon-setup</span><span class="i-code">0xe89f</span></div>
+        <div title="Code: 0xe8a0" class="the-icons span3"><i class="demo-icon mojix-retail-train-system">&#xe8a0;</i> <span class="i-name">mojix-retail-train-system</span><span class="i-code">0xe8a0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8a3" class="the-icons span3"><i class="demo-icon mojix-retail-find-it">&#xe8a3;</i> <span class="i-name">mojix-retail-find-it</span><span class="i-code">0xe8a3</span></div>
+        <div title="Code: 0xe8a4" class="the-icons span3"><i class="demo-icon mojix-retail-scan-epc">&#xe8a4;</i> <span class="i-name">mojix-retail-scan-epc</span><span class="i-code">0xe8a4</span></div>
+        <div title="Code: 0xe8a5" class="the-icons span3"><i class="demo-icon mojix-retail-bar-code">&#xe8a5;</i> <span class="i-name">mojix-retail-bar-code</span><span class="i-code">0xe8a5</span></div>
+        <div title="Code: 0xe8d6" class="the-icons span3"><i class="demo-icon mojix-retail-server-on">&#xe8d6;</i> <span class="i-name">mojix-retail-server-on</span><span class="i-code">0xe8d6</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8d7" class="the-icons span3"><i class="demo-icon mojix-retail-server-off">&#xe8d7;</i> <span class="i-name">mojix-retail-server-off</span><span class="i-code">0xe8d7</span></div>
+        <div title="Code: 0xe9a8" class="the-icons span3"><i class="demo-icon mojix-retail-success">&#xe9a8;</i> <span class="i-name">mojix-retail-success</span><span class="i-code">0xe9a8</span></div>
+        <div title="Code: 0xf105" class="the-icons span3"><i class="demo-icon mojix-retail-angle-right">&#xf105;</i> <span class="i-name">mojix-retail-angle-right</span><span class="i-code">0xf105</span></div>
+        <div title="Code: 0xf106" class="the-icons span3"><i class="demo-icon mojix-retail-angle-up">&#xf106;</i> <span class="i-name">mojix-retail-angle-up</span><span class="i-code">0xf106</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf107" class="the-icons span3"><i class="demo-icon mojix-retail-angle-down">&#xf107;</i> <span class="i-name">mojix-retail-angle-down</span><span class="i-code">0xf107</span></div>
+      </div>
+    </div>
+    <div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div>
+  </body>
+</html>

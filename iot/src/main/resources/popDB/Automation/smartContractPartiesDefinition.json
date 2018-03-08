@@ -1,0 +1,43 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "smartContractParty",
+      "innerClass": "SmartContractParty",
+      "instances": [
+        {
+          "name": "Walmart",
+          "blockchainId": "0x67891f98e42f1e4a683b3b2e6788c4f50b8a6627",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        },
+        {
+          "name": "Levis",
+          "blockchainId": "0xb6f976803005205ce328433d9157f9ed096b766a",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        },
+        {
+          "name": "XPO",
+          "blockchainId": "0xcf6908a88b51bb3796f25c846dd61d09167b6ae3",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}
+
+

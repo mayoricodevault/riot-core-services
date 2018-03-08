@@ -1,0 +1,13 @@
+{
+  "dependsOn": "AppRetail",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "customThings",
+      "definitionFile": "customThingsDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

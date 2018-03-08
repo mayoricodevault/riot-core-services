@@ -1,0 +1,167 @@
+[
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000001",
+    "thingTypeId": 10,
+    "treeLevel": 1,
+    "thingTypeName": "Tag",
+    "groupId": 3,
+    "name": "000000000000000000001",
+    "_id": 33
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000002",
+    "thingTypeId": 10,
+    "treeLevel": 1,
+    "thingTypeName": "Tag",
+    "groupId": 3,
+    "name": "000000000000000000002",
+    "_id": 34
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000003",
+    "thingTypeId": 10,
+    "treeLevel": 1,
+    "thingTypeName": "Tag",
+    "groupId": 3,
+    "name": "000000000000000000003",
+    "_id": 35
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000004",
+    "thingTypeId": 10,
+    "treeLevel": 1,
+    "thingTypeName": "Tag",
+    "groupId": 3,
+    "name": "000000000000000000004",
+    "_id": 36
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000005",
+    "thingTypeId": 10,
+    "treeLevel": 1,
+    "thingTypeName": "Tag",
+    "groupId": 3,
+    "name": "000000000000000000005",
+    "_id": 37
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000473",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000473",
+    "_id": 4
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000474",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000474",
+    "_id": 6
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000475",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000475",
+    "_id": 8
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000476",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000476",
+    "_id": 10
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000477",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000477",
+    "_id": 12
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000478",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000478",
+    "_id": 14
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000479",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000479",
+    "_id": 16
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000480",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000480",
+    "_id": 18
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000481",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000481",
+    "_id": 20
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "000000000000000000482",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    "name": "000000000000000000482",
+    "_id": 22
+  }
+]

@@ -1,0 +1,128 @@
+
+//IOT BUILD GRADLE VERSION 1.0.0
+
+
+dependencies {
+
+	compile project( ":appcore" )
+	compile project( ":reporting-api" )
+
+    //GeoJson
+    compile 'de.grundid.opendatalab:geojson-jackson:1.2'
+
+    compile 'org.imgscalr:imgscalr-lib:4.2'
+
+	// mongodb
+    compile 'org.mongodb:mongodb-driver:3.4.2'
+//   	compile 'org.mongodb:bson:3.4.2'
+
+    //el
+    compile('javax.el:javax.el-api:3.0.0')
+    compile('de.odysseus.juel:juel-impl:2.2.7')
+
+    //attachments
+//    compile 'org.jboss.resteasy:resteasy-multipart-provider:3.0.4.Final'
+
+    //json-flattener
+    compile 'com.github.wnameless:json-flattener:0.1.4'
+    testCompile group: 'org.powermock', name: 'powermock-mockito-release-full', version: '1.5.4'
+
+    compile 'commons-net:commons-net:3.3'
+
+    compile group: 'com.microsoft.azure', name : 'azure-storage', version : '5.0.0'
+
+    compile group: 'com.microsoft.azure', name : 'azure-storage', version : '5.0.0'
+
+}
+
+task compileAppgen (type: JavaCompile) {
+    source = sourceSets.main.java
+    include 'com/tierconnect/riot/iot/appgen/**/*.java'
+    classpath = sourceSets.main.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+}
+
+task appgen {
+
+	doLast {
+	    ant.java( classpath: sourceSets.main.runtimeClasspath.asPath,
+	    		  classname: "com.tierconnect.riot.iot.appgen.AppgenIot", fork:true,failonerror: true )
+		{
+	    	arg( value: "src/main/java" )
+	    	arg( value: "src/generated/java" )
+		}
+	}
+	dependsOn compileAppgen
+}
+
+task generateQueryDSL(type: JavaCompile, group: 'build', description: 'Generates the QueryDSL query types') {
+    source = sourceSets.main.java + sourceSets.generated.java + project(":appcore").sourceSets.main.java
+    classpath = configurations.compile + configurations.querydslapt
+    options.compilerArgs = [
+            "-proc:only",
+            "-processor", "com.mysema.query.apt.jpa.JPAAnnotationProcessor"
+    ]
+    destinationDir = sourceSets.generated.java.srcDirs.iterator().next()
+    dependsOn appgen
+}
+
+task compileCassandra (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/iot/cassandra/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    //dependsOn generateQueryDSL
+}
+
+task compileModel (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/iot/entities/**/*.java'
+    include 'com/tierconnect/riot/iot/cassandra/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn generateQueryDSL, compileCassandra
+}
+
+task compileDAO (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/iot/entities/**/*.java'
+    include 'com/tierconnect/riot/iot/dao/**/*.java'
+    include 'com/tierconnect/riot/iot/cassandra/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn compileModel
+}
+
+task compileService (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/iot/service/**/*.java'
+    include 'com/tierconnect/riot/iot/cassandra/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn compileDAO
+}
+
+task compileWebService (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/iot/controller/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn compileService
+}
+
+task compileRiot (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/iot/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn compileWebService
+}
+
+// overwrite default compileJava, as it will fail
+compileJava
+{
+	actions = [];
+	doLast { };
+	dependsOn compileRiot
+}
+

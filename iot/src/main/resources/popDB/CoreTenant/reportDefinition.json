@@ -1,0 +1,1156 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName":"folder",
+      "innerClass":"Folder",
+      "instances":[
+        {
+          "sequence": 1,
+          "lastModificationDate": "newDate",
+          "code": "vizix_diagnostics",
+          "name": "ViZix Diagnostics",
+          "typeElement": "report",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "createdByUser":{
+          "innerClass": "User",
+          "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },"createdByUser":{
+            "innerClass": "User",
+            "getter": "getByUsername",
+          "params": [
+            {
+              "innerClass": "String",
+              "getter": "valueOf",
+              "params": "root"
+            },
+            {
+              "innerClass": "Group",
+              "getter": "getByCode",
+              "params": "root"
+            }
+          ]
+          },
+          "creationDate": "newDate"
+        }
+      ]
+    },
+    {
+      "moduleName": "reportDefinition",
+      "innerClass": "ReportDefinition",
+      "instances": [
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Out-of-Order",
+          "description": "ViZix Out-of-Order",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Out-of-Order by Filter",
+          "description": "ViZix Out-of-Order by Filter",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Out-of-Order by Starflex",
+          "description": "ViZix Out-of-Order by Starflex",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Upserts CB by Source - I",
+          "description": "ViZix Upserts CB by Source - I",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Upserts CB by Source - E",
+          "description": "ViZix Upserts CB by Source - E",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Upserts EB - I",
+          "description": "ViZix Upserts EB - I",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Upserts by SF Filter - E",
+          "description": "ViZix Upserts by SF Filter - E",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Upserts E vs EB vs CB",
+          "description": "ViZix Upserts E vs EB vs CB",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Upserts by StarFlex",
+          "description": "ViZix Upserts by StarFlex",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Queues Detailed",
+          "description": "ViZix Queues Detailed",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "chartViewProperties": {
+            "innerMethod": "jsonToString",
+            "params": {
+              "jsonObject": [
+                {
+                  "type": "lineCharts",
+                  "title": "Line Charts",
+                  "subtype": "withDataLabels",
+                  "lib": "hc",
+                  "label": "@CHART_LINECHART_LABEL_WITH_DATA_LABELS",
+                  "disabled": false,
+                  "routeImg": "images/charts/line_charts/with_data_labels.svg",
+                  "activeStatus": true,
+                  "transpose": true,
+                  "pinDefault": true,
+                  "name": "STAT"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Queues Summary",
+          "description": "ViZix Queues Summary",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "chartViewProperties": {
+            "innerMethod": "jsonToString",
+            "params": {
+              "jsonObject":
+              [
+                {
+                  "type": "columnCharts",
+                  "title": "Column Charts",
+                  "subtype": "basic",
+                  "lib": "hc",
+                  "label": "@CHART_COLUMNCHARTS_LABEL_COLUMN_CHART",
+                  "disabled": false,
+                  "routeImg": "images/charts/column_charts/basic.svg",
+                  "activeStatus": true,
+                  "pinDefault": true,
+                  "name": "test"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vizix_diagnostics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "ViZix Indexes",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "chartViewProperties": {
+            "innerMethod": "jsonToString",
+            "params": {
+              "jsonObject": [
+                {
+                  "type": "lineCharts",
+                  "title": "Line Charts",
+                  "subtype": "withDataLabels",
+                  "lib": "hc",
+                  "label": "@CHART_LINECHART_LABEL_WITH_DATA_LABELS",
+                  "disabled": false,
+                  "routeImg": "images/charts/line_charts/with_data_labels.svg",
+                  "activeStatus": true,
+                  "transpose": true,
+                  "pinDefault": true,
+                  "name": "vizixChart"
+                }
+              ]
+            }
+          },
+          "description": "ViZix Index Stats Information"
+        }
+      ]
+    },
+    {
+      "moduleName": "reportFilter",
+      "innerClass": "ReportFilter",
+      "instances": [
+      ]
+    },
+    {
+      "moduleName": "reportDefinitionConfig",
+      "innerClass": "ReportDefinitionConfig",
+      "instances": [
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesOrder.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesOrderF.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Filter"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Filter"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesOrderS.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Starflex"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Starflex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesUpsertCB.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - I"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesUpsertE.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - E"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesUpsertEB.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts EB - I"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts EB - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesUpsertFE.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by SF Filter - E"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by SF Filter - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesUpsertIvE.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts E vs EB vs CB"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts E vs EB vs CB"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-TimeseriesUpsertS#.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by StarFlex"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by StarFlex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ReportScript-StatisticCoreBridge.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZixDiagnostics/ReportScript-IndexInformation.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Indexes"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Indexes"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZixDiagnostics/SummaryCoreBridgeStats.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Summary"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Summary"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

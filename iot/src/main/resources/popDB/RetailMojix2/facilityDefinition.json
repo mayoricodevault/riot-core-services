@@ -1,0 +1,806 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "model",
+      "innerClass": "LocalMap",
+      "instances": [
+        {
+          "name": "Map Store Santa Monica",
+          "lonmin": -118.444142,
+          "imageWidth": 205.5,
+          "latmin": 34.047880,
+          "imageHeight": 174,
+          "imageUnit": "ft",
+          "modifiedTime": "newDate",
+          "lonOrigin": -118.443969,
+          "latOrigin": 34.048092,
+          "altOrigin": 0.0,
+          "xNominal": 0.0,
+          "yNominal": 0.0,
+          "rotationDegree": 0.0,
+          "lonOriginNominal": -118.443969,
+          "latOriginNominal": 34.048092,
+          "declination": 20.0,
+          "lonmax": -118.4434629114931,
+          "latmax": 34.04835642330756,
+          "image": {
+            "innerMethod": "resourceToByteArray",
+            "params": "santaMonica.png"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "LocalMapPoint",
+      "instances": [
+        {
+          "x": -118.444142,
+          "y": 34.047880,
+          "arrayIndex": 0,
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          }
+        },
+        {
+          "x": -118.4434629114931,
+          "y": 34.047880,
+          "arrayIndex": 1,
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          }
+        },
+        {
+          "x": -118.4434629114931,
+          "y": 34.04788,
+          "arrayIndex": 2,
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          }
+        },
+        {
+          "x": -118.444142,
+          "y": 34.04788,
+          "arrayIndex": 3,
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "ZoneGroup",
+      "instances": [
+        {
+          "name": "On-Site",
+          "description": "Map Store Santa Monica On-Site",
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Off-Site",
+          "description": "Map Store Santa Monica Off-Site",
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "ZoneType",
+      "instances": [
+        {
+          "name": "Dressing Zone Type",
+          "zoneTypeCode": "DressingZoneType",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Sales Zone Type",
+          "zoneTypeCode": "SalesZoneType",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Stock Zone Type",
+          "zoneTypeCode": "StockZoneType",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Entrance Zone Type",
+          "zoneTypeCode": "EntranceZoneType",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "POE Zone Type",
+          "zoneTypeCode": "PoeZoneType",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "PoS Zone Type",
+          "zoneTypeCode": "PosZoneType",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "Zone",
+      "instances": [
+        {
+          "name": "Entrance",
+          "description": "Entrance",
+          "color": "#FF0000",
+          "code": "entrance",
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "zoneGroup": {
+            "innerClass": "ZoneGroup",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Off-Site"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "zoneType": {
+            "innerClass": "ZoneType",
+            "getter": "getByCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "EntranceZoneType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "ZonePoint",
+      "instances": [
+        {
+          "x": -118.443980544741,
+          "y": 34.048119816839275,
+          "arrayIndex": 0,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "entrance"
+          }
+        },
+        {
+          "x": -118.443972498113,
+          "y": 34.04810259330263,
+          "arrayIndex": 1,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "entrance"
+          }
+        },
+        {
+          "x": -118.443932724570,
+          "y": 34.048114422716736,
+          "arrayIndex": 2,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "entrance"
+          }
+        },
+        {
+          "x": -118.443940646881,
+          "y": 34.04813120659546,
+          "arrayIndex": 3,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "entrance"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "Zone",
+      "instances": [
+        {
+          "name": "PoS",
+          "description": "PoS",
+          "color": "#FF0000",
+          "code": "pos",
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "zoneGroup": {
+            "innerClass": "ZoneGroup",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "On-Site"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "zoneType": {
+            "innerClass": "ZoneType",
+            "getter": "getByCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "PosZoneType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "ZonePoint",
+      "instances": [
+        {
+          "x": -118.44393829994901,
+          "y": 34.04814426314336,
+          "arrayIndex": 0,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "pos"
+          }
+        },
+        {
+          "x": -118.44393071291418,
+          "y": 34.04812720146832,
+          "arrayIndex": 1,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "pos"
+          }
+        },
+        {
+          "x": -118.4439104720305,
+          "y": 34.04813315118781,
+          "arrayIndex": 2,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "pos"
+          }
+        },
+        {
+          "x": -118.44391784810527,
+          "y": 34.04815037471825,
+          "arrayIndex": 3,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "pos"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "Zone",
+      "instances": [
+        {
+          "name": "Stockroom",
+          "description": "Stockroom",
+          "color": "#FF0000",
+          "code": "stock",
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "zoneGroup": {
+            "innerClass": "ZoneGroup",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "On-Site"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "zoneType": {
+            "innerClass": "ZoneType",
+            "getter": "getByCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "StockZoneType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "ZonePoint",
+      "instances": [
+        {
+          "x": -118.44396414381346,
+          "y": 34.04826240930372,
+          "arrayIndex": 0,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "stock"
+          }
+        },
+        {
+          "x": -118.4439424738065,
+          "y": 34.0482158438294,
+          "arrayIndex": 1,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "stock"
+          }
+        },
+        {
+          "x": -118.44388656651233,
+          "y": 34.04823362294016,
+          "arrayIndex": 2,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "stock"
+          }
+        },
+        {
+          "x": -118.44390781742415,
+          "y": 34.0482776882189,
+          "arrayIndex": 3,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "stock"
+          }
+        },
+        {
+          "x": -118.44392070445531,
+          "y": 34.048283253696866,
+          "arrayIndex": 4,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "stock"
+          }
+        },
+        {
+          "x": -118.44395968030507,
+          "y": 34.04827165561227,
+          "arrayIndex": 5,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "stock"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "Zone",
+      "instances": [
+        {
+          "name": "Salesfloor",
+          "description": "Salesfloor",
+          "color": "#FF0000",
+          "code": "sales",
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "zoneGroup": {
+            "innerClass": "ZoneGroup",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "On-Site"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "zoneType": {
+            "innerClass": "ZoneType",
+            "getter": "getByCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SalesZoneType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "ZonePoint",
+      "instances": [
+        {
+          "x": -118.4438802149873,
+          "y": 34.0482288161938,
+          "arrayIndex": 0,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "sales"
+          }
+        },
+        {
+          "x": -118.4438541638471,
+          "y": 34.048170531850744,
+          "arrayIndex": 1,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "sales"
+          }
+        },
+        {
+          "x": -118.44374701635302,
+          "y": 34.04820320715321,
+          "arrayIndex": 2,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "sales"
+          }
+        },
+        {
+          "x": -118.44377259594499,
+          "y": 34.04826137303725,
+          "arrayIndex": 3,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "sales"
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "model",
+      "innerClass": "Zone",
+      "instances": [
+        {
+          "name": "DressingRoom",
+          "description": "Dressing Room",
+          "color": "#FF0000",
+          "code": "dressing",
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "zoneGroup": {
+            "innerClass": "ZoneGroup",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "On-Site"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "zoneType": {
+            "innerClass": "ZoneType",
+            "getter": "getByCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "DressingZoneType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "ZonePoint",
+      "instances": [
+        {
+          "x": -118.4440179169,
+          "y": 34.0481933691,
+          "arrayIndex": 0,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "dressing"
+          }
+        },
+        {
+          "x": -118.4439589083,
+          "y": 34.0482105926,
+          "arrayIndex": 1,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "dressing"
+          }
+        },
+        {
+          "x": -118.4439381211,
+          "y": 34.0481639224,
+          "arrayIndex": 2,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "dressing"
+          }
+        },
+        {
+          "x": -118.4439951181,
+          "y": 34.0481472545,
+          "arrayIndex": 3,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "dressing"
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "model",
+      "innerClass": "Zone",
+      "instances": [
+        {
+          "name": "POE",
+          "description": "Point of Exit",
+          "color": "#FF0000",
+          "code": "poe",
+          "localMap": {
+            "innerClass": "LocalMap",
+            "getter": "selectByCode",
+            "params": "Map Store Santa Monica"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "zoneGroup": {
+            "innerClass": "ZoneGroup",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "On-Site"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "zoneType": {
+            "innerClass": "ZoneType",
+            "getter": "getByCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "PoeZoneType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "model",
+      "innerClass": "ZonePoint",
+      "instances": [
+        {
+          "x": -118.4440259635,
+          "y": 34.0480741934,
+          "arrayIndex": 0,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "poe"
+          }
+        },
+        {
+          "x": -118.4439910948,
+          "y": 34.0480841941,
+          "arrayIndex": 1,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "poe"
+          }
+        },
+        {
+          "x": -118.4439830482,
+          "y": 34.0480641926,
+          "arrayIndex": 2,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "poe"
+          }
+        },
+        {
+          "x": -118.4440205991,
+          "y": 34.0480530806,
+          "arrayIndex": 3,
+          "zone": {
+            "innerClass": "Zone",
+            "getter": "getByCode",
+            "params": "poe"
+          }
+        }
+      ]
+    }
+
+  ],
+  "postProcess": [
+  ]
+}

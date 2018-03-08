@@ -1,0 +1,29 @@
+{
+  "dependsOn": "",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "tenantGroups",
+      "definitionFile": "tenantDefinition.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesDefinition.json"
+    },
+    {
+      "module": "reports",
+      "definitionFile": "reportDefinition.json"
+    },
+    {
+      "module": "usersAndRoles",
+      "definitionFile": "userDefinition.json"
+    },
+    {
+      "module": "bridgesAndConnections",
+      "definitionFile": "bridgesDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

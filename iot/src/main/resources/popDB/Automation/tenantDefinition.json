@@ -1,0 +1,540 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Mojix Retail",
+          "code": "mojix",
+          "description": "",
+          "hierarchyName": ">mojix",
+          "treeLevel": 2,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByName",
+            "params": "Company"
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          }
+        }
+
+      ]
+    },
+    {
+      "moduleName": "tenantGroupTypes",
+      "innerClass": "GroupType",
+      "instances": [
+        {
+          "name": "Store",
+          "code": "Store",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "description": null,
+          "archived": false,
+          "parent": {
+            "innerClass": "GroupType",
+            "getter": "getByName",
+            "params": "Company"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Santa Monica",
+          "code": "SM",
+          "description": null,
+          "hierarchyName": ">mojix>SM",
+          "treeLevel": 3,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByName",
+            "params": "Store"
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroupTypes",
+      "innerClass": "GroupType",
+      "instances": [
+        {
+          "name": "Department",
+          "code": "Department",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "description": null,
+          "archived": false,
+          "parent": {
+            "innerClass": "GroupType",
+            "getter": "getByName",
+            "params": "Store"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Front-end",
+          "code": "FE",
+          "description": null,
+          "hierarchyName": ">mojix>SM>FE",
+          "treeLevel": 4,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByName",
+            "params": "Department"
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM",
+            "classLevel": 2
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "parentLevel4": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "FE"
+          }
+        },
+        {
+          "name": "Stocking",
+          "code": "S",
+          "description": null,
+          "hierarchyName": ">mojix>SM>S",
+          "treeLevel": 4,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByName",
+            "params": "Department"
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM",
+            "classLevel": 2
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "parentLevel4": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "S"
+          }
+        },
+        {
+          "name": "Clothing",
+          "code": "C",
+          "description": null,
+          "hierarchyName": ">mojix>SM>C",
+          "treeLevel": 4,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByName",
+            "params": "Department"
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM",
+            "classLevel": 2
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "parentLevel4": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "C"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Discovered",
+          "code": "SF",
+          "description": "",
+          "hierarchyName": ">SF",
+          "treeLevel": 2,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByName",
+            "params": "Company"
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          }
+        }
+
+      ]
+    },
+    {
+      "moduleName": "groupFields",
+      "innerClass": "GroupField",
+      "instances": [
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "thing"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "thingType"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "zone"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "localMap"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "report"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "logicalReader"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "shift"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "zoneType"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "edgeBox"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "zoneGroup"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Blockchain Azure Cloud",
+          "code": "BAC",
+          "description": "",
+          "hierarchyName": ">Blockchain Azure Cloud",
+          "treeLevel": 2,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "BAC"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroupTypes",
+      "innerClass": "GroupType",
+      "instances": [
+        {
+          "name": "Consortium",
+          "code": "Consortium",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "BAC"
+          },
+          "description": null,
+          "archived": false,
+          "parent": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Network Retail Supply Chain",
+          "code": "NRSC",
+          "description": null,
+          "hierarchyName": ">Blockchain Azure Cloud>NRSC",
+          "treeLevel": 3,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Consortium"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "BAC"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "BAC"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "BAC"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

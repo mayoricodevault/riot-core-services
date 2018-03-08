@@ -1,0 +1,1 @@
+Temporary folder that contains the files of the shell commands and results.

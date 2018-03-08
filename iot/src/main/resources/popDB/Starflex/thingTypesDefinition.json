@@ -1,0 +1,3646 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingType",
+      "instances": [
+        {
+          "name": "STARflex Config",
+          "thingTypeCode": "STR_400",
+          "archived": false,
+          "autoCreate": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "STARflex Config"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          }
+        },
+        {
+          "name": "Starflex Status",
+          "thingTypeCode": "starflex_status_code",
+          "archived": false,
+          "autoCreate": true,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByCode",
+            "params": "Starflex Status"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          }
+        },
+        {
+          "name": "Starflex",
+          "thingTypeCode": "flextag_code",
+          "archived": false,
+          "autoCreate": true,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByCode",
+            "params": "Starflex"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypeFields",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "multiple": false,
+          "name": "hostName",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "hostName"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "macId",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "macId"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "releaseLabel",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "releaseLabel"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "firmwareVersion",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "firmwareVersion"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "apiVersion",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "apiVersion"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "deviceType",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "deviceType"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "webServerVersion",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "webServerVersion"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--lo__0__--address",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--lo__0__--address"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--lo__0__--family",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--lo__0__--family"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--lo__0__--internal",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--lo__0__--internal"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--lo__1__--address",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--lo__1__--address"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--lo__1__--family",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--lo__1__--family"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--lo__1__--internal",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--lo__1__--internal"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0__0__--address",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0__0__--address"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0__0__--family",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0__0__--family"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0__0__--internal",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0__0__--internal"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0__1__--address",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0__1__--address"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0__1__--family",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0__1__--family"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0__1__--internal",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0__1__--internal"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0:1__0__--address",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0:1__0__--address"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0:1__0__--family",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0:1__0__--family"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "netIfs--eth0:1__0__--internal",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0:1__0__--internal"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "latestMQTTClientMsg",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "latestMQTTClientMsg"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "latestMQTTClientMsg--level",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "latestMQTTClientMsg--level"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "latestMQTTClientMsg--msg",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "latestMQTTClientMsg--msg"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "latestMQTTClientMsg--ts_ms",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "latestMQTTClientMsg--ts_ms"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "latestMQTTClientMsg--metaData--type",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "latestMQTTClientMsg--metaData--type"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "latestMQTTClientMsg--metaData--myID",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "latestMQTTClientMsg--metaData--myID"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "jurisdiction",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "jurisdiction"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "cpuUtilization",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "cpuUtilization"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "ledStatus",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ledStatus"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "freeFlash",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "freeFlash"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "state",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "state"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "activeRFIDProgramName",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "activeRFIDProgramName"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "bridge_code",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "bridge_code"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "bridge_tag_code",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "bridge_tag_code"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "metaData_type",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "metaData_type"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "discoveryDate",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "discoveryDate"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "claimDate",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "claimDate"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "modifiedDate",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "modifiedDate"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "mqtt_subscription_name",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_subscription_name"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "mqtt_subscription_body",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_subscription_body"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "defaultValue": "starflex.mojix.com",
+          "multiple": false,
+          "name": "mqtt_host",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_host"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "defaultValue": "1883",
+          "multiple": false,
+          "name": "mqtt_port",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_port"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+
+
+        {
+          "name": "mqtt_username",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_username"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "mqtt_password",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_password"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+
+
+
+        {
+          "defaultValue": "/v1/flex/${serialNumber}/data",
+          "multiple": false,
+          "name": "mqtt_topic_data",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_topic_data"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "FORMULA"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "defaultValue": "/v1/flex/${serialNumber}/interesting_events",
+          "multiple": false,
+          "name": "mqtt_topic_interesting_events",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_topic_interesting_events"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "FORMULA"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "defaultValue": "/v1/flex/${serialNumber}/request",
+          "multiple": false,
+          "name": "mqtt_topic_req",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_topic_req"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "FORMULA"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "defaultValue": "/v1/flex/${serialNumber}/response",
+          "multiple": false,
+          "name": "mqtt_topic_res",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mqtt_topic_res"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "FORMULA"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--ports__0__--PORT_1",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--ports__0__--PORT_1"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--ports__1__--PORT_2",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--ports__1__--PORT_2"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--ports__2__--PORT_3",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--ports__2__--PORT_3"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--ports__3__--PORT_4",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--ports__3__--PORT_4"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__0__--type",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__0__--type"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__0__--id",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__0__--id"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__0__--enode",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__0__--enode"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__0__--bsp",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__0__--bsp"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__1__--type",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__1__--type"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__1__--id",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__1__--id"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__1__--enode",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__1__--enode"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__1__--bsp",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__1__--bsp"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__2__--type",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__2__--type"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__2__--id",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__2__--id"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__2__--enode",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__2__--enode"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "topology--devices__2__--bsp",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "topology--devices__2__--bsp"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "license",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "license"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "license__0__--featurePack",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "license__0__--featurePack"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "license__1__--featurePack",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "license__1__--featurePack"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "license__1__--options--expire",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "license__1__--options--expire"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "license__1__--options--upgrade",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "license__1__--options--upgrade"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "license__2__--featurePack",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "license__2__--featurePack"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "license__2__--options--maxDoors",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "license__2__--options--maxDoors"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "STARflex Config"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "STR_400"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "cpuUtilPercent",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "cpuUtilPercent"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "loadAvg_0_",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "loadAvg_0_"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "loadAvg_1_",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "loadAvg_1_"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "loadAvg_2_",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "loadAvg_2_"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "metaData_myID",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "metaData_myID"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "temperature_c_",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "temperature_c_"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "temperature_f_",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "temperature_f_"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "freeMem",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "freeMem"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "totMem",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "totMem"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "ts_ms",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ts_ms"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "tz",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tz"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "upTime_sec",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "upTime_sec"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "wallclock",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "wallclock"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex H&S"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "starflex_status_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "location",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "location"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "COORDINATES"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "locationXYZ",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "locationXYZ"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "XYZ"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "thingReader",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thingReader"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "TxID",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "TxID"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "zone",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "ZONE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "lastDetectTime",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastDetectTime"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "txAntennaPort",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "txAntennaPort"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "txExpanderPort",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "txExpanderPort"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "transmitSource",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "transmitSource"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "macId",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "macId"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "datestamp",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "datestamp"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "round",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "round"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "rssi",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "rssi"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "preambleQuality",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "preambleQuality"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "decoderQuality",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "decoderQuality"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "vgaValues",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "vgaValues"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "numBits",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "numBits"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "rxPhasors",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "rxPhasors"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "digitalGain",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "digitalGain"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "alias",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "alias"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "filter",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "filter"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "source",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "source"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "logicalReader",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "logicalReader"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": true,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "LOGICAL_READER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "tsCoreIn",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tsCoreIn"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "tsEdgeIn",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tsEdgeIn"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "doorEvent",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "doorEvent"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        },
+        {
+          "multiple": false,
+          "name": "lastLocateTime",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastLocateTime"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "Starflex tag"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "typeParent": "DATA_TYPE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "flextag_code"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

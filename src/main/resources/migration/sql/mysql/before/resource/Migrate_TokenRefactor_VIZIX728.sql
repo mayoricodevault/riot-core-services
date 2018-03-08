@@ -1,0 +1,1 @@
+ALTER TABLE token ADD tokenActive BOOLEAN NOT NULL DEFAULT TRUE AFTER creationTime;

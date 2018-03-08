@@ -1,0 +1,1 @@
+ALTER TABLE edgeboxRule ADD COLUMN serialExecution bit(1) DEFAULT 0;

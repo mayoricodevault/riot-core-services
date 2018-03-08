@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <!--
+    # As a Recommendation do not put hibernate, cassandra, mqtt or other properties in this file
+    # THESE VALUES NOW COME FROM: (LOAD order)
+    # 1. hibernate.properties (this file is recommended to be empty of hibernate connection/dialect properties)
+    # 2. hibernate.cfg.xml (this file is recommended to be empty of hibernate connection/dialect properties)
+    # 3. conf.properties derived file from gradle-default.properties automatically on build process
+    # 4. web.xml (this file should is recommended to be empty of hibernate, cassandra, mqtt, other connection properties)
+    # 5. TOMCAT context.xml defined in CATALINA_HOME/conf
+    # 6. -D property setting from a command line switch (e.g. popdb)
+    # (HIGHER load order overrides LOWER load order, meaning has HIGHER priority)
+    -->
+
+    <!--
+ <context-param>
+    <param-name>mqtt.host</param-name>
+    <param-value>localhost</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>mqtt.port</param-name>
+    <param-value>1883</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>cassandra.host</param-name>
+    <param-value>localhost</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>cassandra.port</param-name>
+    <param-value>9160</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>cassandra.keyspace</param-name>
+    <param-value>riot_main</param-value>
+  </context-param>
+  
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/riot_ds</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  -->
+
+  <listener>
+    <listener-class>
+      com.tierconnect.riot.iot.servlet.AppcoreContextListener
+    </listener-class>
+  </listener>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <!-- 403 = access denied -->
+<!--
+  <error-page>
+    <error-code>403</error-code>
+    <location>/public/403.jspx</location>
+  </error-page>
+-->
+
+  <!-- RestEasy -->
+  <!-- Auto scan REST service -->
+<!--   
+  <context-param>
+    <param-name>resteasy.scan</param-name>
+    <param-value>true</param-value>
+  </context-param>
+ -->
+  <!-- this need same with resteasy servlet url-pattern -->
+  <context-param>
+		<param-name>javax.ws.rs.core.Application</param-name>
+		<param-value>com.tierconnect.riot.iot.servlet.RiotRestEasyApplication</param-value>
+	</context-param>
+  
+  <context-param>
+    <param-name>resteasy.servlet.mapping.prefix</param-name>
+    <param-value>/api</param-value>
+  </context-param>
+
+<!--
+	<listener>
+	   <listener-class>com.tierconnect.riot.iot.servlet.EdgeboxConfigMqttListenerner</listener-class>
+	</listener>
+-->
+
+  <listener>
+    <listener-class>
+      org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
+    </listener-class>
+  </listener>
+
+  <servlet>
+    <servlet-name>resteasy-servlet</servlet-name>
+    <servlet-class>
+      org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+    </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>resteasy-servlet</servlet-name>
+    <url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+  <!-- RestEasy End-->
+
+	<servlet>
+		<servlet-name>imageServlet</servlet-name>
+	    <servlet-class>com.tierconnect.riot.iot.servlet.ImageServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>imageServletFacility</servlet-name>
+	    <servlet-class>com.tierconnect.riot.iot.servlet.ImageServletMap</servlet-class>
+	</servlet>
+
+    <servlet>
+        <servlet-name>thingImageServlet</servlet-name>
+        <servlet-class>com.tierconnect.riot.iot.servlet.ThingImageServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>groupImageServlet</servlet-name>
+        <servlet-class>com.tierconnect.riot.iot.servlet.GroupImageServlet</servlet-class>
+    </servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>imageServlet</servlet-name>
+	    <url-pattern>/imageServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>imageServletFacility</servlet-name>
+	    <url-pattern>/imageServletFacility</url-pattern>
+	</servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>groupImageServlet</servlet-name>
+        <url-pattern>/groupImageServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>thingImageServlet</servlet-name>
+        <url-pattern>/thingImageServlet/*</url-pattern>
+    </servlet-mapping>
+
+  <!-- CORS -->
+  <filter>
+    <filter-name>CORS</filter-name>
+    <filter-class>com.tierconnect.riot.utils.ViZixCORSFilter</filter-class>
+
+    <init-param>
+      <param-name>cors.allowOrigin</param-name>
+      <param-value>*</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>cors.supportedMethods</param-name>
+      <param-value>GET, POST, HEAD, PATCH, PUT, DELETE, OPTIONS</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CORS</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- CORS End -->
+
+
+  <!--  Transaction Filter Start -->
+  <!-- 
+  <filter>
+    <filter-name>TransactionFilter</filter-name>
+    <filter-class>com.tierconnect.riot.ccc.transaction.TransactionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>TransactionFilter</filter-name>
+    <url-pattern>/api/*</url-pattern>
+  </filter-mapping>
+   -->
+  <!--  Transaction Filter End -->
+  
+  <!-- Swagger -->
+  <context-param>
+		<param-name>resteasy.resources</param-name>
+		<param-value>com.wordnik.swagger.jaxrs.listing.ApiListingResourceJSON</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>resteasy.providers</param-name>
+		<param-value>
+    			com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider
+    			,com.wordnik.swagger.jaxrs.listing.ResourceListingProvider
+    	</param-value>
+	</context-param>
+	
+    <session-config>
+      <session-timeout>1</session-timeout>
+    </session-config>
+	
+	<servlet>
+		<servlet-name>DefaultJaxrsConfig</servlet-name>
+		<servlet-class>com.wordnik.swagger.jaxrs.config.DefaultJaxrsConfig</servlet-class>
+		<init-param>
+			<param-name>api.version</param-name>
+			<param-value>1.0.0</param-value>
+		</init-param>
+		<init-param>
+			<param-name>swagger.api.basepath</param-name>
+			<param-value>/riot-core-services/api</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+    <servlet-mapping>
+        <servlet-name>DefaultJaxrsConfig</servlet-name>
+        <url-pattern>/riot-core-services/api</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+

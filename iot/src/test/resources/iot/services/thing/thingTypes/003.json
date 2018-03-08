@@ -1,0 +1,57 @@
+{
+  "serialFormula": "",
+  "group.id": 3,
+  "name": "CustomTT003",
+  "child.ids": [
+  ],
+  "isParent": false,
+  "thingTypeTemplateId": 1,
+  "thingTypeCode": "CustomTT003",
+  "autoCreate": false,
+  "fields": [
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "strStdUDF",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 1,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "a default string",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "zoneNativeUDF",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 9,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "thingTypeAttribute",
+      "symbol": "",
+      "timeSeries": true,
+      "typeParent": "NATIVE_THING_TYPE",
+      "type": 27,
+      "dataTypeThingTypeId": 11,
+      "defaultValue": "",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "attributeSequence",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 25,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "",
+      "multiple": false
+    }
+  ]
+}

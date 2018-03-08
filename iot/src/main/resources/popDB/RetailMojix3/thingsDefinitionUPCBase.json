@@ -1,0 +1,2007 @@
+{
+    "preProcess": [],
+    "executeModules": [
+        {
+            "moduleName": "CustomThing",
+            "innerClass": "CustomThing",
+            "instances": [
+                {
+                    "name": "5686964",
+                    "serial": "5686964",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1950"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "4"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialC"
+                        },
+                        "color": {
+                            "value": "Faded Orange"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#F1792F"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1261"
+                        }
+                    }
+                },
+                {
+                    "name": "9729834",
+                    "serial": "9729834",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "10900"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "2"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialC"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1135"
+                        }
+                    }
+                },
+                {
+                    "name": "2677392",
+                    "serial": "2677392",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "12900"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "2"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialC"
+                        },
+                        "color": {
+                            "value": "Silver"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#8D8D8D"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1967N"
+                        }
+                    }
+                },
+                {
+                    "name": "6094133",
+                    "serial": "6094133",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1700"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "3"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialC"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "2421"
+                        }
+                    }
+                },
+                {
+                    "name": "2379197",
+                    "serial": "2379197",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "49900"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "2"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialC"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "4075"
+                        }
+                    }
+                },
+                {
+                    "name": "9397354",
+                    "serial": "9397354",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1950"
+                        },
+                        "size": {
+                            "value": "50-52"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Brown"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#6D3919"
+                        },
+                        "upcCategoryCode": {
+                            "value": "4003B"
+                        }
+                    }
+                },
+                {
+                    "name": "9406179",
+                    "serial": "9406179",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1950"
+                        },
+                        "size": {
+                            "value": "46-48"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Brown"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#6D3919"
+                        },
+                        "upcCategoryCode": {
+                            "value": "4003B"
+                        }
+                    }
+                },
+                {
+                    "name": "25428841",
+                    "serial": "25428841",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1950"
+                        },
+                        "size": {
+                            "value": "42-44"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Brown"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#6D3919"
+                        },
+                        "upcCategoryCode": {
+                            "value": "4003B"
+                        }
+                    }
+                },
+                {
+                    "name": "8820945",
+                    "serial": "8820945",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "199"
+                        },
+                        "size": {
+                            "value": "X"
+                        },
+                        "min": {
+                            "value": "7"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Charcoal"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0836C"
+                        }
+                    }
+                },
+                {
+                    "name": "8590695",
+                    "serial": "8590695",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2100"
+                        },
+                        "size": {
+                            "value": "M"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Brown"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#6D3919"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0910O"
+                        }
+                    }
+                },
+                {
+                    "name": "9329676",
+                    "serial": "9329676",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "799"
+                        },
+                        "size": {
+                            "value": "X"
+                        },
+                        "min": {
+                            "value": "10"
+                        },
+                        "max": {
+                            "value": "15"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Brown Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#6D3919"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0801A"
+                        }
+                    }
+                },
+                {
+                    "name": "8324948",
+                    "serial": "8324948",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "199"
+                        },
+                        "size": {
+                            "value": "L-XL"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Grey Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#8D8D8D"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0900M"
+                        }
+                    }
+                },
+                {
+                    "name": "3527672",
+                    "serial": "3527672",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "750"
+                        },
+                        "size": {
+                            "value": "30-32"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0920O"
+                        }
+                    }
+                },
+                {
+                    "name": "21030604",
+                    "serial": "21030604",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "109"
+                        },
+                        "size": {
+                            "value": "X"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Blue Marl"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1120M"
+                        }
+                    }
+                },
+                {
+                    "name": "9865754",
+                    "serial": "9865754",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "149"
+                        },
+                        "size": {
+                            "value": "M"
+                        },
+                        "min": {
+                            "value": "7"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Navy Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1123M"
+                        }
+                    }
+                },
+                {
+                    "name": "21030598",
+                    "serial": "21030598",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "109"
+                        },
+                        "size": {
+                            "value": "L"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Blue Marl"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1120M"
+                        }
+                    }
+                },
+                {
+                    "name": "1767667",
+                    "serial": "1767667",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "199"
+                        },
+                        "size": {
+                            "value": "X"
+                        },
+                        "min": {
+                            "value": "7"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialA"
+                        },
+                        "color": {
+                            "value": "Blue Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1921B"
+                        }
+                    }
+                },
+                {
+                    "name": "2339498",
+                    "serial": "2339498",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2950"
+                        },
+                        "size": {
+                            "value": "17.5"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Lilac Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#9C00B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1089U"
+                        }
+                    }
+                },
+                {
+                    "name": "9329720",
+                    "serial": "9329720",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2950"
+                        },
+                        "size": {
+                            "value": "15.5"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Navy Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1089I"
+                        }
+                    }
+                },
+                {
+                    "name": "9336483",
+                    "serial": "9336483",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2950"
+                        },
+                        "size": {
+                            "value": "17.5"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Navy Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1089I"
+                        }
+                    }
+                },
+                {
+                    "name": "9333550",
+                    "serial": "9333550",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2950"
+                        },
+                        "size": {
+                            "value": "16"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Navy Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1089I"
+                        }
+                    }
+                },
+                {
+                    "name": "2373737",
+                    "serial": "2373737",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2950"
+                        },
+                        "size": {
+                            "value": "18"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Navy Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "P001"
+                        }
+                    }
+                },
+                {
+                    "name": "2336404",
+                    "serial": "2336404",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2950"
+                        },
+                        "size": {
+                            "value": "16"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Lilac Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#9C00B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1089U"
+                        }
+                    }
+                },
+                {
+                    "name": "2375021",
+                    "serial": "2375021",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2950"
+                        },
+                        "size": {
+                            "value": "18.5"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Navy Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1089U"
+                        }
+                    }
+                },
+                {
+                    "name": "2132853",
+                    "serial": "2132853",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "99"
+                        },
+                        "size": {
+                            "value": "15.5"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Purple Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#9C00B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0001O"
+                        }
+                    }
+                },
+                {
+                    "name": "2132860",
+                    "serial": "2132860",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "99"
+                        },
+                        "size": {
+                            "value": "16"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Purple Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#9C00B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0001O"
+                        }
+                    }
+                },
+                {
+                    "name": "2132778",
+                    "serial": "2132778",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "99"
+                        },
+                        "size": {
+                            "value": "14.5"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialB"
+                        },
+                        "color": {
+                            "value": "Purple Mix"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#9C00B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0001O"
+                        }
+                    }
+                },
+                {
+                    "name": "3279465",
+                    "serial": "3279465",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "7500"
+                        },
+                        "size": {
+                            "value": "40"
+                        },
+                        "min": {
+                            "value": "3"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Charcoal"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1269"
+                        }
+                    }
+                },
+                {
+                    "name": "3279915",
+                    "serial": "3279915",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "7500"
+                        },
+                        "size": {
+                            "value": "42"
+                        },
+                        "min": {
+                            "value": "3"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Charcoal"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1269"
+                        }
+                    }
+                },
+                {
+                    "name": "9442146",
+                    "serial": "9442146",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "4500"
+                        },
+                        "size": {
+                            "value": "44"
+                        },
+                        "min": {
+                            "value": "3"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0985T"
+                        }
+                    }
+                },
+                {
+                    "name": "9442788",
+                    "serial": "9442788",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "4500"
+                        },
+                        "size": {
+                            "value": "46"
+                        },
+                        "min": {
+                            "value": "3"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0985T"
+                        }
+                    }
+                },
+                {
+                    "name": "9444669",
+                    "serial": "9444669",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "4500"
+                        },
+                        "size": {
+                            "value": "48"
+                        },
+                        "min": {
+                            "value": "3"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0985T"
+                        }
+                    }
+                },
+                {
+                    "name": "8769022",
+                    "serial": "8769022",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "6400"
+                        },
+                        "size": {
+                            "value": "38"
+                        },
+                        "min": {
+                            "value": "3"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "2582T"
+                        }
+                    }
+                },
+                {
+                    "name": "8764294",
+                    "serial": "8764294",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "6400"
+                        },
+                        "size": {
+                            "value": "36"
+                        },
+                        "min": {
+                            "value": "3"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Black"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#000000"
+                        },
+                        "upcCategoryCode": {
+                            "value": "2582T"
+                        }
+                    }
+                },
+                {
+                    "name": "20467685",
+                    "serial": "20467685",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "3500"
+                        },
+                        "size": {
+                            "value": "L"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "3"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "PinK"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FF9E94"
+                        },
+                        "upcCategoryCode": {
+                            "value": "2379S"
+                        }
+                    }
+                },
+                {
+                    "name": "2412283",
+                    "serial": "2412283",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2250"
+                        },
+                        "size": {
+                            "value": "L"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "3"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Royal Blue"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "6968I"
+                        }
+                    }
+                },
+                {
+                    "name": "2458021",
+                    "serial": "2458021",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "2250"
+                        },
+                        "size": {
+                            "value": "L"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "3"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Royal Blue"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "6968I"
+                        }
+                    }
+                },
+                {
+                    "name": "20491604",
+                    "serial": "20491604",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "3500"
+                        },
+                        "size": {
+                            "value": "M"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "3"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Purple"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#9C00B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "2379S"
+                        }
+                    }
+                },
+                {
+                    "name": "20448066",
+                    "serial": "20448066",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "3500"
+                        },
+                        "size": {
+                            "value": "S"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "3"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Blue"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "2379S"
+                        }
+                    }
+                },
+                {
+                    "name": "9022669",
+                    "serial": "9022669",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "7900"
+                        },
+                        "size": {
+                            "value": "40"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Navy"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "3831"
+                        }
+                    }
+                },
+                {
+                    "name": "9022676",
+                    "serial": "9022676",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "7900"
+                        },
+                        "size": {
+                            "value": "38"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Navy"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "3831"
+                        }
+                    }
+                },
+                {
+                    "name": "9581135",
+                    "serial": "9581135",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "7900"
+                        },
+                        "size": {
+                            "value": "36"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Navy"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#0084B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "3831"
+                        }
+                    }
+                },
+                {
+                    "name": "9983434",
+                    "serial": "9983434",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1299"
+                        },
+                        "size": {
+                            "value": "28"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Grey"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#8D8D8D"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0504A"
+                        }
+                    }
+                },
+                {
+                    "name": "20093594",
+                    "serial": "20093594",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1299"
+                        },
+                        "size": {
+                            "value": "32"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Grey"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#8D8D8D"
+                        },
+                        "upcCategoryCode": {
+                            "value": "0504A"
+                        }
+                    }
+                },
+                {
+                    "name": "3695906",
+                    "serial": "3695906",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "649"
+                        },
+                        "size": {
+                            "value": "38"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "7"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Neutral"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#8D8D8D"
+                        },
+                        "upcCategoryCode": {
+                            "value": "2608Q"
+                        }
+                    }
+                },
+                {
+                    "name": "1637410",
+                    "serial": "1637410",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "100"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "10"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "No Color"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FFFFFF"
+                        },
+                        "upcCategoryCode": {
+                            "value": "7700"
+                        }
+                    }
+                },
+                {
+                    "name": "9710726",
+                    "serial": "9710726",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "10"
+                        },
+                        "max": {
+                            "value": "20"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "No Color"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FFFFFF"
+                        },
+                        "upcCategoryCode": {
+                            "value": "8206"
+                        }
+                    }
+                },
+                {
+                    "name": "9730021",
+                    "serial": "9730021",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "22900"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "2"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "No Color"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FFFFFF"
+                        },
+                        "upcCategoryCode": {
+                            "value": "8400"
+                        }
+                    }
+                },
+                {
+                    "name": "6817749",
+                    "serial": "6817749",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "17900"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "2"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "No Color"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FFFFFF"
+                        },
+                        "upcCategoryCode": {
+                            "value": "9207"
+                        }
+                    }
+                },
+                {
+                    "name": "9767454",
+                    "serial": "9767454",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "10"
+                        },
+                        "max": {
+                            "value": "20"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "No Color"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FFFFFF"
+                        },
+                        "upcCategoryCode": {
+                            "value": "8503"
+                        }
+                    }
+                },
+                {
+                    "name": "1002676",
+                    "serial": "1002676",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "100"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "15"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "No Color"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FFFFFF"
+                        },
+                        "upcCategoryCode": {
+                            "value": "9903"
+                        }
+                    }
+                },
+                {
+                    "name": "7380242",
+                    "serial": "7380242",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1400"
+                        },
+                        "size": {
+                            "value": "8"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "7"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "PinK"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FF9E94"
+                        },
+                        "upcCategoryCode": {
+                            "value": "67"
+                        }
+                    }
+                },
+                {
+                    "name": "7152337",
+                    "serial": "7152337",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "3050"
+                        },
+                        "size": {
+                            "value": "5"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "MedIUM RED"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FD3A2F"
+                        },
+                        "upcCategoryCode": {
+                            "value": "56"
+                        }
+                    }
+                },
+                {
+                    "name": "2993676",
+                    "serial": "2993676",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "800"
+                        },
+                        "size": {
+                            "value": "14"
+                        },
+                        "min": {
+                            "value": "2"
+                        },
+                        "max": {
+                            "value": "5"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Lilac"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#9C00B6"
+                        },
+                        "upcCategoryCode": {
+                            "value": "1314"
+                        }
+                    }
+                },
+                {
+                    "name": "8838568",
+                    "serial": "8838568",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1"
+                        },
+                        "size": {
+                            "value": "1SIZE"
+                        },
+                        "min": {
+                            "value": "10"
+                        },
+                        "max": {
+                            "value": "20"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "No Color"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FFFFFF"
+                        },
+                        "upcCategoryCode": {
+                            "value": "3050"
+                        }
+                    }
+                },
+                {
+                    "name": "7380211",
+                    "serial": "7380211",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1200"
+                        },
+                        "size": {
+                            "value": "5"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "7"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "PinK"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FF9E94"
+                        },
+                        "upcCategoryCode": {
+                            "value": "67"
+                        }
+                    }
+                },
+                {
+                    "name": "7380358",
+                    "serial": "7380358",
+                    "thingTypeCode": "upc",
+                    "groupHierarchyCode": ">mojix>SM",
+                    "udfs": {
+                        "price": {
+                            "value": "1000"
+                        },
+                        "size": {
+                            "value": "3"
+                        },
+                        "min": {
+                            "value": "5"
+                        },
+                        "max": {
+                            "value": "7"
+                        },
+                        "brand": {
+                            "value": "The Brand"
+                        },
+                        "material": {
+                            "value": "materialL"
+                        },
+                        "color": {
+                            "value": "Wine"
+                        },
+                        "colorHexadecimal": {
+                            "value": "#FD3A2F"
+                        },
+                        "upcCategoryCode": {
+                            "value": "67"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "postProcess": []
+}

@@ -1,0 +1,320 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Mojix Retail",
+          "code": "mojix",
+          "description": "",
+          "hierarchyName": ">mojix",
+          "treeLevel": 2,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroupTypes",
+      "innerClass": "GroupType",
+      "instances": [
+        {
+          "name": "Store",
+          "code": "Store",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "description": null,
+          "archived": false,
+          "parent": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Santa Monica",
+          "code": "SM",
+          "description": null,
+          "hierarchyName": ">mojix>SM",
+          "treeLevel": 3,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroupTypes",
+      "innerClass": "GroupType",
+      "instances": [
+        {
+          "name": "Department",
+          "code": "Department",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "description": null,
+          "archived": false,
+          "parent": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "Front-end",
+          "code": "FE",
+          "description": null,
+          "hierarchyName": ">mojix>SM>FE",
+          "treeLevel": 4,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Department"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM",
+            "classLevel": 2
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "parentLevel4": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "FE"
+          }
+        },
+        {
+          "name": "Stocking",
+          "code": "S",
+          "description": null,
+          "hierarchyName": ">mojix>SM>S",
+          "treeLevel": 4,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Department"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM",
+            "classLevel": 2
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "parentLevel4": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "S"
+          }
+        },
+        {
+          "name": "Clothing",
+          "code": "C",
+          "description": null,
+          "hierarchyName": ">mojix>SM>C",
+          "treeLevel": 4,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Department"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM",
+            "classLevel": 2
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "parentLevel4": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "C"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,178 @@
+
+
+
+<html>
+
+
+<pre>
+
+Directory Layout
+----------------
+
+/public/appcore
+/public/flow
+/public/scrap
+
+/secure/appcore
+/secure/scrap
+/secure/flow
+
+/protected/appcore
+/protected/flow
+/protected/scrap
+
+
+/public/*        - requires nothing ( welcome page, logon page, error pages, etc.)
+/protected/*     - requires userPriciple (or remoteUser)
+/private/*       - requires userPriciple and UserSession (i.e., must be "logged in") (application pages)
+
+
+/public/skins/default/images
+/public/skins/default/site.css
+/public/[project]
+
+/protected/[project]
+
+/private/[project]/skins/default/images
+/private/[project]/skins/default/site.css
+
+/private/[project]/skins/skin1/images
+/private/[project]/skins/skin1/site.css
+
+/private/[project]/skins/skin2/images
+/private/[project]/skins/skin2/site.css
+
+
+
+</pre>
+
+<pre>
+Models
+-archive support
+-hierarchal support
+-null String support for Oracle
+
+DAOs
+-CRUD support
+- select List by List support (i.e.select all parts givena List of Groups)
+
+Services
+-CRUD Support
+
+Actions
+
+JSPs
+-skins/branding
+-GUI Componenets
+ -Table Tool (displayTag)
+ -Tree Tool
+ -Group Selector
+ -Calendar Tool
+ -HHMMSS Tool
+ -Timer tool
+ 
+Spec Support
+
+Lists
+- filters (nested properties)
+  - save to database 
+- sorts (operands)
+- table
+  - paginated results
+  - sortable columns
+  - add/edit buttons
+  - checkboxes and submit button support (e.g show items on map)
+  
+  
+Forms
+- CRUD Buttons
+- Archive button
+- textbox
+- textarea
+- select lists
+
+IOC
+- spring
+- transaction demarcation
+
+AutoGen Java
+
+Concerns
+--------
+- validation (view,actions,services,dao)
+- error handling
+- message propagation to views
+-i18n
+  - jsps
+  - actions
+  - services and daos
+  - generate MessagesBundle.properties
+- multi-tenant
+- multi-server
+  - transparent failover
+  - do not write to disk
+  - hibernate config
+  
+Webapp
+-------
+-UserSession Filter
+-Logon, security cntrinats and SSO
+ -webapp dir structure
+ 
+Other
+-----
+-POPDB (install,dev,test)
+-Build System
+-Unit Testing
+-Quartz
+-JMS
+
+Usage
+-----
+-sdk.appcore/app interplay (appsuite, plugin architecture ?)
+
+Major SubSystems
+----------------
+Permissioning
+Configuration
+Licensing
+Charting
+Reporting
+Relations
+Map
+Help
+Events
+Alerts
+Units
+Import/Export
+Batch Integration
+- dowload scheduler
+- upload scheduler
+- ftp
+- jms
+
+
+
+Biz Logic Componenets
+---------------------
+
+GroupTypes and Groups
+
+Roles and Resources
+
+Users and UserGroupRoles
+
+Parts
+-Parts
+-PartBoms
+-PartInstances
+
+
+Misc
+
+- skin support
+- branding support (like skins but just one or two images)
+
+</pre>
+
+</html>

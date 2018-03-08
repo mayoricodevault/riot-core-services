@@ -1,0 +1,32 @@
+{
+  "_id": 44,
+  "groupTypeId": 3,
+  "groupTypeName": "Store",
+  "groupTypeCode": "Store",
+  "groupId": 3,
+  "groupCode": "SM",
+  "groupName": "Santa Monica",
+  "thingTypeId": 11,
+  "thingTypeCode": "Colour",
+  "thingTypeName": "ColorFile",
+  "name": "CTA007",
+  "serialNumber": "CTA007",
+  "modifiedTime": "2017-07-27T13:59:00.511Z",
+  "createdTime": "2017-07-27T13:59:00.511Z",
+  "time": "2017-07-27T13:59:00.472Z",
+  "Action": {
+    "thingTypeFieldId": 78,
+    "time": "2017-07-27T13:59:00.472Z",
+    "value": "an action from Thing Type As Attribute"
+  },
+  "Description": {
+    "thingTypeFieldId": 80,
+    "time": "2017-07-27T13:59:00.472Z",
+    "value": "node"
+  },
+  "ColorCode": {
+    "thingTypeFieldId": 79,
+    "time": "2017-07-27T13:59:00.472Z",
+    "value": "0"
+  }
+}

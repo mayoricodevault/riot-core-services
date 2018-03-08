@@ -1,0 +1,1203 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "reportDefinition",
+      "innerClass": "ReportDefinition",
+      "instances": [
+        {
+          "bulkEdit": false,
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "STARflex Dashboard - ${tenant.name}",
+          "nupYup": false,
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "table",
+          "typeOrder": 1,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "STARflex Monitor - ${tenant.name}",
+          "nupYup": false,
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "table",
+          "typeOrder": 1,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "STARflex Status - ${tenant.name}",
+          "nupYup": false,
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "table",
+          "typeOrder": 1,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "STARflex Unique Tags - ${tenant.name}",
+          "nupYup": false,
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "table",
+          "typeOrder": 1,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        }
+      ]
+    },
+    {
+      "moduleName": "reportFilter",
+      "innerClass": "ReportFilter",
+      "instances": [
+        {
+          "displayOrder": 1,
+          "editable": false,
+          "label": "Thing Type",
+          "operator": "==",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": false,
+          "label": "group",
+          "operator": "=",
+          "propertyName": "group.id",
+          "value": {
+            "innerMethod": "getGroupId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": false,
+          "label": "Thing Type",
+          "operator": "==",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": false,
+          "label": "group",
+          "operator": "=",
+          "propertyName": "group.id",
+          "value": {
+            "innerMethod": "getGroupId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": false,
+          "label": "Thing Type",
+          "operator": "==",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SFS_${tenant.code}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": false,
+          "label": "group",
+          "operator": "=",
+          "propertyName": "group.id",
+          "value": {
+            "innerMethod": "getGroupId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": false,
+          "label": "Thing Type",
+          "operator": "==",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SFT_${tenant.code}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Unique Tags - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": false,
+          "label": "group",
+          "operator": "=",
+          "propertyName": "group.id",
+          "value": {
+            "innerMethod": "getGroupId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Unique Tags - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "reportProperty",
+      "innerClass": "ReportProperty",
+      "instances": [
+        {
+          "displayOrder": 1,
+          "label": "MAC id",
+          "propertyName": "macId",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "macId"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "IP",
+          "propertyName": "netIfs--eth0__0__--address",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0__0__--address"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "Firmware",
+          "propertyName": "firmwareVersion",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "firmwareVersion"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Discovered",
+          "propertyName": "discoveryDate",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "discoveryDate"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Claimed",
+          "propertyName": "claimDate",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "claimDate"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "State",
+          "propertyName": "state",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "state"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "IP",
+          "propertyName": "netIfs--eth0__0__--address",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "netIfs--eth0__0__--address"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "MAC id",
+          "propertyName": "macId",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "macId"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "State",
+          "propertyName": "state",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "state"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "CPU Utilization",
+          "propertyName": "cpuUtilization",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "cpuUtilization"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "LED Status",
+          "propertyName": "ledStatus",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SF_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ledStatus"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "MAC id",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SFS_${tenant.code}"
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Date Time",
+          "propertyName": "wallclock",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SFS_${tenant.code}"
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "Uptime",
+          "propertyName": "upTime_sec",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SFS_${tenant.code}"
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Free Memory",
+          "propertyName": "freeMem",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SFS_${tenant.code}"
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Temperature",
+          "propertyName": "temperature_f_",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SFS_${tenant.code}"
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "Name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Unique Tags - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SFT_${tenant.code}"
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Timestamp",
+          "propertyName": "datestamp",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Unique Tags - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SFT_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "datestamp"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SFT_${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "TxID",
+          "propertyName": "TxID",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Unique Tags - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SFT_${tenant.code}"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "TxID"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SFT_${tenant.code}"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

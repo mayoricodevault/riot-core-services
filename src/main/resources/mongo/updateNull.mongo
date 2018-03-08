@@ -1,0 +1,3 @@
+db.getCollection('things').update({"itemcode.value":"null"}, {$set: { "itemcode.value": ""}}, false, true);
+db.getCollection('things').update({"Timestamp.value":"null"}, {$set: { "Timestamp.value": ""}}, false, true);
+db.getCollection('things').update({"serialNUM.value":"null"}, {$set: { "serialNUM.value": ""}}, false, true);

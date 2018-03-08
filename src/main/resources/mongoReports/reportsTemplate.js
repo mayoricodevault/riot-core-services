@@ -1,0 +1,1 @@
+<REPLICA_MODE> var tableScriptFunction=db.system.js.findOne({"_id":"<METHOD_NAME>"}); var options = <OPTIONS>; var JSONFormatter=db.system.js.findOne({"_id":"JSONFormatter"}); JSONFormatter.value(tableScriptFunction.value(options));

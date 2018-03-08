@@ -1,0 +1,119 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "connections",
+      "innerClass": "Connection",
+      "instances": [
+        {
+          "name": "Kafka",
+          "code": "KAFKA",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "zookeeper": "${kafka.zookeeper}",
+              "server": "${kafka.servers}"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "KAFKA"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "bridges",
+      "innerClass": "Edgebox",
+      "instances": [
+        {
+          "name": "Rules Processor",
+          "code": "RulesProcessor",
+          "type": "Rules_Processor",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "streamConfig": {
+                "lingerMs": 5,
+                "numStreamThreads": 4,
+                "batchSize": 65536
+              },
+              "kafka": {
+                "active": false,
+                "connectionCode": "KAFKA"
+              },
+              "mongo": {
+                "connectionCode": "MONGO"
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Mongo Injector",
+          "code": "MongoInjector",
+          "type": "Mongo_Injector",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "mongo": {
+                "connectionCode": "MONGO"
+              },
+              "streamConfig": {
+                "lingerMs": 5,
+                "numStreamThreads": 4,
+                "batchSize": 65536
+              },
+              "kafka": {
+                "active": false,
+                "connectionCode": "KAFKA"
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

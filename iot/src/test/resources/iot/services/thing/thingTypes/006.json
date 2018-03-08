@@ -1,0 +1,100 @@
+{
+  "serialFormula": "",
+  "group.id": 3,
+  "name": "CustomTT006",
+  "child.ids": [],
+  "isParent": false,
+  "thingTypeTemplateId": 1,
+  "thingTypeCode": "CustomTT006",
+  "autoCreate": false,
+  "fields": [
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "expressionUDFName",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 26,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "${name}",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "expressionUDFSerial",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 26,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "${serialNumber}",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "expressionUDFTTCode",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 26,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "${thingType.thingTypeCode}",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "expressionUDFTTName",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 26,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "${thingType.name}",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "expressionUDFGroupCode",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 26,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "${group.code}",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "expressionUDFGroupName",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 26,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "${group.name}",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "expressionUDFGroupTypeCode",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 26,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "${group.groupType.code}",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "expressionUDFGroupTypeName",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 26,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "${group.groupType.name}",
+      "multiple": false
+    }
+  ]
+}

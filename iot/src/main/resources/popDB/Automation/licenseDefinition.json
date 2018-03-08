@@ -1,0 +1,66 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "license",
+      "innerClass": "License",
+      "instances": [
+        {
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "licenseString": {
+            "innerMethod": "toString",
+            "params": {
+              "applicableGroupLevel": [
+                1
+              ],
+              "clientIp": "",
+              "creationDate": 1491320220309,
+              "customer": "multinancy",
+              "description": "",
+              "expirationDate": "",
+              "features": [
+                "Control_LicenseManager",
+                "Esper Rules Plugin",
+                "Integration_Genetec_Baku",
+                "Integration_MD7_Baku",
+                "Integration_SAP_FMC",
+                "LDAP_Auth_root_Group"
+              ],
+              "groupId": 1,
+              "key": "eyJhbGciOiJSUzUxMiJ9.eyJhcHBsaWNhYmxlR3JvdXBMZXZlbCI6WzFdLCJjbGllbnRJcCI6IiIsImNyZWF0aW9uRGF0ZSI6MTQ5MTMyMDIyMDMwOSwiY3VzdG9tZXIiOiJtdWx0aW5hbmN5IiwiZGVzY3JpcHRpb24iOiIiLCJleHBpcmF0aW9uRGF0ZSI6IiIsImZlYXR1cmVzIjpbIkludGVncmF0aW9uX0dlbmV0ZWNfQmFrdSIsIkNvbnRyb2xfTGljZW5zZU1hbmFnZXIiLCJFc3BlciBSdWxlcyBQbHVnaW4iLCJJbnRlZ3JhdGlvbl9NRDdfQmFrdSIsIkxEQVBfQXV0aF9yb290X0dyb3VwIiwiSW50ZWdyYXRpb25fU0FQX0ZNQyJdLCJrZXkiOiIiLCJsaWNlbnNlVHlwZSI6IkVWQUwiLCJtYXhDb25jdXJyZW50VXNlcnMiOiIiLCJtYXhMZXZlbDJHcm91cHMiOiIiLCJtYXhMZXZlbDNHcm91cHMiOiIiLCJtYXhOdW1iZXJPZlVzZXJzIjoiIiwibWF4VGhpbmdUeXBlcyI6IiIsIm1heFRoaW5ncyI6IiIsIm1vZHVsZXMiOlsiQ29udHJvbCIsIk1vbml0b3IiLCJSZXBvcnRzIiwiTWFrZXIiLCJBbmFseXRpY3MiLCJab25lcyJdLCJwcm9kdWN0IjoiVmlaaXgiLCJzZXJpYWxOdW1iZXIiOiIyMDE3MDQwNDExMzcwMCIsInNlcnZlcklwIjoiIiwidGVuYW50TGljZW5zZUluaGVyaXRhbmNlIjp0cnVlLCJ2ZW5kb3IiOiJWSVpJWCIsInZlcnNpb24iOiI1LngueCJ9.oZ46ET0VqbE99rYufd_NS7CevjIQxMgtqr7U62SfN6aexMUH8xHRdV4juZnsBHy9dRyym-RQ6jSHLXaCng__2aai66zACUScRJw_raO6kc7SVnj05p3-KymPxOt8EajaIbwAQZ_nnumENp0SDdIZPEn9-9q9_TSVgJ42A5-lCls9h-kizjawd8UfKJ4QVNfInH_l4999DvTdUPVxqGQ3uxbhUFZiLobwzjKYHkPiK4UbE_2SbR8Xt43QAFExD3jk4iUR3O_qxUCKkLY1kYjovZCNIn2wf45zx5AemtK-41dy-cJ8VylH2MoaZoMiZK5Ess74BTBieKXWzpkSgzE1mA",
+              "licenseType": "EVAL",
+              "maxConcurrentUsers": "",
+              "maxLevel2Groups": "",
+              "maxLevel3Groups": "",
+              "maxNumberOfUsers": "",
+              "maxThingTypes": "",
+              "maxThings": "",
+              "modules": [
+                "Analytics",
+                "Control",
+                "Maker",
+                "Monitor",
+                "Reports",
+                "Zones"
+              ],
+              "product": "ViZix",
+              "serialNumber": "20170404113700",
+              "serverIp": "",
+              "tenantLicenseInheritance": true,
+              "vendor": "VIZIX",
+              "version": "5.x.x"
+            }
+          },
+          "installTime": "newDate"
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

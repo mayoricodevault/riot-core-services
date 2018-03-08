@@ -1,0 +1,13 @@
+{
+  "dependsOn": "CoreTenant",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "bridgesAndConnections",
+      "definitionFile": "bridgesDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

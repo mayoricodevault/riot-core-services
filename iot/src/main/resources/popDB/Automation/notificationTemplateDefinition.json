@@ -1,0 +1,18 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "notificationTemplate",
+      "innerClass": "NotificationTemplate",
+      "instances": [
+        {
+          "templateName": "notificationTemplate",
+          "templateBody": "{\"subject\":\"Subject Serial: ${serialNumber}\",\"to\":[\"administrator@mojix.com\"],\"email-body\":\"Hi. This is the mail transport agent at mail.elsewhere.com. UDFs:zone=${zone} status=${status}\"}"
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

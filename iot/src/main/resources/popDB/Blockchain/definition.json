@@ -1,0 +1,17 @@
+{
+  "dependsOn": "Kafka",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "bridgesAndConnections",
+      "definitionFile": "bridgesDefinition.json"
+    },
+    {
+      "module": "thingTypeTemplates",
+      "definitionFile": "thingTypeTemplatesDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

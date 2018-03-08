@@ -1,0 +1,659 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "roles",
+      "innerClass": "Role",
+      "instances": [
+        {
+          "name": "Retail",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "groupTypeCeiling": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "description": "Retail Role"
+        },
+        {
+          "name": "Retail Admin",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "groupTypeCeiling": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "description": "Retail Admin"
+        }
+
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Tenants"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "permissions": [
+            "r",
+            "i",
+            "u",
+            "d",
+            "a"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "role"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "permissions": [
+            "r",
+            "i",
+            "u",
+            "d",
+            "a"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "user"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Analytics"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "permissions": [
+            "r",
+            "i",
+            "u",
+            "d",
+            "a",
+            "x",
+            "p"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "reportDefinition"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Report Instances"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Report Instances"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Thing Types"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Things"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "permissions": [
+            "r"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "thing"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "permissions": [
+            "r",
+            "i",
+            "u",
+            "d",
+            "a"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "thingType"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Tenants"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "permissions": [
+            "r",
+            "i",
+            "u",
+            "d",
+            "a"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "role"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "permissions": [
+            "r",
+            "i",
+            "u",
+            "d",
+            "a"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "user"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Things"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "permissions": [
+            "r"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "thing"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions": [
+            "x"
+          ],
+          "resource": {
+            "innerClass": "Resource",
+            "getter": "getByName",
+            "params": "Thing Types"
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+
+
+    {
+      "moduleName": "users",
+      "innerClass": "User",
+      "instances": [
+        {
+          "username": "mojix",
+          "password": "1234",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "firstName": "Mojix",
+          "lastName": "Mojix",
+          "email": "",
+          "archived": false,
+          "roamingGroup": null
+        }
+      ]
+    },
+    {
+      "moduleName": "userRoles",
+      "innerClass": "UserRole",
+      "instances": [
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mojix"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Retail Admin"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

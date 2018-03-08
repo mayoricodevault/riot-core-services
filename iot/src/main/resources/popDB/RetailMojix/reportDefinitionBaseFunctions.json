@@ -1,0 +1,105 @@
+{
+  "preProcess": [],
+  "executeModules": [
+
+    {
+      "moduleName": "reportDefinition",
+      "innerClass": "ReportDefinition",
+      "instances": [
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_reports"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Base Functions Report",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        }
+      ]
+    },
+
+
+    {
+      "moduleName": "reportDefinitionConfig",
+      "innerClass": "ReportDefinitionConfig",
+      "instances": [
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_basefunctions.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Base Functions Report"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Base Functions Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": []
+}

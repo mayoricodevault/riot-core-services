@@ -1,0 +1,406 @@
+[
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "GPS1234567890",
+    "thingTypeId": 6,
+    "treeLevel": 1,
+    "thingTypeName": "Default GPS Thing Type",
+    "groupId": 3,
+    " color.value": null,
+    "name": "GPS1234567890",
+    "_id": 2
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "J00001",
+    "thingTypeId": 5,
+    "treeLevel": 1,
+    "thingTypeName": "Jackets",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000473",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000473",
+        "_id": 4
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Jacket1",
+    "_id": 3
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "J00002",
+    "thingTypeId": 5,
+    "treeLevel": 1,
+    "thingTypeName": "Jackets",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000474",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000474",
+        "_id": 6
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Jacket2",
+    "_id": 5
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "J00003",
+    "thingTypeId": 5,
+    "treeLevel": 1,
+    "thingTypeName": "Jackets",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000475",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000475",
+        "_id": 8
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Jacket3",
+    "_id": 7
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "J00004",
+    "thingTypeId": 5,
+    "treeLevel": 1,
+    "thingTypeName": "Jackets",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000476",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000476",
+        "_id": 10
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Jacket4",
+    "_id": 9
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "J00005",
+    "thingTypeId": 5,
+    "treeLevel": 1,
+    "thingTypeName": "Jackets",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000477",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000477",
+        "_id": 12
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Jacket5",
+    "_id": 11
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "P00001",
+    "thingTypeId": 7,
+    "treeLevel": 1,
+    "thingTypeName": "Pants",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000478",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000478",
+        "_id": 14
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Pants1",
+    "_id": 13
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "P00002",
+    "thingTypeId": 7,
+    "treeLevel": 1,
+    "thingTypeName": "Pants",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000479",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000479",
+        "_id": 16
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Pants2",
+    "_id": 15
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "P00003",
+    "thingTypeId": 7,
+    "treeLevel": 1,
+    "thingTypeName": "Pants",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000480",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000480",
+        "_id": 18
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Pants3",
+    "_id": 17
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "P00004",
+    "thingTypeId": 7,
+    "treeLevel": 1,
+    "thingTypeName": "Pants",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000481",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000481",
+        "_id": 20
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Pants4",
+    "_id": 19
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "P00005",
+    "thingTypeId": 7,
+    "treeLevel": 1,
+    "thingTypeName": "Pants",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000482",
+        "thingTypeId": 3,
+        "treeLevel": 2,
+        "thingTypeName": "Default RFID Thing Type",
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000482",
+        "_id": 22
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "Pants5",
+    "_id": 21
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "RFID1234567890",
+    "thingTypeId": 3,
+    "treeLevel": 1,
+    "thingTypeName": "Default RFID Thing Type",
+    "groupId": 3,
+    " color.value": null,
+    "name": "RFID1234567890",
+    "_id": 1
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "SO00001",
+    "thingTypeId": 8,
+    "treeLevel": 1,
+    "thingTypeName": "ShippingOrder",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000483",
+        "thingTypeId": 9,
+        "treeLevel": 2,
+        "thingTypeName": "Asset",
+        "children": [
+          {
+            "groupTypeName": "Store",
+            "groupName": "Santa Monica",
+            "serialNumber": "000000000000000000001",
+            "thingTypeId": 10,
+            "treeLevel": 3,
+            "thingTypeName": "Tag",
+            "groupId": 3,
+            " color.value": null,
+            "name": "000000000000000000001",
+            "_id": 33
+          }
+        ],
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000483",
+        "_id": 28
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "ShippingOrder1",
+    "_id": 23
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "SO00002",
+    "thingTypeId": 8,
+    "treeLevel": 1,
+    "thingTypeName": "ShippingOrder",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000484",
+        "thingTypeId": 9,
+        "treeLevel": 2,
+        "thingTypeName": "Asset",
+        "children": [
+          {
+            "groupTypeName": "Store",
+            "groupName": "Santa Monica",
+            "serialNumber": "000000000000000000002",
+            "thingTypeId": 10,
+            "treeLevel": 3,
+            "thingTypeName": "Tag",
+            "groupId": 3,
+            " color.value": null,
+            "name": "000000000000000000002",
+            "_id": 34
+          }
+        ],
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000484",
+        "_id": 29
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "ShippingOrder2",
+    "_id": 24
+  },
+  {
+    "groupTypeName": "Store",
+    "groupName": "Santa Monica",
+    "serialNumber": "SO00003",
+    "thingTypeId": 8,
+    "treeLevel": 1,
+    "thingTypeName": "ShippingOrder",
+    "children": [
+      {
+        "groupTypeName": "Store",
+        "groupName": "Santa Monica",
+        "serialNumber": "000000000000000000485",
+        "thingTypeId": 9,
+        "treeLevel": 2,
+        "thingTypeName": "Asset",
+        "children": [
+          {
+            "groupTypeName": "Store",
+            "groupName": "Santa Monica",
+            "serialNumber": "000000000000000000003",
+            "thingTypeId": 10,
+            "treeLevel": 3,
+            "thingTypeName": "Tag",
+            "groupId": 3,
+            " color.value": null,
+            "name": "000000000000000000003",
+            "_id": 35
+          }
+        ],
+        "groupId": 3,
+        " color.value": null,
+        "name": "000000000000000000485",
+        "_id": 30
+      }
+    ],
+    "groupId": 3,
+    " color.value": null,
+    "name": "ShippingOrder3",
+    "_id": 25
+  }
+]

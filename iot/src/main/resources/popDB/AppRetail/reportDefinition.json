@@ -1,0 +1,2574 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "reportDefinition",
+      "innerClass": "ReportDefinition",
+      "instances": [
+        {
+          "bulkEdit": false,
+          "centerLat": "34.048092",
+          "centerLon": "-118.443969",
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "Pin",
+          "defaultZoom": 20,
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "localMapId": {
+            "innerMethod": "getLocalMapId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Map Store Santa Monica"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "name": "All RFID Tags",
+          "nupYup": true,
+          "pinLabel": "1",
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "map",
+          "typeOrder": 0,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "name": "All RFID Tags",
+          "nupYup": false,
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "table",
+          "typeOrder": 1,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "centerLat": "34.048092",
+          "centerLon": "-118.443969",
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "defaultZoom": 20,
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "localMapId": {
+            "innerMethod": "getLocalMapId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Map Store Santa Monica"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+            "name": "Clothing by Zone",
+          "nupYup": true,
+          "pinLabel": "3",
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "map",
+          "typeOrder": 0,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "name": "Clothing by Zone",
+          "nupYup": false,
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "table",
+          "typeOrder": 1,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "centerLat": "34.048092",
+          "centerLon": "-118.443969",
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "defaultZoom": 20,
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "localMapId": {
+            "innerMethod": "getLocalMapId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Map Store Santa Monica"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "name": "Jackets & Pants Dwell",
+          "nupYup": true,
+          "pinLabel": "1",
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "map",
+          "typeOrder": 0,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "name": "Test_exit_report",
+          "nupYup": false,
+          "pinLabels": false,
+          "playback": false,
+          "reportType": "tableTimeSeries",
+          "typeOrder": 2,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "009F6B",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Multilevel Report",
+          "nupYup": false,
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "table",
+          "typeOrder": 1,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        },
+        {
+          "bulkEdit": false,
+          "clustering": true,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "4DD000",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Clothing by Brand",
+          "nupYup": true,
+          "pinLabels": true,
+          "playback": true,
+          "reportType": "table",
+          "typeOrder": 1,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": true
+        },
+        {
+          "bulkEdit": false,
+          "centerLat": "34.048092",
+          "centerLon": "-118.443969",
+          "clustering": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "defaultColorIcon": "4DD000",
+          "defaultList": false,
+          "defaultTypeIcon": "pin",
+          "defaultZoom": 20,
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "heatmap": false,
+          "localMapId": {
+            "innerMethod": "getLocalMapId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Map Store Santa Monica"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "name": "Clothing by Brand",
+          "nupYup": true,
+          "pinLabel": "3",
+          "pinLabels": false,
+          "playback": true,
+          "reportType": "map",
+          "typeOrder": 0,
+          "rfidPrint": false,
+          "runOnLoad": true,
+          "trails": false,
+          "zoneLabels": false
+        }
+      ]
+    },
+    {
+      "moduleName": "reportFilter",
+      "innerClass": "ReportFilter",
+      "instances": [
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "==",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": false,
+          "label": "group",
+          "operator": "=",
+          "propertyName": "group.id",
+          "value": {
+            "innerMethod": "getGroupId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mojix"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": false,
+          "label": "Thing Type",
+          "operator": "==",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": false,
+          "label": "group",
+          "operator": "=",
+          "propertyName": "group.id",
+          "value": {
+            "innerMethod": "getGroupId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mojix"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Brand",
+          "operator": "=",
+          "propertyName": "brand",
+          "value": "Calvin Klein",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "pants_code"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Brand",
+          "operator": "=",
+          "propertyName": "brand",
+          "value": "Calvin Klein",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "pants_code"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "reportProperty",
+      "innerClass": "ReportProperty",
+      "instances": [
+        {
+          "displayOrder": 1,
+          "label": "RFID Tag #",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Group",
+          "propertyName": "group.name",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "Zone",
+          "propertyName": "zone",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Zone Dwell Time (zone)",
+          "propertyName": "dwellTime( zone )",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Last Detect Time",
+          "propertyName": "lastDetectTime",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastDetectTime"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "Name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "Location",
+          "propertyName": "location",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "location"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "RFID Tag #",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Group",
+          "propertyName": "group.name",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "Zone",
+          "propertyName": "zone",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Zone Dwell Time (zone)",
+          "propertyName": "dwellTime( zone )",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Last Detect Time",
+          "propertyName": "lastDetectTime",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastDetectTime"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "Name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "Location",
+          "propertyName": "location",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "location"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "Name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Category",
+          "propertyName": "category",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "RFID Tag",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Last Detect Time",
+          "propertyName": "lastDetectTime",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastDetectTime"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Brand",
+          "propertyName": "brand",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "Color",
+          "propertyName": "color",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "Size",
+          "propertyName": "size",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 8,
+          "label": "Price",
+          "propertyName": "price",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "Name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Category",
+          "propertyName": "category",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "RFID Tag",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Last Detect Time",
+          "propertyName": "lastDetectTime",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastDetectTime"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Brand",
+          "propertyName": "brand",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "Color",
+          "propertyName": "color",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "Size",
+          "propertyName": "size",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 8,
+          "label": "Price",
+          "propertyName": "price",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "RFID Tag #",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Jackets & Pants Dwell"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Category",
+          "propertyName": "category",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Jackets & Pants Dwell"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "Logical Reader",
+          "propertyName": "logicalReader",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Jackets & Pants Dwell"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "logicalReader"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Zone Dwell Time (ms)",
+          "propertyName": "dwellTime( zone )",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Jackets & Pants Dwell"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Last Detect Time",
+          "propertyName": "lastDetectTime",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Jackets & Pants Dwell"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "Name",
+          "propertyName": "name",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Jackets & Pants Dwell"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "Location",
+          "propertyName": "location",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Jackets & Pants Dwell"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "Assets Serial",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Tag Serial",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "Brand",
+          "propertyName": "brand",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Category",
+          "propertyName": "category",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Zone",
+          "propertyName": "zone",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "Location",
+          "propertyName": "location",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "location"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "Size",
+          "propertyName": "size",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 8,
+          "label": "Price",
+          "propertyName": "price",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "Name Shipping Order",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Multilevel Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "name Asset",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Multilevel Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "Name Tag",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Multilevel Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "Brand",
+          "propertyName": "brand",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Category",
+          "propertyName": "category",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "RFID Tag #",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Department",
+          "propertyName": "group.name",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Last Detect Time",
+          "propertyName": "lastDetectTime",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "Logical Reader",
+          "propertyName": "logicalReader",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "logicalReader"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "Color",
+          "propertyName": "color",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 8,
+          "label": "Size",
+          "propertyName": "size",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 9,
+          "label": "Price",
+          "propertyName": "price",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 10,
+          "label": "Name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 11,
+          "label": "Type",
+          "propertyName": "thingType.name",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "Brand",
+          "propertyName": "brand",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "Category",
+          "propertyName": "category",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "RFID Tag #",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "Department",
+          "propertyName": "group.name",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "Last Detect Time",
+          "propertyName": "lastDetectTime",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "Logical Reader",
+          "propertyName": "logicalReader",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "logicalReader"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "Color",
+          "propertyName": "color",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 8,
+          "label": "Size",
+          "propertyName": "size",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 9,
+          "label": "Price",
+          "propertyName": "price",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 10,
+          "label": "Name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 11,
+          "label": "Type",
+          "propertyName": "thingType.name",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Brand"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

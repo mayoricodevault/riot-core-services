@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!--
+# As a Recommendation do not put hibernate connection properties or hibernate dialect properties in this file
+# THESE VALUES NOW COME FROM: (LOAD order)
+# 1. hibernate.properties (this file is recommended to be empty of hibernate connection/dialect properties)
+# 2. hibernate.cfg.xml (this file is recommended to be empty of hibernate connection/dialect properties)
+# 3. conf.properties derived file from gradle-default.properties automatically on build process
+# 4. web.xml (this file should is recommended to be empty of hibernate, cassandra, mqtt, other connection properties)
+# 5. TOMCAT context.xml defined in CATALINA_HOME/conf
+# 6. -D property setting from a command line switch (e.g. popdb)
+# (HIGHER load order overrides LOWER load order, meaning has HIGHER priority)
+-->
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings, it reads first from hibernate.properties-->
+        <property name="connection.release_mode">after_statement</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.cache.use_query_cache">false</property>
+        <property name="connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
+        <property name="hibernate.hikari.minimumIdle">6</property>
+        <property name="hibernate.hikari.maximumPoolSize">1000</property>
+        <property name="hibernate.hikari.idleTimeout">3600000</property>
+        <property name="hibernate.hikari.dataSource.cachePrepStmts">true</property>
+        <!--connection timeout hikari 5 min.-->
+        <property name="hibernate.hikari.connectionTimeout">300000</property>
+        <!--test connection for MYSQL and MSSQL-->
+        <property name="hibernate.hikari.connectionTestQuery">select 1</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+    </session-factory>
+
+</hibernate-configuration>

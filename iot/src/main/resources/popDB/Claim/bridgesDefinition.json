@@ -1,0 +1,291 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "connections",
+      "innerClass": "Connection",
+      "instances": [
+        {
+          "name": "MQTT_${tenant.name}",
+          "code": "MQTT_${tenant.code}",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "${mqtt.host}",
+              "qos": 2,
+              "secure": false,
+              "port": "${mqtt.port}"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MQTT"
+          }
+        },
+        {
+          "name": "MONGO_${tenant.name}",
+          "code": "MONGO_${tenant.code}",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "mongoReplicaSet": "",
+              "mongoSSL": false,
+              "mongoPrimary": "mongo:27017",
+              "password": "Y29udHJvbDEyMyE=",
+              "mongoAuthDB": "admin",
+              "mongoSecondary": "",
+              "mongoConnectTimeout": 0,
+              "mongoSharding": false,
+              "mongoDB": "riot_main",
+              "mongoMaxPoolSize": 0,
+              "username": "admin"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MONGO"
+          }
+        },
+        {
+          "name": "SQL_${tenant.name}",
+          "code": "SQL_${tenant.code}",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "password": "Y29udHJvbDEyMyE=",
+              "dialect": "org.hibernate.dialect.MySQLDialect",
+              "driver": "com.mysql.jdbc.Driver",
+              "url": "jdbc:mysql://mysql:3306/riot_main",
+              "username": "root",
+              "hazelcastNativeClientAddress": "hazelcast"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "SQL"
+          }
+        },
+        {
+          "name": "Services_${tenant.name}",
+          "code": "SERVICES_${tenant.code}",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "apikey": "7B4BCCDC",
+              "secure": false,
+              "port": 8080,
+              "contextpath": "/riot-core-services"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "REST"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "bridges",
+      "innerClass": "Edgebox",
+      "instances": [
+        {
+          "name": "CoreBridge_${tenant.name}",
+          "code": "CORE_${tenant.code}",
+          "type": "core",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "shiftZoneRule": {
+                "active": false,
+                "shiftProperty": "shift",
+                "zoneViolationStatusProperty": "zoneViolationStatus",
+                "zoneViolationFlagProperty": "zoneViolationFlag"
+              },
+              "mongo": {
+                "connectionCode": "MONGO_${tenant.code}"
+              },
+              "coreBridgeStatistics": {"active": true},
+              "cepChangeLogs": {"active": false},
+              "numberOfThreads": 2,
+              "mqtt": {
+                "connectionCode": "MQTT_${tenant.code}",
+                "topics": [
+                  "/v1/data/APP2/#",
+                  "/v1/data/ALEB_${tenant.code}/#",
+                  "/v1/data/STAR_${tenant.code}/#"
+                ]
+              },
+              "swarmRule": {
+                "thingTypes": [{
+                  "thingTypeCode": "flextag_code",
+                  "udfGroup": "grouping",
+                  "distanceFilter": 10000,
+                  "udfGroupStatus": "groupStatus"
+                }],
+                "timeInterval": 5000,
+                "active": false,
+                "algorithm": "followLastDetect"
+              },
+              "thingCache": {
+                "size": 1000000,
+                "evictionTime": 60
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES_${tenant.code}",
+                "sqlConnectionCode": "SQL_${tenant.code}",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              },
+              "outOfOrderRule": {
+                "active": false
+              },
+              "thingInsertRestApi": {
+                "retryAttemptLimit": 10,
+                "retryIntervalPeriodSecs": 5000
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          }
+        },
+        {
+          "name": "AleBridge_${tenant.name}",
+          "code": "ALEB_${tenant.code}",
+          "type": "edge",
+          "port": 9090,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "zoneDwellFilter": {
+                "lastDetectTimeActive": true,
+                "active": true,
+                "zoneDwellTime": 300,
+                "inZoneDistance": 10,
+                "lastDetectTimeWindow": 0,
+                "unlockDistance": 25,
+                "evictionTime":24
+              },
+              "facilityMapForOrigin": "",
+              "edgeBridgeStatistics": {"active": true},
+              "thingTypeCode": "flextag_code",
+              "storeAleMessages": {"active": false},
+              "numberOfThreads": 2,
+              "httpListener": {
+                "bridgePort": 9090,
+                "socketTimeout": 60000
+              },
+              "mqtt": {
+                "connectionCode": "MQTT_${tenant.code}"
+              },
+              "kafka": {
+                "active": false,
+                "connectionCode": "KAFKA"
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES_${tenant.code}",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          }
+        },
+        {
+          "name": "STARflexBridge_${tenant.name}",
+          "code": "STAR_${tenant.code}",
+          "type": "STARflex",
+          "port": 9092,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "zoneDwellFilter": {
+                "lastDetectTimeActive": true,
+                "active": true,
+                "zoneDwellTime": 10,
+                "inZoneDistance": 0,
+                "lastDetectTimeWindow": 20,
+                "unlockDistance": 0
+              },
+              "thingTypeCodeConfig": "SF_${tenant.code}",
+              "thingTypeCode": "SFT_${tenant.code}",
+              "rateFilter": {
+                "timeLimit": 20,
+                "active": true
+              },
+              "thingTypeCodeStatus": "SFS_${tenant.code}",
+              "mqtt": {
+                "connectionCode": "MQTT_${tenant.code}"
+              },
+              "lastDetectFilterTypes": "",
+              "logRawMessages": true,
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES_${tenant.code}",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

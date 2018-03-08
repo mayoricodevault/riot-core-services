@@ -1,0 +1,1 @@
+ALTER TABLE `riot_main`.`reportentryoption` MODIFY group_id BIGINT(20) DEFAULT NULL;

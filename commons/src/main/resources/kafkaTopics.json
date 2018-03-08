@@ -1,0 +1,84 @@
+{
+  "topics": [
+  	{
+      "name": "/v1/broker/check",
+      "partitions": 1,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/connection",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/edgebox",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/edgeboxconfiguration",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/edgeboxrule",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/group",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/grouptype",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/logicalreader",
+      "partitions": 4,
+      "replicas": 1
+    }, 
+    {
+      "name": "/v1/cache/shift",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/shiftzone",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/things",
+      "partitions": 8,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/thingtype",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/zone",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/cache/zonetype",
+      "partitions": 4,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/data1",
+      "partitions": 32,
+      "replicas": 1
+    },
+    {
+      "name": "/v1/data2",
+      "partitions": 32,
+      "replicas": 1
+    }
+  ]
+}

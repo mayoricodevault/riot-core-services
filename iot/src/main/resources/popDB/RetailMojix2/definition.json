@@ -1,0 +1,17 @@
+{
+  "dependsOn": "RetailMojix",
+  "preProcess": [],
+  "executeModules": [
+
+    {
+      "module": "model",
+      "definitionFile": "facilityDefinition.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesDefinitionBase.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "things": {
+    "uniqueSerialNumber": {
+      "key": {
+        "thingTypeCode": 1,
+        "serialNumber": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true,
+        "textIndexVersion": 1
+      }
+    },
+    "parent._id_1_": {
+      "key": {
+        "parent._id": 1
+      },
+      "options": {
+      }
+    },
+    "parent._id_-1_": {
+      "key": {
+        "parent._id": -1
+      },
+      "options": {
+      }
+    },
+    "parent._serialNumber_1_": {
+      "key": {
+        "parent.serialNumber": 1
+      },
+      "options": {
+      }
+    },
+    "serialNumber_1_": {
+      "key": {
+        "serialNumber": 1
+      },
+      "options": {
+      }
+    },
+    "serialNumber_-1_": {
+      "key": {
+        "serialNumber": -1
+      },
+      "options": {
+      }
+    },
+    "name_1_": {
+      "key": {
+        "name": -1
+      },
+      "options": {
+      }
+    },
+    "thingTypeCode_1_": {
+      "key": {
+        "thingTypeCode": 1
+      },
+      "options": {
+      }
+    },
+    "thingTypeName_1_": {
+      "key": {
+        "thingTypeName": 1
+      },
+      "options": {
+      }
+    },
+    "thingTypeId_1_": {
+      "key": {
+        "thingTypeId": 1
+      },
+      "options": {
+      }
+    },
+    "lastDetectTime.value_-1_": {
+      "key": {
+        "lastDetectTime.value": -1
+      },
+      "options": {
+      }
+    },
+    "groupId_1_": {
+      "key": {
+        "groupId": 1
+      },
+      "options": {
+      }
+    },
+    "groupId_-1_": {
+      "key": {
+        "groupId": -1
+      },
+      "options": {
+      }
+    },
+    "serialNumber.thingTypeCode.groupId_1_": {
+      "key": {
+        "serialNumber": 1,
+        "thingTypeCode": 1,
+        "groupId": 1
+      },
+      "options": {
+      }
+    },
+    "serialNumber.thingTypeCode_1_": {
+      "key": {
+        "serialNumber": 1,
+        "thingTypeCode": 1
+      },
+      "options": {
+      }
+    }
+  },
+  "thingSnapshots": {
+    "time_-1_": {
+      "key": {
+        "time": -1
+      },
+      "options": {
+      }
+    },
+    "time_1_": {
+      "key": {
+        "time": 1
+      },
+      "options": {
+      }
+    },
+    "value.serialNumber_1_": {
+      "key": {
+        "value.serialNumber": 1
+      },
+      "options": {
+      }
+    },
+    "value.serialNumber_1_time_1_": {
+      "key": {
+        "value.serialNumber": 1
+      },
+      "options": {
+      }
+    },
+    "value.serialNumber_1_time_-1_": {
+      "key": {
+        "value.serialNumber": -1
+      },
+      "options": {
+      }
+    },
+    "value._id_1_": {
+      "key": {
+        "value._id": 1
+      },
+      "options": {
+      }
+    },
+    "value._id_1_time_1_": {
+      "key": {
+        "value._id": 1,
+        "time": 1
+      },
+      "options": {
+      }
+    },
+    "value._id_-1_": {
+      "key": {
+        "value._id": -1
+      },
+      "options": {
+      }
+    },
+    "value._id_1_time_-1_": {
+      "key": {
+        "value._id": -1,
+        "time": -1
+      },
+      "options": {
+      }
+    },
+    "thingTypeCode_1_": {
+      "key": {
+        "value.thingTypeCode": 1
+      },
+      "options": {
+      }
+    },
+    "thingTypeId_1_": {
+      "key": {
+        "value.thingTypeId": 1
+      },
+      "options": {
+      }
+    },
+    "groupId_1_": {
+      "key": {
+        "value.groupId": 1
+      },
+      "options": {
+      }
+    },
+    "value.logicalReader.changed_1_": {
+      "key": {
+        "value.logicalReader.changed": 1
+      },
+      "options": {
+        "sparse" : true
+      }
+    },
+    "value.zone.changed_1_": {
+      "key": {
+        "value.zone.changed": 1
+      },
+      "options": {
+        "sparse" : true
+      }
+    },
+    "value.shift.changed_1_": {
+      "key": {
+        "value.shift.changed": 1
+      },
+      "options": {
+        "sparse" : true
+      }
+    },
+    "value.group.changed_1_": {
+      "key": {
+        "value.group.changed": 1
+      },
+      "options": {
+        "sparse" : true
+      }
+    }
+  },
+  "thingSnapshotIds": {
+    "blinks.time_1_blinks.blink_id_1_": {
+      "key": {
+        "blinks.time": 1,
+        "blinks.blink_id": 1
+      },
+      "options": {
+      }
+    }
+  }
+}

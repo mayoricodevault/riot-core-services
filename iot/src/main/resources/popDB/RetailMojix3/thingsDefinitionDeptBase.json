@@ -1,0 +1,418 @@
+{
+  "preProcess": [],
+  "executeModules": [
+    {
+      "moduleName": "CustomThing",
+      "innerClass": "CustomThing",
+      "instances": [
+        {
+          "name": "TECHNOLOGY",
+          "serial": "T04",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "technology"
+            },
+            "departmentSubGroupName": {
+              "value": "TECHNOLOGY"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "various"
+            },
+            "departmentGroupName": {
+              "value": "VARIOUS"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "MENS ACCESSORIES",
+          "serial": "T09",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "men-accessories"
+            },
+            "departmentSubGroupName": {
+              "value": "MEN-ACCESSORIES"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "men"
+            },
+            "departmentGroupName": {
+              "value": "MEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "MENS FORMAL SHIRTS",
+          "serial": "T11",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "men-formal"
+            },
+            "departmentSubGroupName": {
+              "value": "MEN-FORMAL"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "men"
+            },
+            "departmentGroupName": {
+              "value": "MEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "MENS SUITS",
+          "serial": "T15",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "men-formal"
+            },
+            "departmentSubGroupName": {
+              "value": "MEN-FORMAL"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "men"
+            },
+            "departmentGroupName": {
+              "value": "MEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "MENS CASUAL SHIRTS",
+          "serial": "T25",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "men-tops"
+            },
+            "departmentSubGroupName": {
+              "value": "MEN-TOPS"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "men"
+            },
+            "departmentGroupName": {
+              "value": "MEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "MENS JACKETS",
+          "serial": "T19",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "men-tops"
+            },
+            "departmentSubGroupName": {
+              "value": "MEN-TOPS"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "men"
+            },
+            "departmentGroupName": {
+              "value": "MEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "ENERGY",
+          "serial": "T45",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "various"
+            },
+            "departmentSubGroupName": {
+              "value": "VARIOUS"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "various"
+            },
+            "departmentGroupName": {
+              "value": "VARIOUS"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "LIMITED COLLECTION",
+          "serial": "T69",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "women-collection"
+            },
+            "departmentSubGroupName": {
+              "value": "WOMEN-COLLECTION"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "women"
+            },
+            "departmentGroupName": {
+              "value": "WOMEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "CLASSICS",
+          "serial": "T58",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "women-collection"
+            },
+            "departmentSubGroupName": {
+              "value": "WOMEN-COLLECTION"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "women"
+            },
+            "departmentGroupName": {
+              "value": "WOMEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "DRESSES  ",
+          "serial": "T42",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "women-dresses"
+            },
+            "departmentSubGroupName": {
+              "value": "WOMEN-DRESSES"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "women"
+            },
+            "departmentGroupName": {
+              "value": "WOMEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "JEWELLERY  ",
+          "serial": "T06",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "women-accessories"
+            },
+            "departmentSubGroupName": {
+              "value": "WOMEN-ACCESSORIES"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "women"
+            },
+            "departmentGroupName": {
+              "value": "WOMEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "FORMAL TOPS  ",
+          "serial": "T43",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "women-tops"
+            },
+            "departmentSubGroupName": {
+              "value": "WOMEN-TOPS"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "women"
+            },
+            "departmentGroupName": {
+              "value": "WOMEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "TRAINING ",
+          "serial": "T89",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "various"
+            },
+            "departmentSubGroupName": {
+              "value": "VARIOUS"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "various"
+            },
+            "departmentGroupName": {
+              "value": "VARIOUS"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        },
+        {
+          "name": "OUTERWEAR",
+          "serial": "T49",
+          "thingTypeCode": "dept",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "icon": {
+              "value": "Icon-department"
+            },
+            "departmentSubGroup": {
+              "value": "women-tops"
+            },
+            "departmentSubGroupName": {
+              "value": "WOMEN-TOPS"
+            },
+            "departmentSubGroupIcon": {
+              "value": "icon-departmentsubgroup"
+            },
+            "departmentGroup": {
+              "value": "women"
+            },
+            "departmentGroupName": {
+              "value": "WOMEN"
+            },
+            "departmentGroupIcon": {
+              "value": "icon-departmentgroup"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": []
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <context-param>
+        <param-name>rest.apikey</param-name>
+        <param-value>root</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>bridge.code</param-name>
+        <param-value>MCB</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>rest.context</param-name>
+        <param-value>riot-core-services</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>rest.host</param-name>
+        <param-value>localhost</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>rest.port</param-name>
+        <param-value>8080</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>thingType.code</param-name>
+        <param-value>default_rfid</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            com.tierconnect.riot.iot.servlet.BigDataBridgeContextListener
+        </listener-class>
+    </listener>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>-1</session-timeout>
+    </session-config>
+
+</web-app>
+

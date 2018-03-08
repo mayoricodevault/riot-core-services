@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <Context docBase="/app/">
+
+  <Parameter name="hibernate.connection.driver_class" value="VIZIX_MYSQL_DRIVER" override="false"/>
+  <Parameter name="hibernate.connection.url" value="jdbc:mysql://VIZIX_MYSQL_HOST:3306/VIZIX_MYSQL_DB" override="false"/>
+  <Parameter name="hibernate.connection.username" value="VIZIX_MYSQL_USER" override="false"/>
+  <Parameter name="hibernate.connection.password" value="VIZIX_MYSQL_PASSWORD" override="false"/>
+  <Parameter name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" override="false"/>
+
+  <!-- Parameter name="hazelcast.member.list" value="VIZIX_HAZELCAST_HOST" override="false"/-->
+
+  <!--Parameter name="hibernate.cache.region.factory_class" value="com.hazelcast.hibernate.HazelcastLocalCacheRegionFactory" override="false"/-->
+  <Parameter name="vizix.hazelcast.distributed.enable" value="VIZIX_HAZELCAST_DISTRIBUTED_ENABLE" override="false"/>
+  <Parameter name="hibernate.cache.provider_configuration_file_resource_path" value="hazelcast-client.xml" override="false"/>
+  <Parameter name="hibernate.cache.hazelcast.client.config" value="hazelcast-client.xml" override="false"/>
+  <Parameter name="hibernate.cache.hazelcast.native_client_address" value="VIZIX_HAZELCAST_NATIVE_CLIENT_ADDRESS" override="false"/>
+  <Parameter name="hibernate.cache.hazelcast.use_native_client" value="true" override="false"/>
+  <Parameter name="hibernate.cache.hazelcast.native_client_group" value="dev" override="false"/>
+  <Parameter name="hibernate.cache.hazelcast.native_client_password" value="dev-pass" override="false"/>
+  <Parameter name="vizix.hazelcast.managementcenter.enable" value="VIZIX_HAZELCAST_MC_ENABLE" override="false"/>
+  <Parameter name="vizix.hazelcast.managementcenter.url" value="VIZIX_HAZELCAST_MC_URL" override="false"/>
+  <Parameter name="vizix.hazelcast.services.multicast.enable" value="VIZIX_HAZELCAST_SERVICES_MULTICAST_ENABLE" override="false"/>
+
+  <Parameter name="mqtt.host" value="VIZIX_MQTT_HOST" override="false"/>
+  <Parameter name="mqtt.port" value="VIZIX_MQTT_PORT" override="false"/>
+  <!--<Parameter name="mqtt.clientid.name" value="APP" override="false"/>-->
+  <Parameter name="broker.connection.wait" value="VIZIX_BROKER_CONNECTION_WAIT" override="false"/>
+
+  <Parameter name="mongo.primary" value="VIZIX_MONGO_PRIMARY" override="false"/>
+  <Parameter name="mongo.secondary" value="VIZIX_MONGO_SECONDARY" override="false"/>
+  <Parameter name="mongo.replicaset" value="VIZIX_MONGO_REPLICASET" override="false"/>
+  <Parameter name="mongo.ssl" value="VIZIX_MONGO_SSL" override="false"/>
+  <Parameter name="mongo.username" value="VIZIX_MONGO_USERNAME" override="false"/>
+  <Parameter name="mongo.password" value="VIZIX_MONGO_PASSWORD" override="false"/>
+  <Parameter name="mongo.authdb" value="VIZIX_MONGO_AUTHDB" override="false"/>
+  <Parameter name="mongo.db" value="VIZIX_MONGO_DB" override="false"/>
+  <Parameter name="mongo.db" value="VIZIX_MONGO_CONTROL_READPREFERENCE" override="false"/>
+  <Parameter name="mongo.db" value="VIZIX_MONGO_REPORTS_READPREFERENCE" override="false"/>
+  <Parameter name="mongo.sharding" value="VIZIX_MONGO_SHARDING" override="false"/>
+  <Parameter name="mongo.connectiontimeout" value="VIZIX_MONGO_CONNECTION_TIMEOUT" override="false"/>
+  <Parameter name="mongo.maxpoolsize" value="VIZIX_MONGO_MAX_POOL_SIZE" override="false"/>
+
+  <Parameter name="spark.enabled" value="VIZIX_SPARK_ENABLED" override="false"/>
+
+  <Parameter name="kafka.enabled" value="VIZIX_KAFKA_ENABLED" override="false"/>
+  <Parameter name="kafka.zookeeper" value="VIZIX_KAFKA_ZOOKEEPER" override="false"/>
+  <Parameter name="kafka.servers" value="VIZIX_KAFKA_SERVERS" override="false"/>
+  <Parameter name="authentication.mode" value="VIZIX_AUTHENTICATION_MODE" override="false"/>
+
+  <Parameter name="scheduledrule.enabled" value="VIZIX_SCHEDULED_RULES_ENABLED" override="false"/>
+</Context>

@@ -1,0 +1,957 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+  {
+    "moduleName": "thingTypes",
+    "innerClass": "ThingType",
+    "instances": [
+
+      {
+        "name": "Item",
+        "thingTypeCode": "item",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "autoCreate": true,
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "Item"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      },
+      {
+        "name": "UPC",
+        "thingTypeCode": "upc",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "UPC"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      },
+      {
+        "name": "UPC Category",
+        "thingTypeCode": "upcCategory",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "UPC Category"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      },
+
+      {
+        "name": "Department",
+        "thingTypeCode": "dept",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "Department"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      },
+
+      {
+        "name": "SKU",
+        "thingTypeCode": "sku",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "SKU"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      },
+
+      {
+        "name": "SKU Category",
+        "thingTypeCode": "skuCategory",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "SKU Category"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      }
+    ]
+  },
+
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+
+        {
+          "name": "price",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        },
+        {
+          "name": "size",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        },
+        {
+          "name": "min",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        },
+        {
+          "name": "max",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        },
+
+        {
+          "name": "brand",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        },
+        {
+          "name": "material",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        },
+
+        {
+          "name": "color",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        },
+        {
+          "name": "colorHexadecimal",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "COLOR"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        },
+        {
+          "name": "upcCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upc"
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+
+        {
+          "name": "status",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "upcCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "source",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "deptCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "zone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "ZONE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+
+        {
+          "name": "eNode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "lastLocateTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "millisecond",
+          "symbol": "ms",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastLocateTime"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "lastDetectTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "millisecond",
+          "symbol": "ms",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastDetectTime"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "location",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "location"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "COORDINATES"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "locationXYZ",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "locationXYZ"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "XYZ"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "logicalReader",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "LOGICAL_READER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "doorEvent",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        },
+        {
+          "name": "skuCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "item"
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+
+        {
+          "name": "icon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "dept"
+          }
+        },
+        {
+          "name": "departmentSubGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "dept"
+          }
+        },
+        {
+          "name": "departmentSubGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "dept"
+          }
+        },
+        {
+          "name": "departmentSubGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "dept"
+          }
+        },
+        {
+          "name": "departmentGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "dept"
+          }
+        },
+        {
+          "name": "departmentGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "dept"
+          }
+        },
+        {
+          "name": "departmentGroupIcon",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "dept"
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+
+        {
+          "name": "frontImage",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "IMAGE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upcCategory"
+          }
+        },
+        {
+          "name": "backImage",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "IMAGE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upcCategory"
+          }
+        },
+        {
+          "name": "sideImage",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "IMAGE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "upcCategory"
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+
+        {
+          "name": "price",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        },
+        {
+          "name": "size",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        },
+        {
+          "name": "min",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        },
+        {
+          "name": "max",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        },
+
+        {
+          "name": "brand",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        },
+        {
+          "name": "material",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        },
+
+        {
+          "name": "color",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        },
+        {
+          "name": "colorHexadecimal",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "COLOR"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        },
+        {
+          "name": "skuCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sku"
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+
+        {
+          "name": "frontImage",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "IMAGE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "skuCategory"
+          }
+        },
+        {
+          "name": "backImage",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "IMAGE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "skuCategory"
+          }
+        },
+        {
+          "name": "sideImage",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "IMAGE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "skuCategory"
+          }
+        }
+      ]
+    }
+
+  ],
+  "postProcess": [
+  ]
+}
+

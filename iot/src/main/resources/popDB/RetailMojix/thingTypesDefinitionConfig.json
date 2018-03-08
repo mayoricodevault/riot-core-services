@@ -1,0 +1,926 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+  {
+    "moduleName": "thingTypes",
+    "innerClass": "ThingType",
+    "instances": [
+
+
+      {
+        "name": "User Settings Config",
+        "thingTypeCode": "userSettings",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "User Settings Config"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      },
+      {
+        "name": "Retail App Configuration",
+        "thingTypeCode": "retailAppConfig",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "Mobile App Config"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      },
+      {
+        "name": "Priority Configuration",
+        "thingTypeCode": "priorityConfig",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "Picklist Priority Config"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      },
+      {
+        "name": "Tiles Configuration",
+        "thingTypeCode": "tilesConfiguration",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "Home Tiles Config"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      }
+    ]
+  },
+  {
+    "moduleName": "thingTypes",
+    "innerClass": "ThingTypeField",
+    "instances": [
+
+      {
+        "name": "homeTimeRefresh",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue": "10000",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "tileNotificationsReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "departmentsGroupReports",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "dressingRoomReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "dressingRoomZonesReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "dressingRoomDetailReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "hotReplenishDetailReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "hotReplenishReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "replenishDetailReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "replenishReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "sellThruReplenishReport",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+
+      {
+        "name": "dressingRoomReportColumns",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "dressingRoomDetailReportColumns",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "hotReplenishDetailReportColumns",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "hotReplenishReportColumns",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "replenishDetailReportColumns",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "replenishReportColumns",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "sellThruReplenishReportColumns",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+
+      {
+        "name": "imageHost",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "level",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "limitDataCanBeLoaded",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue": "100",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "pageNumberDefault",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"0",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "pageSizeDefault",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"0",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+
+      {
+        "name": "statusDone",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"Done",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "statusPartial",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"Partial",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "thingGroup",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "thingTypeCodePriority",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"priorityConfig",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "thingTypeCodeTileConfig",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"tilesConfiguration",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "thingTypeCodeUserActivity",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"UserActivity",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "thingTypeCodeDepartment",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "timeDonePopUp",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"1000",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      },
+      {
+        "name": "timeRefresh",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "defaultValue":"20000",
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "retailAppConfig"
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "moduleName": "thingTypes",
+    "innerClass": "ThingTypeField",
+    "instances": [
+      {
+        "name": "end",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "priorityConfig"
+        }
+      },
+      {
+        "name": "color",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "COLOR"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "priorityConfig"
+        }
+      },
+      {
+        "name": "label",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "priorityConfig"
+        }
+      },
+      {
+        "name": "start",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "priorityConfig"
+        }
+      },
+      {
+        "name": "status",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "priorityConfig"
+        }
+      },
+      {
+        "name": "type",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "priorityConfig"
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "moduleName": "thingTypes",
+    "innerClass": "ThingTypeField",
+    "instances": [
+      {
+        "name": "resource",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "tilesConfiguration"
+        }
+      },
+      {
+        "name": "backgroundColor",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "COLOR"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "tilesConfiguration"
+        }
+      },
+      {
+        "name": "textColor",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "COLOR"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "tilesConfiguration"
+        }
+      },
+      {
+        "name": "badgeColor",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "COLOR"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "tilesConfiguration"
+        }
+      },
+      {
+        "name": "badgeTextColor",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "COLOR"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "tilesConfiguration"
+        }
+      },
+      {
+        "name": "order",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "NUMBER"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "tilesConfiguration"
+        }
+      }
+    ]
+  },
+
+  {
+    "moduleName": "thingTypes",
+    "innerClass": "ThingTypeField",
+    "instances": [
+      {
+        "name": "level",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "userSettings"
+        }
+      },
+      {
+        "name": "departmentLevelCode",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "userSettings"
+        }
+      },
+      {
+        "name": "storeName",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "userSettings"
+        }
+      },
+      {
+        "name": "storeCode",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "userSettings"
+        }
+      },
+      {
+        "name": "username",
+        "typeParent": "DATA_TYPE",
+        "timeSeries": false,
+        "multiple": false,
+        "dataType": {
+          "innerClass": "DataType",
+          "getter": "getByCode",
+          "params": "STRING"
+        },
+        "thingType": {
+          "innerClass": "ThingType",
+          "getter": "getByCode",
+          "params": "userSettings"
+        }
+      }
+
+    ]
+  }
+  ],
+  "postProcess": [
+  ]
+}
+

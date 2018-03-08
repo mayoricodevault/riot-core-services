@@ -1,0 +1,37 @@
+{
+  "dependsOn": "CoreTenant",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "bridgesAndConnections",
+      "definitionFile": "bridgesDefinition.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesDefinition.json"
+    },
+    {
+      "module": "things",
+      "definitionFile": "thingsDefinition.json"
+    },
+    {
+      "module": "model",
+      "definitionFile": "facilityDefinition.json"
+    },
+    {
+      "module": "reports",
+      "definitionFile": "reportDefinition.json"
+    },
+    {
+      "module": "reportFilters",
+      "definitionFile": "filterDefinition.json"
+    },
+    {
+      "module": "usersAndRoles",
+      "definitionFile": "userDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

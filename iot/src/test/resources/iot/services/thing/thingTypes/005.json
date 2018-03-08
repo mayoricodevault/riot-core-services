@@ -1,0 +1,45 @@
+{
+  "serialFormula": "CustomTT005${numberFloatField}-${stringField}-${String:leftPad(attributeSequence,8,\"0\")}",
+  "group.id": 3,
+  "name": "CustomTT005",
+  "child.ids": [],
+  "isParent": false,
+  "thingTypeTemplateId": 1,
+  "thingTypeCode": "CustomTT005",
+  "autoCreate": false,
+  "fields": [
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "attributeSequence",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 25,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "1",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "stringField",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 1,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "a default string",
+      "multiple": false
+    },
+    {
+      "thingTypeFieldTemplateId": null,
+      "name": "numberFloatField",
+      "symbol": "",
+      "timeSeries": false,
+      "typeParent": "DATA_TYPE",
+      "type": 4,
+      "dataTypeThingTypeId": null,
+      "defaultValue": "100",
+      "multiple": false
+    }
+  ]
+}

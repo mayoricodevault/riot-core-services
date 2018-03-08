@@ -1,0 +1,737 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingType",
+      "instances": [
+        {
+          "name": "Supply Chain Contract",
+          "thingTypeCode": "SupplyChainContract",
+          "archived": false,
+          "autoCreate": true,
+          "isParent": true,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Smart Contract Document"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        },
+        {
+          "name": "Smart Item",
+          "thingTypeCode": "SmartItem",
+          "archived": false,
+          "autoCreate": true,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByCode",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        },
+        {
+          "name": "Items Quantity",
+          "thingTypeCode": "ItemsQuantity",
+          "archived": false,
+          "autoCreate": true,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByCode",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "active",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "BOOLEAN"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "ASN_Carrier",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "ASN_DeliveryDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "ASN_Number",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "ASN_ShippingDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "blockchainId",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "BOL_Consignee",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "BOL_Date",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "BOL_Number",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "BOL_Shipper",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "containerID",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "errorMessage",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "kitSerial",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "kitTransaction",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "palletID",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "PO_Carrier",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "PO_Customer",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "PO_Date",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "PO_DeliveryDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "PO_InCoTerms",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "PO_Number",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "PO_Vendor",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "source",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "status",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "TrDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "TrLocation",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "truckID",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SupplyChainContract"
+          }
+        },
+        {
+          "name": "bizLocation",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "bizStep",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "bizTransactionList",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "employeeID",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "epcClass",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "eventTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "unit": "millisecond",
+          "symbol": "ms",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "homeGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "GROUP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "orgID",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "SKU",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "scd_SupplyChainContract",
+          "typeParent": "NATIVE_THING_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataTypeThingTypeId": {
+            "innerMethod": "getDataTypeThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SupplyChainContract"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "THING_TYPE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "SmartItem"
+          }
+        },
+        {
+          "name": "epcClass",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "ItemsQuantity"
+          }
+        },
+        {
+          "name": "quantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "ItemsQuantity"
+          }
+        },
+        {
+          "name": "scd_SupplyChainContract",
+          "typeParent": "NATIVE_THING_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataTypeThingTypeId": {
+            "innerMethod": "getDataTypeThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SupplyChainContract"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "THING_TYPE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "ItemsQuantity"
+          }
+        }
+      ]
+    }
+
+
+  ],
+  "postProcess": [
+  ]
+}

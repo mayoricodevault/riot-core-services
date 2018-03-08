@@ -1,0 +1,52 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "connections",
+      "innerClass": "Connection",
+      "instances": [
+        {
+          "name": "Blockchain adapter",
+          "code": "BlockchainAdapter",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "apikey": "root",
+              "secure": false,
+              "port": 3000,
+              "contextpath": "/"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "REST"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "parameters",
+      "innerClass": "Parameters",
+      "instances": [
+        {
+          "category": "BRIDGE_TYPE",
+          "code": "smed",
+          "appResourceCode": "@SYSTEM_PARAMETERS_BRIDGE_TYPE_SMED",
+          "value" : "{\"filters\":{},\"configuration\":{\"inputTopic\":{\"value\":\"/v1/data2\",\"type\":\"String\",\"order\":0,\"required\":true},\"outputTopic\":{\"value\":\"/v1/data1\",\"type\":\"String\",\"order\":1,\"required\":true},\"outputFormat\":{\"value\":\"JSON\",\"type\":\"String\",\"order\":2,\"required\":true},\"numberOfThreads\":{\"value\":1,\"type\":\"Number\",\"order\":3,\"required\":true},\"documentUdfNamePrefix\":{\"value\":\"scd\",\"type\":\"String\",\"order\":4,\"required\":true},\"mqtt\":{\"value\":{\"active\":{\"value\":false,\"type\":\"Boolean\",\"order\":0,\"required\":false},\"connectionCode\":{\"value\":\"MQTTNRSC\",\"type\":\"String\",\"order\":0,\"required\":true}},\"type\":\"JSON\",\"order\":5,\"required\":false},\"kafka\":{\"value\":{\"active\":{\"value\":true,\"type\":\"Boolean\",\"order\":0,\"required\":false},\"connectionCode\":{\"value\":\"KAFKA\",\"type\":\"String\",\"order\":0,\"required\":true},\"consumerGroup\":{\"value\":\"group1\",\"type\":\"String\",\"order\":1,\"required\":true},\"checkpoint\":{\"value\":false,\"type\":\"Boolean\",\"order\":2,\"required\":false}},\"type\":\"JSON\",\"order\":6,\"required\":false},\"listener\":{\"value\":{\"kafkaCode\":{\"value\":\"KAFKA\",\"type\":\"String\",\"order\":0,\"required\":true},\"topic\":{\"value\":\"___v1___events,1,1\",\"type\":\"String\",\"order\":1,\"required\":true}},\"type\":\"JSON\",\"order\":7,\"required\":false},\"commands\":{\"value\":{\"kafkaCode\":{\"value\":\"KAFKA\",\"type\":\"String\",\"order\":0,\"required\":true},\"topic\":{\"value\":\"/v1/commands/SMED,1,1\",\"type\":\"String\",\"order\":1,\"required\":true},\"consortiumCode\":{\"value\":\"TEST_RETAILER\",\"type\":\"String\",\"order\":2,\"required\":true},\"adapterCode\":{\"value\":\"BlockchainAdapter\",\"type\":\"String\",\"order\":3,\"required\":true}},\"type\":\"JSON\",\"order\":8,\"required\":false}},\"extra\":{\"apikey\":{\"value\":\"7B4BCCDC\",\"type\":\"String\",\"required\":false},\"bridgeTopic\":{\"value\":\"\",\"type\":\"String\",\"required\":false},\"httpHost\":{\"value\":\"\",\"type\":\"String\",\"required\":false}}}"
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}
+
+

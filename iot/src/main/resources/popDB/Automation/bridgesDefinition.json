@@ -1,0 +1,1686 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "connections",
+      "innerClass": "Connection",
+      "instances": [
+        {
+          "name": "Blockchain adapter",
+          "code": "BlockchainAdapter",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "apikey": "root",
+              "secure": false,
+              "port": 3000,
+              "contextpath": "/"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "REST"
+          }
+        },
+        {
+          "name": "Mqtt Blockchain",
+          "code": "MQTTBLOCKCHAIN",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "qos": 2,
+              "secure": false,
+              "port": 1883
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MQTT"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "parameters",
+      "innerClass": "Parameters",
+      "instances": [
+        {
+          "category": "BRIDGE_TYPE",
+          "code": "smed",
+          "appResourceCode": "@SYSTEM_PARAMETERS_BRIDGE_TYPE_SMED",
+          "value" : "{\"filters\":{},\"configuration\":{\"inputTopic\":{\"value\":\"/v1/data3\",\"type\":\"String\",\"order\":0,\"required\":true},\"outputTopic\":{\"value\":\"/v1/data1\",\"type\":\"String\",\"order\":1,\"required\":true},\"outputFormat\":{\"value\":\"JSON\",\"type\":\"String\",\"order\":2,\"required\":true},\"numberOfThreads\":{\"value\":1,\"type\":\"Number\",\"order\":3,\"required\":true},\"documentUdfNamePrefix\":{\"value\":\"scd\",\"type\":\"String\",\"order\":4,\"required\":true},\"mqtt\":{\"value\":{\"active\":{\"value\":false,\"type\":\"Boolean\",\"order\":0,\"required\":false},\"connectionCode\":{\"value\":\"MQTTBLOCKCHAIN\",\"type\":\"String\",\"order\":0,\"required\":true}},\"type\":\"JSON\",\"order\":5,\"required\":false},\"kafka\":{\"value\":{\"active\":{\"value\":true,\"type\":\"Boolean\",\"order\":0,\"required\":false},\"connectionCode\":{\"value\":\"KAFKA\",\"type\":\"String\",\"order\":0,\"required\":true},\"consumerGroup\":{\"value\":\"group1\",\"type\":\"String\",\"order\":1,\"required\":true},\"checkpoint\":{\"value\":false,\"type\":\"Boolean\",\"order\":2,\"required\":false}},\"type\":\"JSON\",\"order\":6,\"required\":false},\"listener\":{\"value\":{\"kafkaCode\":{\"value\":\"KAFKA\",\"type\":\"String\",\"order\":0,\"required\":true},\"topic\":{\"value\":\"___v1___events,1,1\",\"type\":\"String\",\"order\":1,\"required\":true}},\"type\":\"JSON\",\"order\":7,\"required\":false},\"commands\":{\"value\":{\"kafkaCode\":{\"value\":\"KAFKA\",\"type\":\"String\",\"order\":0,\"required\":true},\"topic\":{\"value\":\"/v1/commands/SMED,1,1\",\"type\":\"String\",\"order\":1,\"required\":true},\"consortiumCode\":{\"value\":\"TEST_RETAILER\",\"type\":\"String\",\"order\":2,\"required\":true},\"adapterCode\":{\"value\":\"BlockchainAdapter\",\"type\":\"String\",\"order\":3,\"required\":true}},\"type\":\"JSON\",\"order\":8,\"required\":false}},\"extra\":{\"apikey\":{\"value\":\"7B4BCCDC\",\"type\":\"String\",\"required\":false},\"bridgeTopic\":{\"value\":\"\",\"type\":\"String\",\"required\":false},\"httpHost\":{\"value\":\"\",\"type\":\"String\",\"required\":false}}}"
+        }
+      ]
+    },
+    {
+      "moduleName": "connections",
+      "innerClass": "Connection",
+      "instances": [
+        {
+          "name": "MSSQLServer",
+          "code": "MSSQLServer",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "schema": "DWMS",
+              "password": "YWJjMTIz",
+              "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+              "user": "sa",
+              "url": "jdbc:sqlserver://localhost;DatabaseName=DWMS"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "DBConnection"
+          }
+        },
+        {
+          "name": "MySQLServer",
+          "code": "MySQLServer",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "schema": "ct-app-center",
+              "password": "Y29udHJvbDEyMyE=",
+              "driver": "com.mysql.jdbc.Driver",
+              "user": "root",
+              "url": "jdbc:mysql://localhost:3306/ct-app-center"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "DBConnection"
+          }
+        },
+        {
+          "name": "SQL",
+          "code": "SQL",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "password": "Y29udHJvbDEyMyE=",
+              "dialect": "org.hibernate.dialect.MySQLDialect",
+              "driver": "com.mysql.jdbc.Driver",
+              "url": "jdbc:mysql://localhost:3306/riot_main",
+              "username": "root",
+              "hazelcastNativeClientAddress": "localhost"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "SQL"
+          }
+        },
+        {
+          "name": "Services",
+          "code": "SERVICES",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "apikey": "7B4BCCDC",
+              "secure": false,
+              "port": 8080,
+              "contextpath": "/riot-core-services"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "REST"
+          }
+        },
+        {
+          "name": "Mqtt",
+          "code": "MQTT",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "qos": 2,
+              "secure": false,
+              "port": 1883
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MQTT"
+          }
+        },
+        {
+          "name": "Mqtt Santa Monica",
+          "code": "MQTTSM",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "qos": 2,
+              "secure": false,
+              "port": 1883
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MQTT"
+          }
+        },
+        {
+          "name": "Mqtt Discovered",
+          "code": "MQTTSF",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "qos": 2,
+              "secure": false,
+              "port": 1883
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MQTT"
+          }
+        },
+        {
+          "name": "MongoDB",
+          "code": "MONGO",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "mongoReplicaSet": "",
+              "mongoSSL": false,
+              "mongoPrimary": "127.0.0.1:27017",
+              "password": "Y29udHJvbDEyMyE=",
+              "mongoAuthDB": "admin",
+              "mongoSecondary": "",
+              "mongoConnectTimeout": 0,
+              "mongoSharding": false,
+              "mongoDB": "riot_main",
+              "mongoMaxPoolSize": 0,
+              "username": "admin"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MONGO"
+          }
+        },
+        {
+          "name": "MongoDB Santa Monica",
+          "code": "MONGOSM",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "mongoReplicaSet": "",
+              "mongoSSL": false,
+              "mongoPrimary": "127.0.0.1:27017",
+              "password": "Y29udHJvbDEyMyE=",
+              "mongoAuthDB": "admin",
+              "mongoSecondary": "",
+              "mongoConnectTimeout": 0,
+              "mongoSharding": false,
+              "mongoDB": "riot_main",
+              "mongoMaxPoolSize": 0,
+              "username": "admin"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MONGO"
+          }
+        },
+        {
+          "name": "MongoDB Discovered",
+          "code": "MONGOSF",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "mongoReplicaSet": "",
+              "mongoSSL": false,
+              "mongoPrimary": "127.0.0.1:27017",
+              "password": "Y29udHJvbDEyMyE=",
+              "mongoAuthDB": "admin",
+              "mongoSecondary": "",
+              "mongoConnectTimeout": 0,
+              "mongoSharding": false,
+              "mongoDB": "riot_main",
+              "mongoMaxPoolSize": 0,
+              "username": "admin"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MONGO"
+          }
+        },
+        {
+          "name": "Ftp",
+          "code": "FTP",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "password": "MTIzNA==",
+              "secure": false,
+              "port": 21,
+              "username": "ftpUser"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "FTP"
+          }
+        },
+        {
+          "name": "Ftp Santa Monica",
+          "code": "FTPSM",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "password": "ZjEyMzQ1Njc=",
+              "secure": false,
+              "port": 21,
+              "username": "ftpUser"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "FTP"
+          }
+        },
+        {
+          "name": "Analytics",
+          "code": "ANALYTICS",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "mongo.port": "27017",
+              "mongo.dbname": "riot_main",
+              "extractions.path": "/var/local/riot/extractions",
+              "responses.path": "/var/local/riot/responses",
+              "trainings.path": "/var/local/riot/trainings",
+              "predictions.path": "/var/local/riot/predictions",
+              "mongo.password": "",
+              "mongo.secure": "true",
+              "jars.path": "/var/local/riot/jars",
+              "mongo.host": "localhost",
+              "mongo.username": "admin",
+              "extraction.collection": "thingSnapshots"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "ANALYTICS"
+          }
+        },
+        {
+          "name": "Kafka",
+          "code": "KAFKA",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "zookeeper": "${kafka.zookeeper}",
+              "server": "${kafka.servers}"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "KAFKA"
+          }
+        },
+        {
+          "name": "GPubSub",
+          "code": "GPubSub",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "type":"service_account",
+              "project_id":"just-aloe-172913",
+              "private_key_id":"cfca5a0ced64649f902cb794053ed64430393828",
+              "private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCxOFZzzC+0xtOh\n/WrW5YWKKbEaueKA1Kmaff6dazekYWpAOygstHMHlGQa+CbnqYtIsD3zTDqIr9Yl\n9BEGPKERVi7kZDn3dfCZv2ynG8uGqUCz1V19jayODrB+/RGEv8tBZP6UAsan0TsA\nnObi8br6iuAyVSwHkrM/ea/ToFKebro8N/LbRSK7U0ZeXFfIGTZBf+GfqMKSOiqQ\nTu0QlqCOCbtRd7U0fYFigJemCTYGkbACDF1AFTV5zrAJclN6WbSjiS/2cBS1TWlh\nkmSBFpJXg8K2OxPcXWtaz8mfwLS27HAkMfLno4o3MOyYx0z5VV9DmpE6iSDJvVDH\nYInODpUPAgMBAAECggEAGUjRb39gBb8hrgigTVK9Om4iWjl6gH5W8wzWM+glLdXG\n5AJ3WTwm9puMVhtg6Z0omyanYBFYf0H0dWvHYLLBGYkd8vCoeI73fz1u0hTGyqAB\nSZG/30xET0Gh8CxJFeiLUPmI0jM8hpr1Jmw8YNVeTlAGwVz3hYkU++caV+uVfgxP\ncIWEMl5JLuNlJ1piH47jx/ot+VA8V9rgvinkWO3Bmk4Xy/V3F8g4cmSAB3byRxEn\nwykXJb4AruiYxJONZ7NpImZHQ42ju6OCgqHV92zE0mOUgds/Iyr4xySoEAmumgPd\nFufqpnEUz9EZcUPQMwQIrRxmspOphIpo9Z3UYgdOiQKBgQDbS2uOCBQPWByikhT0\nMhqIewpbnbn2XKvQmw4MeV4uObwDMoaPsSwfZ7vtROHleB7vp9P+jqDE4RgOL927\nQoAW6tya9c331oVswX5Ml+p3GxQkI8GB3SwsdXNjfjbsUuUDrm1ST0kKg6jHFmYw\nw2bWkjQDllZCuvhLa1DzFoZigwKBgQDO4g+NaZjacbeqVtiVXwJIk/uig3b/davC\nDPuFrhjdSX9RSPhh2U5KszOlst7cA5lXfhJzemtm/4fxMExcaDJfjK77efgcTlC9\nRrbMOpzotXwIsG8VnPkMPgBT7rr2/QuCZYzzgZvx+5hR+wfAbHa5W/VrrJXBtxY0\nDs3Q5DRNhQKBgQDKnhflZo9qUgY7K3BS5IxheBXs6oHtIFjb6LgFTIp5eXy/E4sC\n7zeOWOFpbBCwXdlvo4iblhrzbes1CIL9x4bkJeLpBp5lFP+4qdtRV7gajpmAfs0H\neVycQ3T3A6IpnrndOefmej1JiraCJK8M9S5qqTGH8vsGswxBWwmzYSePkwKBgQCT\n9Zt34LjgKgpYOgpmMe/5JlUGco1twKOZgh11CwFfagwzf0Oc/4R96lIaxKWcprpJ\nl7HsgvZDUKfR+F/0itTT/1K6Kg4neF9IL0XXJGhKClnuAPlBdOWtOr6TSJ7QvEM5\n/BTlpqF4XB8hKq7tkOUMRldsrZ7hT2cCzj+mkT9S3QKBgQCyJ3X5mRl0TAHgMjGU\nnXXqSr4CCmijTISDj/W37L5hlfxALuN6pivO6e6O8nPixMiCRKBtsbRULw+hDuce\nswddW8PtA/P/w/b0WpybNVJUxGhWhdgHTE9sv3WCFe88a8IeJ99z+8XnYQ4xqP3I\nzHkJQDu6sXM4rLtJWMdOfMCvUg==\n-----END PRIVATE KEY-----\n",
+              "client_email":"vizix-883@just-aloe-172913.iam.gserviceaccount.com",
+              "client_id":"102763950436270263668",
+              "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+              "token_uri":"https://accounts.google.com/o/oauth2/token",
+              "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+              "client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/vizix-883%40just-aloe-172913.iam.gserviceaccount.com"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "GPubSub"
+          }
+        },
+        {
+          "name": "SQL-Azure",
+          "code": "SQL-Azure",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "schema": "automationTest",
+              "password": "QWRtMTEyMzQ1Njc4",
+              "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+              "user": "sa",
+              "url": "jdbc:sqlserver://localhost;DatabaseName=automationTest"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "DBConnection"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "bridges",
+      "innerClass": "Edgebox",
+      "instances": [
+        {
+          "name": "Core Bridge",
+          "code": "MCB",
+          "type": "core",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "sourceRule": {
+                "active": false
+              },
+              "shiftZoneRule": {
+                "active": false,
+                "shiftProperty": "shift",
+                "zoneViolationStatusProperty": "zoneViolationStatus",
+                "zoneViolationFlagProperty": "zoneViolationFlag"
+              },
+              "mongo": {
+                "connectionCode": "MONGO"
+              },
+              "coreBridgeStatistics": {"active": true},
+              "cepChangeLogs": {"active": false},
+              "numberOfThreads": 1,
+              "mqtt": {
+                "connectionCode": "MQTT",
+                "topics": [
+                  "/v1/data/APP2/#",
+                  "/v1/data/ALEB/#"
+                ]
+              },
+              "swarmRule": {
+                "thingTypes": [{
+                  "thingTypeCode": "default_rfid_thingtype",
+                  "udfGroup": "grouping",
+                  "distanceFilter": 10000,
+                  "udfGroupStatus": "groupStatus"
+                }],
+                "timeInterval": 5000,
+                "active": false,
+                "algorithm": "followLastDetect"
+              },
+              "thingCache": {
+                "size": 1000000,
+                "evictionTime": 60
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES",
+                "sqlConnectionCode": "SQL",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "2048m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              },
+              "outOfOrderRule": {
+                "active": false
+              },
+              "checkMultilevelReferences": {
+                "active": true
+              },
+              "thingInsertRestApi": {
+                "retryAttemptLimit": 10,
+                "retryIntervalPeriodSecs": 5000
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          }
+        },
+        {
+          "name": "ALE Edge Bridge",
+          "code": "ALEB",
+          "type": "edge",
+          "port": 9090,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "zoneDwellFilter": {
+                "lastDetectTimeActive": true,
+                "active": true,
+                "zoneDwellTime": 300,
+                "inZoneDistance": 10,
+                "lastDetectTimeWindow": 0,
+                "unlockDistance": 25,
+                "evictionTime":24
+              },
+              "facilityMapForOrigin": "Map Store Santa Monica",
+              "edgeBridgeStatistics": {"active": true},
+              "thingTypeCode": "default_rfid_thingtype",
+              "logRawMessages": false,
+              "numberOfThreads": 1,
+              "httpListener": {
+                "bridgePort": 9090,
+                "socketTimeout": 60000
+              },
+              "mqtt": {
+                "connectionCode": "MQTT"
+              },
+              "kafka": {
+                "active": false,
+                "connectionCode": "KAFKA"
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES",
+                "bridgeMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "ALE Edge Bridge #2",
+          "code": "ALEB2",
+          "type": "edge",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "evaluateStats": true,
+              "thingTypeCode": "default_rfid_thingtype",
+              "numberOfThreads": 10,
+              "send500ErrorOnTimeout": false,
+              "zoneDwellFilter": {
+                "lastDetectTimeActive": true,
+                "active": true,
+                "zoneDwellTime": 300.0,
+                "inZoneDistance": 10.0,
+                "lastDetectTimeWindow": 0,
+                "unlockDistance": 25.0
+              },
+              "streaming": {
+                "active": false,
+                "bufferSize": 10
+              },
+              "mqtt": {
+                "connectionCode": "MQTTSM",
+                "active": true
+              },
+              "socketTimeout": 60000,
+              "dynamicTimeoutRate": 0,
+              "logRawMessages": false,
+              "bridgePort": 9091
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "GPS Edge Bridge",
+          "code": "GPS",
+          "type": "GPS",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "thingTypeCode": "default_gps_thingtype",
+              "logRawMessages": false,
+              "mqtt": {
+                "connectionCode": "MQTTSM"
+              },
+              "geoforce": {
+                "host": "app.geoforce.com",
+                "path": "/feeds/asset_inventory.xml",
+                "port": 443,
+                "user": "datafeed@mojix.com",
+                "password": "AHmgooCk8l0jo95f7YSo",
+                "period": 60
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "StarFlex Core Bridge",
+          "code": "MCB_DISCOVERED",
+          "type": "core",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "threadDispatchMode": 1,
+              "numberOfThreads": 32,
+              "sql": {
+                "connectionCode": "SQL"
+              },
+              "rest": {
+                "connectionCode": "SERVICES"
+              },
+              "mqtt": {
+                "connectionCode": "MQTTSF",
+                "active": true,
+                "topics": [
+                  "/v1/data/APP2/#",
+                  "/v1/data/STAR/#",
+                  "/v1/data/ALEB_DISCOVERED/#"
+                ]
+              },
+              "mongo": {
+                "connectionCode": "MONGOSF"
+              },
+              "sequenceNumberLogging": {
+                "active": false,
+                "TTL": 86400,
+                "GC_GRACE_SECONDS": 0
+              },
+              "sourceRule": {
+                "active": false
+              },
+              "outOfOrderRule": {
+                "active": false
+              },
+              "timeOrderRule": {
+                "active": false,
+                "period": 0
+              },
+              "interCacheEviction": {
+                "active": false
+              },
+              "swarmFilter": {
+                "active": false,
+                "timeGroupTimer": 5000,
+                "swarmAlgorithm": "followLastDetect",
+                "thingTypes": [
+                  {
+                    "thingTypeCode": "default_rfid_thingtype",
+                    "udfGroupStatus": "groupStatus",
+                    "udfGroup": "grouping",
+                    "distanceFilter": 10000
+                  }
+                ]
+              },
+              "CEPLogging": {
+                "active": false
+              },
+              "shiftZoneRule": {
+                "active": false,
+                "shiftProperty": "shift",
+                "zoneViolationStatusProperty": "zoneViolationStatus",
+                "zoneViolationFlagProperty": "zoneViolationFlag"
+              },
+              "checkMultilevelReferences": {},
+              "CEPEngineConfiguration": {
+                "insertIntoDispatchPreserveOrder": false,
+                "listenerDispatchPreserveOrder": false,
+                "multipleInstanceMode": false
+              },
+              "interCacheEvictionQueueSize": 20000,
+              "fixOlderSnapshotsQueueSize": 20000,
+              "evaluateStats": true
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          }
+        },
+        {
+          "name": "StarFlex ALE Edge Bridge",
+          "code": "ALEB_DISCOVERED",
+          "type": "edge",
+          "port": 9093,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "evaluateStats": true,
+              "thingTypeCode": "flextag_code",
+              "numberOfThreads": 10,
+              "send500ErrorOnTimeout": false,
+              "zoneDwellFilter": {
+                "lastDetectTimeActive": true,
+                "active": true,
+                "zoneDwellTime": 300.0,
+                "inZoneDistance": 10.0,
+                "lastDetectTimeWindow": 0,
+                "unlockDistance": 25.0
+              },
+              "streaming": {
+                "active": false,
+                "bufferSize": 10
+              },
+              "mqtt": {
+                "connectionCode": "MQTTSF",
+                "active": true
+              },
+              "kafka": {
+                "connectionCode": "KAFKA",
+                "active": false
+              },
+              "socketTimeout": 60000,
+              "dynamicTimeoutRate": 0,
+              "logRawMessages": false,
+              "bridgePort": 9092
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          }
+        },
+        {
+          "name": "STARflex Bridge",
+          "code": "STAR",
+          "type": "STARflex",
+          "port": 9092,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "mongo": {
+                "connectionCode": "MONGOSF"
+              },
+              "zoneDwellFilter": {
+                "lastDetectTimeActive": true,
+                "active": true,
+                "zoneDwellTime": 10,
+                "inZoneDistance": 0,
+                "lastDetectTimeWindow": 20,
+                "unlockDistance": 0
+              },
+              "thingTypeCodeConfig": "STR_400",
+              "thingTypeCode": "flextag_code",
+              "rateFilter": {
+                "timeLimit": 20,
+                "active": true
+              },
+              "thingTypeCodeStatus": "starflex_status_code",
+              "mqtt": {
+                "connectionCode": "MQTTSF"
+              },
+              "numberOfThreads": 1,
+              "lastDetectFilterTypes": "",
+              "logRawMessages": false
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SF"
+          }
+        },
+        {
+          "name": "FTP Bridge Test",
+          "code": "FTPTest",
+          "type": "FTP",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "thingTypeCode": "item",
+              "logRawMessages": false,
+              "ftp": {
+                "connectionCode": "FTPSM"
+              },
+              "path": "/StoreReferenceData",
+              "pattern": "*.AUTOMATION",
+              "patternCaseSensitive": false,
+              "schedule": "0/10 * * * * ?",
+              "configParser": {
+                "parserType": "fixedlength",
+                "separator": null,
+                "fieldLengths": "17,6,13",
+                "ignoreFooter": true,
+                "ignoreHeader": false,
+                "fieldNames": [
+                  "Serial",
+                  "zone",
+                  "detectedTime"
+                ],
+                "columnNumberAsSerial": 0
+              },
+              "processPolicy": "Move",
+              "localBackupFolder": "/tmp",
+              "ftpDestinationFolder": "processed/automation",
+              "mqtt": {
+                "connectionCode": "MQTTSM"
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+
+        {
+          "name": "BLOCKCHAIN Bridge",
+          "code": "BLOCKCHAIN",
+          "type": "core",
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "threadDispatchMode": 1,
+              "numberOfThreads": 1,
+              "sql": {
+                "connectionCode": "SQL"
+              },
+              "rest": {
+                "connectionCode": "SERVICES"
+              },
+              "mqtt": {
+                "connectionCode": "MQTT",
+                "active": true,
+                "topics": [
+                  "/v1/data/#"
+                ]
+              },
+              "mongo": {
+                "connectionCode": "MONGO"
+              },
+              "sequenceNumberLogging": {
+                "active": false,
+                "TTL": 86400,
+                "GC_GRACE_SECONDS": 0
+              },
+              "sourceRule": {
+                "active": false
+              },
+              "outOfOrderRule": {
+                "active": false
+              },
+              "timeOrderRule": {
+                "active": false,
+                "period": 0
+              },
+              "interCacheEviction": {
+                "active": false
+              },
+              "CEPLogging": {
+                "active": false
+              },
+              "shiftZoneRule": {
+                "active": false,
+                "shiftProperty": "shift",
+                "zoneViolationStatusProperty": "zoneViolationStatus",
+                "zoneViolationFlagProperty": "zoneViolationFlag"
+              },
+              "checkMultilevelReferences": {},
+              "CEPEngineConfiguration": {
+                "insertIntoDispatchPreserveOrder": false,
+                "listenerDispatchPreserveOrder": false,
+                "multipleInstanceMode": false
+              },
+              "interCacheEvictionQueueSize": 20000,
+              "fixOlderSnapshotsQueueSize": 20000,
+              "evaluateStats": true
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "edgeboxRules",
+      "innerClass": "EdgeboxRule",
+      "instances": [
+        {
+          "name": "Door_#1_Light_Buzzer",
+          "input": "ThingMessage",
+          "output": "AlienReaderGPIOSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "ip": "10.100.1.61",
+              "port": 23,
+              "username": "alien",
+              "password": "password",
+              "times": {
+                "lightOn": 5000,
+                "buzzerOn": 4000,
+                "buzzerOff": 3000,
+                "numberOfRetries": 5,
+                "retryTime": 5000,
+                "delay": 2000
+              },
+              "lightPinMap": {
+                "light1": 0,
+                "light2": 2,
+                "light3": 3,
+                "light4": 4
+              },
+              "buzzerPinMap": {
+                "buzzer1": 1
+              },
+              "zoneLightBuzzerMap": {
+                "Stockroom": [
+                  "light1",
+                  "buzzer1"
+                ],
+                "Salesfloor": [
+                  "light2",
+                  "buzzer1"
+                ],
+                "PoS": [
+                  "light3",
+                  "buzzer1"
+                ],
+                "Entrance": [
+                  "light4",
+                  "buzzer1"
+                ]
+              }
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and ( udf('logicalReader') = \"Door1\" and udf('status') != \"Sold\"  )",
+          "description": "Light Buzzer Example",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 0,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Door_#2_Light_Buzzer",
+          "input": "ThingMessage",
+          "output": "AlienReaderGPIOSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "ip": "10.100.1.61",
+              "port": 23,
+              "username": "alien",
+              "password": "password",
+              "times": {
+                "lightOn": 5000,
+                "buzzerOn": 4000,
+                "buzzerOff": 3000,
+                "numberOfRetries": 5,
+                "retryTime": 5000,
+                "delay": 2000
+              },
+              "lightPinMap": {
+                "light1": 0,
+                "light2": 2,
+                "light3": 3,
+                "light4": 4
+              },
+              "buzzerPinMap": {
+                "buzzer1": 1
+              },
+              "zoneLightBuzzerMap": {
+                "Stockroom": [
+                  "light1",
+                  "buzzer1"
+                ],
+                "Salesfloor": [
+                  "light2",
+                  "buzzer1"
+                ],
+                "PoS": [
+                  "light3",
+                  "buzzer1"
+                ],
+                "Entrance": [
+                  "light4",
+                  "buzzer1"
+                ]
+              }
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and ( udf('logicalReader') = \"Door2\" and udf('status') != \"Sold\" )",
+          "description": "Light Buzzer Example",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 1,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Door_#1_Light_BuzzerMFR",
+          "input": "ThingMessage",
+          "output": "MFRReaderGPIOSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "ip": "10.100.1.124",
+              "port": 65200,
+              "times": {
+                "lightOn": 5000,
+                "buzzerOn": 3000,
+                "buzzerOff": 2000,
+                "delayBeforeTrigger": 0,
+                "timeBuzzer": 3000,
+                "maxTimeBuzzer": 5000
+              },
+              "lightPinMap": {
+                "light1": 0,
+                "light2": 2,
+                "light3": 3,
+                "light4": 4
+              },
+              "buzzerPinMap": {
+                "buzzer1": 1
+              },
+              "zoneLightBuzzerMap": {
+                "Stockroom": [
+                  "light1",
+                  "buzzer1"
+                ],
+                "Salesfloor": [
+                  "light2",
+                  "buzzer1"
+                ],
+                "PoS": [
+                  "light3",
+                  "buzzer1"
+                ],
+                "Entrance": [
+                  "light4",
+                  "buzzer1"
+                ]
+              }
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and (  udf('zone') = \"Stockroom\" )",
+          "description": "Example MFR Subscriber",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 2,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "TurnOff_Light_BuzzerMFR",
+          "input": "ThingMessage",
+          "output": "MFRTurnOffGPIOSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "ip": "10.100.1.124",
+              "port": 65200,
+              "times": {
+                "lightOn": 5000,
+                "buzzerOn": 3000,
+                "buzzerOff": 2000,
+                "delayBeforeTrigger": 0,
+                "timeBuzzer": 3000,
+                "maxTimeBuzzer": 5000
+              },
+              "lightPinMap": {
+                "light1": 0,
+                "light2": 2,
+                "light3": 3,
+                "light4": 4
+              },
+              "buzzerPinMap": {
+                "buzzer1": 1
+              },
+              "zoneLightBuzzerMap": {
+                "Stockroom": [
+                  "light1",
+                  "buzzer1"
+                ],
+                "Salesfloor": [
+                  "light2",
+                  "buzzer1"
+                ],
+                "PoS": [
+                  "light3",
+                  "buzzer1"
+                ],
+                "Entrance": [
+                  "light4",
+                  "buzzer1"
+                ]
+              },
+              "counterUDFs": {
+                "zoneUDF": "zone",
+                "lastZoneIdUDF": "lastZoneId",
+                "zoneAlertFlagUDF": "zoneAlertFlag"
+              }
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and ( udf('zone') != \"Stockroom\" )",
+          "description": "Example TurnOff light buzzer MFR Subscriber",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 3,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Location_Event_Test",
+          "input": "ThingMessage",
+          "output": "ThingPropertySetter",
+          "outputConfig": "status=\"BAD\"",
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and ( udf('logicalReader') != 'LR1' )",
+          "description": "Sets status to 'BAD' if a thing is not in it's assigned zone",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 4,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Door_Event_Test",
+          "input": "ThingMessage",
+          "output": "ThingPropertySetter",
+          "outputConfig": "status=\"YOU ARE IN\"",
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and (  udf('doorEvent') = 'LR1:in' )",
+          "description": "Test rule for junit testing",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 5,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Point_In_Zone_Test",
+          "input": "ThingMessage",
+          "output": "ThingPropertySetter",
+          "outputConfig": "status=\"YOU ARE IN POS\"",
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and (  udf('zone') = 'PoS' )",
+          "description": "Test rule for junit testing",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 6,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Out_Of_Assigned_Zone",
+          "input": "ThingMessage",
+          "output": "ThingPropertySetter",
+          "outputConfig": "status='bad'",
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and ( udf('zone') != 'assignedZone' )",
+          "description": "Sets status to 'bad' if a thing is not in it's assigned zone",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 7,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "MQTTPushSubscriber",
+          "input": "ThingMessage",
+          "output": "MQTTPushSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "port": 1883,
+              "topic": "MQTTDemo",
+              "mqtt-body": "Serial Number: ${serialNumber}. Hi. This is the mqtt message for thing ${name}"
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and (  udf('zone') = 'Stockroom' )",
+          "description": "When a thing is moved to another area, this rule sends information from the thing to the broker configured.",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 8,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "EmailSubscriber",
+          "input": "ThingMessage",
+          "output": "EmailSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "mqtt": {
+                "connectionCode": "MQTT"
+              },
+              "contentType": "text/html; charset=utf-8",
+              "subject": "Subject Serial: ${serialNumber}",
+              "to": [
+                "administrator@mojix.com"
+              ],
+              "email-body": "Hi. This is an automated message from Vizix from thing: ${name}."
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and (  udf('zone') = 'Stockroom' )",
+          "description": "When a thing is moved to another area, this rule sends an email to recipients configured.",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 9,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Exit_Gate_Rule",
+          "input": "ThingMessage",
+          "output": "ReportGeneratorSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {}
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and (  udf('zone') = 'Stockroom' )",
+          "description": "Valid values of groupBy are:- id or thingId (child/current thing_id)- parentId (parent child_id)- <any valid udf> (example: zone) records in table exit_report are snapshots of the thing, but this table only keeps last record",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 10,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Example_Rest_Endpoint_Subscriber",
+          "input": "ThingMessage",
+          "output": "com.tierconnect.riot.bridges.rules.actions.RestEndpointSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "method": "POST",
+              "protocol": "http",
+              "host": "localhost",
+              "port": 8080,
+              "path": "/riot-core-services/api/thingBridge/test/testRestEndpointSubscriber",
+              "headers": {
+                "Api_key": "root"
+              },
+              "basicAuth": {
+                "username": "myname",
+                "password": "mypasss"
+              },
+              "body": "zone=$zone"
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and ( )",
+          "description": "Example Rest Endpoint Subscriber",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 11,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "Example_Super_Subscriber",
+          "input": "ThingMessage",
+          "output": "com.tierconnect.riot.bridges.rules.actions.SuperSubscriber",
+          "outputConfig": {
+            "innerMethod": "jsonToString",
+            "params": {
+              "jsonObject": [
+                {
+                  "name": "com.tierconnect.riot.bridges.rules.actions.ThingPropertySetterSubcriber",
+                  "active": true,
+                  "config": "status=$zone"
+                },
+                {
+                  "name": "com.tierconnect.riot.bridges.rules.actions.AlienReaderGPIOSubscriber3",
+                  "active": true,
+                  "config": {
+                    "ip": "10.100.1.61",
+                    "port": 23,
+                    "username": "alien",
+                    "password": "password",
+                    "times": {
+                      "lightOn": 5000,
+                      "buzzerOn": 4000,
+                      "buzzerOff": 3000
+                    },
+                    "lightPinMap": {
+                      "light1": 0,
+                      "light2": 2,
+                      "light3": 3,
+                      "light4": 4
+                    },
+                    "buzzerPinMap": {
+                      "buzzer1": 1
+                    },
+                    "zoneLightBuzzerMap": {
+                      "Stockroom": [
+                        "light1",
+                        "buzzer1"
+                      ],
+                      "Salesfloor": [
+                        "light2",
+                        "buzzer1"
+                      ],
+                      "PoS": [
+                        "light3",
+                        "buzzer1"
+                      ],
+                      "Entrance": [
+                        "light4",
+                        "buzzer1"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "com.tierconnect.riot.bridges.rules.actions.RestEndpointSubscriber",
+                  "active": true,
+                  "config": {
+                    "method": "POST",
+                    "protocol": "http",
+                    "host": "localhost",
+                    "port": 8080,
+                    "path": "/riot-core-services/api/thingBridge/test/testRestEndpointSubscriber",
+                    "headers": {
+                      "Api_key": "root"
+                    },
+                    "basicAuth": {
+                      "username": "myname",
+                      "password": "mypasss"
+                    },
+                    "body": "zone=$serialNumber"
+                  }
+                },
+                {
+                  "name": "com.tierconnect.riot.bridges.rules.actions.MQTTPushSubscriber",
+                  "active": true,
+                  "config": {
+                    "host": "localhost",
+                    "port": 1883,
+                    "topic": "MQTTDemo",
+                    "mqtt-body": "Serial Number: ${serialNumber}. Hi. This is the mqtt message for thing ${name}"
+                  }
+                }
+              ]
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and (  )",
+          "description": "Example Super Subscriber. This allows more than one subscriber to be executed per Esper rule.",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 12,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "ExternalDataBaseSubscriber",
+          "input": "ThingMessage",
+          "output": "ExternalDataBaseSubscriber",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "connectionCode": "MSSQLServer",
+              "storeProcedure": "VizixDocument",
+              "input": [
+                "documentId",
+                "documentName",
+                "documentType",
+                "documentStatus",
+                "category1",
+                "category2",
+                "boxId",
+                "imagePath",
+                "shelfId",
+                "applySecurity",
+                "cabinetId",
+                "vizixFlag"
+              ],
+              "inputTypeData": [
+                "Integer",
+                "String",
+                "String",
+                "String",
+                "String",
+                "String",
+                "Integer",
+                "String",
+                "Integer",
+                "Integer",
+                "Integer",
+                "String"
+              ]
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'Document' and (  udf('vizixFlag') = \"Vizix\" )",
+          "description": "When a thing is moved to another area, this rule sends the value of the UDF to the external Data Base in SQL Server.",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 13,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        },
+        {
+          "name": "TCP Flow (Sync)",
+          "input": "ThingMessage",
+          "output": "TCPAction",
+          "outputConfig": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "port": 23,
+              "payLoad": "Test",
+              "typeMessage": "plainText",
+              "encoding": "text"
+            }
+          },
+          "rule": "select * from messageEventType where udf('thingTypeCode') = 'default_rfid_thingtype' and ( udf('zone') != \"Stockroom\" )",
+          "description": "Send payload to a TCP server",
+          "active": false,
+          "runOnReorder": false,
+          "serialExecution": false,
+          "sortOrder": 14,
+          "conditionType": "CEP",
+          "parameterConditionType": "CONDITION_TYPE",
+          "edgebox": {
+            "innerClass": "Edgebox",
+            "getter": "selectByCode",
+            "params": "MCB"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          }
+        }
+      ]
+    }
+
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "groupTypeName": "Store",
+  "groupName": "Santa Monica",
+  "serialNumber": "J00002",
+  "thingTypeId": 5,
+  "thingTypeName": "Jackets",
+  "children": [
+    {
+      "groupTypeName": "Store",
+      "groupName": "Santa Monica",
+      "serialNumber": "000000000000000000474",
+      "thingTypeId": 3,
+      "treeLevel": 2,
+      "thingTypeName": "Default RFID Thing Type",
+      "groupId": 3,
+      "name": "000000000000000000474",
+      "color.value": null,
+      "_id": 6
+    }
+  ],
+  "groupId": 3,
+  "name": "Jacket2",
+  "color.value": "Black",
+  "_id": 5
+}

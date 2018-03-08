@@ -1,0 +1,109 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "thingtypetemplatecategories",
+      "innerClass": "ThingTypeTemplateCategory",
+      "instances": [
+        {
+          "code": "BLOCKCHAIN",
+          "name": "BLOCKCHAIN",
+          "displayOrder": "7",
+          "pathIcon": "icon-thingtype-blockchain"
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypeTemplates",
+      "innerClass": "ThingTypeTemplate",
+      "instances": [
+        {
+          "name": "Smart Contract Document",
+          "code": "SmartContractDoc",
+          "description" : "Smart Contract Document",
+          "autoCreate": true,
+          "displayOrder": 1,
+          "pathIcon":"icon-thingtype-smart-contraacts",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "thingTypeTemplateCategory": {
+            "innerClass": "ThingTypeTemplateCategory",
+            "getter": "getByCode",
+            "params": "BLOCKCHAIN"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingtypefieldtemplates",
+      "innerClass": "ThingTypeFieldTemplate",
+      "instances": [
+        {
+          "name": "blockchainId",
+          "description": "blockchain id",
+          "unit": "",
+          "symbol": "",
+          "defaultValue": "",
+          "timeSeries": false,
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByCode",
+            "params": "SmartContractDoc"
+          },
+          "typeParent": "DATA_TYPE",
+          "type": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+            
+          }
+        },
+        {
+          "name": "status",
+          "description": "status",
+          "unit": "",
+          "symbol": "",
+          "defaultValue": "",
+          "timeSeries": true,
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByCode",
+            "params": "SmartContractDoc"
+          },
+          "typeParent": "DATA_TYPE",
+          "type": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+            
+          }
+        },
+        {
+          "name": "active",
+          "description": "active",
+          "unit": "",
+          "symbol": "",
+          "defaultValue": "",
+          "timeSeries": false,
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByCode",
+            "params": "SmartContractDoc"
+          },
+          "typeParent": "DATA_TYPE",
+          "type": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "BOOLEAN"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "dependsOn": "CoreTenant",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "machineLearning",
+      "definitionFile": "machineLearningDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

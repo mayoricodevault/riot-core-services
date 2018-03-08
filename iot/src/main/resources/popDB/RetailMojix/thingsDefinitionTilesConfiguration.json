@@ -1,0 +1,98 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "things",
+      "innerClass": "Thing",
+      "instances": [
+        {
+          "name": "Tile Replenishment",
+          "serial": "TILEREPLENISHMENT",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Tile Hot Replenishment",
+          "serial": "TILEHOTREPLENISHMENT",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Tile Sell Thru Replenishment",
+          "serial": "TILESELLTHRUREPLENISHMENT",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Tile Dressing Room Cleanup",
+          "serial": "TILEDRESSINGROOMCLEANUP",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

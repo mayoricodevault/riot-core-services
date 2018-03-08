@@ -1,0 +1,61 @@
+{
+  "dependsOn": "",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "tenantGroups",
+      "definitionFile": "tenantDefinition.json"
+    },
+    {
+      "module": "shifts",
+      "definitionFile": "shift.json"
+    },
+    {
+      "module": "model",
+      "definitionFile": "facilityDefinition.json"
+    },
+    {
+      "module": "logicalReader",
+      "definitionFile": "logicalReader.json"
+    },
+    {
+      "module": "usersAndRoles",
+      "definitionFile": "userDefinition.json"
+    },
+    {
+      "module": "bridgesAndConnections",
+      "definitionFile": "bridgesDefinition.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesDefinition.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesStarflex.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesBlockchain.json"
+    },
+    {
+      "module": "things",
+      "definitionFile": "thingsDefinition.json"
+    },
+    {
+      "module": "notificationTemplate",
+      "definitionFile": "notificationTemplateDefinition.json"
+    },
+    {
+      "module": "smartContractParties",
+      "definitionFile": "smartContractPartiesDefinition.json"
+    },
+    {
+      "module": "smartContractDefiniton",
+      "definitionFile": "smartContractDefDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "tenantGroups",
+      "innerClass": "Group",
+      "instances": [
+        {
+          "name": "${tenant.name}",
+          "code": "${tenant.code}",
+          "description": "",
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          }
+        },
+        {
+          "name": "${tenant.name}_Store",
+          "code": "${tenant.code}_Store",
+          "description": null,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}_Store"
+          }
+        },
+        {
+          "name": "${tenant.name}_Department",
+          "code": "${tenant.code}_Department",
+          "description": null,
+          "groupType": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Department"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "parent": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}_Store",
+            "classLevel": 2
+          },
+          "parentLevel1": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "parentLevel2": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "parentLevel3": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}_Store"
+          },
+          "parentLevel4": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}_Department"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "groupFields",
+      "innerClass": "GroupField",
+      "instances": [
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "thing"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "thingType"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "zone"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "localMap"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "report"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "logicalReader"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "shift"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "zoneType"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "edgeBox"
+          }
+        },
+        {
+          "value": 2,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "field": {
+            "innerClass": "Field",
+            "getter": "selectByName",
+            "params": "zoneGroup"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

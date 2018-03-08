@@ -1,0 +1,1 @@
+ALTER TABLE edgeboxrule ADD runOnReorder bit(1) DEFAULT 0;

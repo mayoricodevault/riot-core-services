@@ -1,0 +1,1 @@
+ALTER TABLE Resource DROP COLUMN module;

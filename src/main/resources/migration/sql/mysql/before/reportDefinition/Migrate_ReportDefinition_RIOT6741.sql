@@ -1,0 +1,1 @@
+ALTER TABLE reportdefinition ADD bulkEdit bit(1) DEFAULT FALSE;

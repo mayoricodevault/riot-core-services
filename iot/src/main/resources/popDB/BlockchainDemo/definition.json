@@ -1,0 +1,30 @@
+{
+  "dependsOn": "Blockchain",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "tenantGroups",
+      "definitionFile": "tenantDefinition.json"
+    },
+    {
+      "module": "bridges",
+      "definitionFile": "bridgesDefinition.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesDefinition.json"
+    },
+    {
+      "module": "smartContractParties",
+      "definitionFile": "smartContractPartiesDefinition.json"
+    },
+    {
+      "module": "smartContractDefiniton",
+      "definitionFile": "smartContractDefDefinition.json"
+    }
+
+  ],
+  "postProcess": [
+  ]
+}

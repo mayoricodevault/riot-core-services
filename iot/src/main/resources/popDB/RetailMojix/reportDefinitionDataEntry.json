@@ -1,0 +1,1753 @@
+{
+  "preProcess": [],
+  "executeModules": [
+    {
+      "moduleName": "folder",
+      "innerClass": "Folder",
+      "instances": [
+        {
+          "sequence": 1,
+          "lastModificationDate": "newDate",
+          "code": "retail_config",
+          "name": "Mojix Retail Config",
+          "typeElement": "report",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "createdByUser":{
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "creationDate": "newDate"
+        }
+      ]
+    },
+    {
+      "moduleName": "reportDefinition",
+      "innerClass": "ReportDefinition",
+      "instances": [
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_config"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": true,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": true,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": true,
+          "name": "Tiles Configuration Report",
+          "reportType": "table",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        }
+      ]
+    },
+    {
+      "moduleName": "reportFilter",
+      "innerClass": "ReportFilter",
+      "instances": [
+
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "==",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        }
+
+      ]
+    },
+    {
+      "moduleName": "reportProperty",
+      "innerClass": "ReportProperty",
+      "instances": [
+        {
+          "displayOrder": 1,
+          "label": "name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "serial",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "resource",
+          "propertyName": "resource",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "resource"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "backgroundColor",
+          "propertyName": "backgroundColor",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "backgroundColor"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "textColor",
+          "propertyName": "textColor",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "textColor"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "badgeColor",
+          "propertyName": "badgeColor",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "badgeColor"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "badgeTextColor",
+          "propertyName": "badgeTextColor",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "badgeTextColor"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 8,
+          "label": "order",
+          "propertyName": "order",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tilesConfiguration"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "order"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "reportEntryOption",
+      "innerClass": "ReportEntryOption",
+      "instances": [
+        {
+          "name": "Edit Home Tiles",
+          "label": "",
+          "displayOrder": 1,
+          "associate": false,
+          "disassociate": false,
+          "newOption": true,
+          "editOption": true,
+          "deleteOption": false,
+          "RFIDprint": false,
+          "isMobile": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "reportEntryOptionProperty",
+      "innerClass": "ReportEntryOptionProperty",
+      "instances": [
+        {
+          "label": "backgroundColor",
+          "displayOrder": "1",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "backgroundColor"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          },
+          "propertyName":"backgroundColor",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Home Tiles"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "badgeColor",
+          "displayOrder": "2",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "badgeColor"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          },
+          "propertyName":"badgeColor",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Home Tiles"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "badgeTextColor",
+          "displayOrder": "3",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "badgeTextColor"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          },
+          "propertyName":"badgeTextColor",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Home Tiles"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "order",
+          "displayOrder": "4",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "order"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          },
+          "propertyName":"order",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Home Tiles"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "name",
+          "displayOrder": "4",
+
+          "propertyName":"name",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Home Tiles"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+
+        {
+          "label": "resource",
+          "displayOrder": "6",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "resource"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          },
+          "propertyName":"resource",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Home Tiles"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "textColor",
+          "displayOrder": "7",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "textColor"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              }
+            ]
+          },
+          "propertyName":"textColor",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tilesConfiguration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Home Tiles"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tiles Configuration Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "moduleName": "reportDefinition",
+      "innerClass": "ReportDefinition",
+      "instances": [
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_config"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": true,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": true,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": true,
+          "name": "Priority Report",
+          "reportType": "table",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        }
+      ]
+    },
+    {
+      "moduleName": "reportFilter",
+      "innerClass": "ReportFilter",
+      "instances": [
+
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "==",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "reportProperty",
+      "innerClass": "ReportProperty",
+      "instances": [
+        {
+          "displayOrder": 1,
+          "label": "name",
+          "propertyName": "name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          }
+        },
+        {
+          "displayOrder": 1,
+          "label": "group",
+          "propertyName": "group.name",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          }
+        },
+        {
+          "displayOrder": 2,
+          "label": "serial",
+          "propertyName": "serial",
+          "showHover": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          }
+        },
+        {
+          "displayOrder": 3,
+          "label": "start",
+          "propertyName": "start",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "start"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "label": "end",
+          "propertyName": "end",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "start"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "label": "type",
+          "propertyName": "type",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "start"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "label": "label",
+          "propertyName": "label",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "start"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 7,
+          "label": "color",
+          "propertyName": "color",
+          "showHover": false,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "start"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "reportEntryOption",
+      "innerClass": "ReportEntryOption",
+      "instances": [
+        {
+          "name": "Edit Priority Configuration",
+          "label": "Edit Priority Configuration",
+          "displayOrder": 1,
+          "associate": false,
+          "disassociate": false,
+          "newOption": true,
+          "editOption": true,
+          "deleteOption": false,
+          "RFIDprint": false,
+          "isMobile": true,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "reportEntryOptionProperty",
+      "innerClass": "ReportEntryOptionProperty",
+      "instances": [
+        {
+          "label": "start",
+          "displayOrder": "1",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "start"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          },
+          "propertyName":"start",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Priority Configuration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "end",
+          "displayOrder": "2",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "end"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          },
+          "propertyName":"end",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Priority Configuration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "label",
+          "displayOrder": "3",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "label"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          },
+          "propertyName":"label",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Priority Configuration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "type",
+          "displayOrder": "4",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "type"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          },
+          "propertyName":"type",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Priority Configuration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "status",
+          "displayOrder": "5",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "status"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          },
+          "propertyName":"status",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Priority Configuration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "label": "color",
+          "displayOrder": "6",
+          "thingTypeFieldId":{
+            "innerMethod": "getIdByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "color"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              }
+            ]
+          },
+          "propertyName":"color",
+          "thingTypeIdReport":{
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "priorityConfig"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "sortBy":"",
+          "defaultMobileValue":"",
+          "editInline":true,
+          "required":false,
+          "pickList":false,
+          "allPropertyData":false,
+          "reportEntryOption":{
+            "innerClass": "ReportEntryOption",
+            "getter": "getByNameAndReportDefinition",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Edit Priority Configuration"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Priority Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        }
+
+
+
+
+
+      ]
+    }
+  ],
+  "postProcess": []
+}

@@ -1,0 +1,792 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "roles",
+      "innerClass": "Role",
+      "instances": [
+        {
+          "name": "Company Administrator",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "groupTypeCeiling": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "description": "Company Administrator"
+        }
+      ]
+    },
+    {
+      "moduleName": "roleResources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+              "innerClass": "String",
+              "getter": "valueOf",
+              "params": "Thing Types"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "coreBridge"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "edgeBridge"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mlExtraction"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mlBusinessModel"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mlModel"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Analytics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mlPrediction"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Filter"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Starflex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts EB - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by SF Filter - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts E vs EB vs CB"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by StarFlex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Summary"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Indexes"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "users",
+      "innerClass": "User",
+      "instances": [
+        {
+          "username": "tenant",
+          "password": "tenant",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "firstName": "Tenant",
+          "lastName": "User",
+          "email": "",
+          "archived": false,
+          "roamingGroup": null,
+          "lastPasswordChange": "newDate"
+        }
+      ]
+    },
+    {
+      "moduleName": "userRoles",
+      "innerClass": "UserRole",
+      "instances": [
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tenant"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="/usr/local/riot/services/riot-core-services/">
+<Parameter name="hibernate.connection.driver_class" value="org.gjt.mm.mysql.Driver" override="false"/>
+<Parameter name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/riot_main" override="false"/>
+<Parameter name="hibernate.connection.username" value="root" override="false"/>
+<Parameter name="hibernate.connection.password" value="control123!" override="false"/>
+<Parameter name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" override="false"/>
+<!--<Parameter name="mqtt.host" value="localhost" override="false"/>-->
+<!--<Parameter name="mqtt.port" value="1883" override="false"/>-->
+<!--<Parameter name="mqtt.client.name" value="APP" override="false"/>-->
+<Parameter name="mongo.host" value="localhost" override="false"/>
+<Parameter name="mongo.port" value="27017" override="false"/>
+<Parameter name="mongo.db" value="riot_main" override="false"/>
+<Parameter name="mongo.password" value="control123!" override="false"/>
+<Parameter name="mongo.username" value="admin" override="false"/>
+
+<Parameter name="mongo.primary" value="localhost:27017" override="false"/>
+<Parameter name="mongo.secondary" value="" override="false"/>
+<Parameter name="mongo.replicaset" value="" override="false"/>
+<Parameter name="mongo.ssl" value="false" override="false"/>
+<Parameter name="mongo.username" value="admin" override="false"/>
+<Parameter name="mongo.password" value="control123!" override="false"/>
+<Parameter name="mongo.authdb" value="admin" override="false"/>
+<Parameter name="mongo.db" value="riot_main" override="false"/>
+<Parameter name="mongo.sharding" value="false" override="false"/>
+<Parameter name="mongo.connectiontimeout" value="0" override="false"/>
+<Parameter name="mongo.maxpoolsize" value="0" override="false"/>
+<!--
+<Parameter name="mongo.read.password" value="control123!" override="false"/>
+<Parameter name="mongo.read.username" value="admin" override="false"/>
+-->
+<Parameter name="spark.enabled" value="false" override="false"/>
+</Context>

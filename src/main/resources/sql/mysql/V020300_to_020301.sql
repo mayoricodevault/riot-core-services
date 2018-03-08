@@ -1,0 +1,2 @@
+
+ALTER TABLE edgeboxrule CHANGE COLUMN outputConfig outputConfig VARCHAR(1024) NULL DEFAULT NULL;

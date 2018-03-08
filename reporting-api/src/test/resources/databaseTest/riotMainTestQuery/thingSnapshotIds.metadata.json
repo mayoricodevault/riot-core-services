@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"riot_main.thingSnapshotIds"},{"v":1,"key":{"blinks.time":1,"blinks.blink_id":1},"name":"blinks.time_1_blinks.blink_id_1_","ns":"riot_main.thingSnapshotIds","background":true}]}

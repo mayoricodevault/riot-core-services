@@ -1,0 +1,17 @@
+{
+  "dependsOn": "Kafka",
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "module": "reportDefinition",
+      "definitionFile": "reportDefinition.json"
+    },
+    {
+      "module": "userDefinition",
+      "definitionFile": "userDefinition.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

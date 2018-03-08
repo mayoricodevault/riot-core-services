@@ -1,0 +1,11 @@
+{
+  "group": ">mojix>SM",
+  "name": "CTA007",
+  "serialNumber": "CTA007",
+  "udfs": {
+    "Action": {
+      "value": "an action from Thing Type As Attribute"
+    }
+  },
+  "thingTypeCode": "Colour"
+}

@@ -1,0 +1,1 @@
+ALTER TABLE group0 ADD COLUMN hierarchyName VARCHAR(512);

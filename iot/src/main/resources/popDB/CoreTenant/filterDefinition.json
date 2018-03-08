@@ -1,0 +1,1753 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "reportFilter",
+      "innerClass": "ReportFilter",
+      "instances": [
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Filter"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Filter"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Filter"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Filter"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Starflex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Starflex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Starflex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Out-of-Order by Starflex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts CB by Source - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts EB - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts EB - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts EB - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts EB - I"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by SF Filter - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by SF Filter - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by SF Filter - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by SF Filter - E"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts E vs EB vs CB"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts E vs EB vs CB"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts E vs EB vs CB"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts E vs EB vs CB"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by StarFlex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Window Size (minutes)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "1",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by StarFlex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "UTC Offset (+/- hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "-4",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by StarFlex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "History (hours)",
+          "operator": "=",
+          "propertyName": "registered",
+          "value": "6",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Upserts by StarFlex"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          },
+          "thingTypeField": {
+            "innerClass": "ThingTypeField",
+            "getter": "getByNameAndThingTypeCode",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "registered"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Tenant Group",
+          "operator": "<",
+          "propertyName": "group.id",
+          "value": null,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Summary"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 1,
+          "editable": true,
+          "label": "Tenant Group",
+          "operator": "<",
+          "propertyName": "group.id",
+          "value": null,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 2,
+          "editable": true,
+          "label": "Thing Type",
+          "operator": "=",
+          "propertyName": "thingType.id",
+          "value": {
+            "innerMethod": "getThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "coreBridge"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 3,
+          "editable": true,
+          "label": "Date",
+          "operator": "",
+          "propertyName": "relativeDate",
+          "value": "NOW",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 4,
+          "editable": true,
+          "label": "Date",
+          "operator": "",
+          "propertyName": "startDate",
+          "value": "",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 5,
+          "editable": true,
+          "label": "Date",
+          "operator": "",
+          "propertyName": "endDate",
+          "value": "",
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "displayOrder": 6,
+          "editable": true,
+          "label": "Serial Number",
+          "operator": "~",
+          "propertyName": "serial",
+          "value": null,
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "ViZix Queues Detailed"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

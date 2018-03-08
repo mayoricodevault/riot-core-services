@@ -1,0 +1,11 @@
+ALTER TABLE dataType ADD COLUMN clazz VARCHAR(255);
+UPDATE dataType SET clazz = 'java.lang.String' WHERE id IN (1,2,3,6,8,12,13,25,26,28);
+UPDATE dataType SET clazz = 'java.lang.Long' WHERE id = 24;
+UPDATE dataType SET clazz = 'java.lang.Boolean' WHERE id = 5;
+UPDATE dataType SET clazz = 'java.lang.BigDecimal' WHERE id = 4;
+UPDATE dataType SET clazz = 'java.util.Date' WHERE id = 11;
+UPDATE dataType SET clazz = 'com.tierconnect.riot.iot.entities.Zone' WHERE id = 9;
+UPDATE dataType SET clazz = 'com.tierconnect.riot.iot.entities.Thing' WHERE id = 27;
+UPDATE dataType SET clazz = 'com.tierconnect.riot.iot.entities.Shift' WHERE id = 7;
+UPDATE dataType SET clazz = 'com.tierconnect.riot.iot.entities.LogicalReader' WHERE id = 23;
+UPDATE dataType SET clazz = 'com.tierconnect.riot.appcore.entities.Group' WHERE id =22;

@@ -1,0 +1,539 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+  {
+    "moduleName": "thingTypes",
+    "innerClass": "ThingType",
+    "instances": [
+
+      {
+        "name": "User Activity",
+        "thingTypeCode": "UserActivity",
+        "archived": false,
+        "modifiedTime": "newDate",
+        "thingTypeTemplate": {
+          "innerClass": "ThingTypeTemplate",
+          "getter": "getByName",
+          "params": "User Activity"
+        },
+        "group": {
+          "innerClass": "Group",
+          "getter": "getByCode",
+          "params": "SM"
+        }
+      }
+    ]
+  },
+
+
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "itemColor",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+
+        {
+          "name": "itemPrice",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemSize",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemBrand",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemMaterial",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemStoreCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemStoreName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemUPCCategoryCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemUpc",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemDepartmentCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemDepartmentName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishDressingCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishDressingZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishRoom",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishFrontCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishFrontZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishLastDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "DATE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishMax",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishMin",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishQuantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+
+        {
+          "name": "replenishStatus",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishUser",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "activityType",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishQuantityDone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishBackCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishBoxCount",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "replenishBackZone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemDepartmentGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroup",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemDepartmentGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        },
+        {
+          "name": "itemDepartmentSubGroupName",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UserActivity"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

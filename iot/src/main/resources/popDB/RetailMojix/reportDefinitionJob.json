@@ -1,0 +1,382 @@
+{
+  "preProcess": [],
+  "executeModules": [
+
+    {
+      "moduleName": "reportDefinition",
+      "innerClass": "ReportDefinition",
+      "instances": [
+        {
+          "folder": {
+            "innerClass": "Folder",
+            "getter": "getByCodeAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_reports"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "bulkEdit": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          },
+          "delete": false,
+          "dismiss": false,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "heatmap": false,
+          "isMobile": false,
+          "isMobileDataEntry": false,
+          "name": "Master Scheduled Report",
+          "reportType": "mongo",
+          "typeOrder": 3,
+          "rfidPrint": false,
+          "runOnLoad": true
+        }
+      ]
+    },
+
+
+    {
+      "moduleName": "reportDefinitionConfig",
+      "innerClass": "ReportDefinitionConfig",
+      "instances": [
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_job.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+
+        ,
+          "internalScript": {
+            "innerMethod": "insertMongoScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_function_itemscount.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "RefreshItemsCount"
+              }
+            ],
+            "ignore": true
+          }
+
+
+        }
+
+
+      ]
+    },
+
+    {
+      "moduleName": "reportDefinitionConfig",
+      "innerClass": "ReportDefinitionConfig",
+      "instances": [
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_job.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+
+        ,
+
+
+          "internalScript": {
+            "innerMethod": "insertMongoScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_function_replenishment.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "RefreshReplenishment"
+              }
+            ],
+            "ignore": true
+          }
+
+
+        }
+
+
+      ]
+    },
+
+    {
+      "moduleName": "reportDefinitionConfig",
+      "innerClass": "ReportDefinitionConfig",
+      "instances": [
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_job.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          },
+
+          "internalScript": {
+            "innerMethod": "insertMongoScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_function_hotreplenishment.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "RefreshHotReplenishment"
+              }
+            ],
+            "ignore": true
+          }
+
+
+        }
+
+
+      ]
+    },
+
+    {
+      "moduleName": "reportDefinitionConfig",
+      "innerClass": "ReportDefinitionConfig",
+      "instances": [
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_job.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+
+        ,
+          "internalScript": {
+            "innerMethod": "insertMongoScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_function_sellthrureplenishment.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "RefreshSellThruReplenishment"
+              }
+            ],
+            "ignore": true
+          }
+
+
+
+        }
+
+
+      ]
+    },
+    {
+      "moduleName": "reportDefinitionConfig",
+      "innerClass": "ReportDefinitionConfig",
+      "instances": [
+        {
+          "keyType": "SCRIPT",
+          "keyValue": {
+            "innerMethod": "insertTableScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_job.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              }
+            ]
+          },
+          "reportDefinition": {
+            "innerClass": "ReportDefinition",
+            "getter": "getByNameAndType",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Master Scheduled Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+
+        ,
+
+          "internalScript": {
+            "innerMethod": "insertMongoScript",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "retail_function_dressingroom.js"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "RefreshDressingRoom"
+              }
+            ],
+            "ignore": true
+          }
+
+
+        }
+
+
+      ]
+    }
+
+  ],
+  "postProcess": []
+}

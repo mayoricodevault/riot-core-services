@@ -1,0 +1,41 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+/*****************
+ * CODE COVERAGE *
+ *****************/
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/reports/jacoco/html"
+    }
+}
+
+test {
+    jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        classDumpFile = file("$buildDir/jacoco/classpathdumps")
+    }
+    finalizedBy jacocoTestReport
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'pl.pragmatists', name: 'JUnitParams', version: '0.3.6'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+    compile "org.slf4j:slf4j-log4j12:1.6.6"
+    compile 'org.mongodb:mongodb-driver:3.4.2'
+//    compile 'org.mongodb:bson:3.4.2'
+    compile "commons-lang:commons-lang:2.5"
+    compile "org.apache.ant:ant:1.8.2"
+    compile "commons-validator:commons-validator:1.5.1"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-joda:2.4.0"
+}

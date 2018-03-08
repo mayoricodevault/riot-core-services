@@ -1,0 +1,252 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "roleResources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1a"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1b"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #1c"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Example #2"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo TimeZone Test"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Now)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Mongo Filters Query (Custom)"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mongo"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

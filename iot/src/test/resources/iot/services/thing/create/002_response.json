@@ -1,0 +1,22 @@
+{
+  "_id": 101,
+  "groupTypeId": 3,
+  "groupTypeName": "Store",
+  "groupTypeCode": "Store",
+  "groupId": 3,
+  "groupCode": "SM",
+  "groupName": "Santa Monica",
+  "thingTypeId": 3,
+  "thingTypeCode": "default_rfid_thingtype",
+  "thingTypeName": "Default RFID Thing Type",
+  "name": "CT002",
+  "serialNumber": "CT002",
+  "modifiedTime": "2017-07-25T21:18:03.093Z",
+  "createdTime": "2017-07-25T21:18:03.093Z",
+  "time": "2017-07-25T21:18:03.087Z",
+  "eNode": {
+    "thingTypeFieldId": 36,
+    "time": "2017-07-25T21:18:03.087Z",
+    "value": "An Enode String"
+  }
+}

@@ -1,0 +1,2278 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingType",
+      "instances": [
+        {
+          "name": "Default RFID Thing Type",
+          "thingTypeCode": "default_rfid_thingtype",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "autoCreate": true,
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Default ZPL Thing Type",
+          "thingTypeCode": "default_zpl_thingtype",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "autoCreate": true,
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "ZPL"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Jackets",
+          "thingTypeCode": "jackets_code",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Default GPS Thing Type",
+          "thingTypeCode": "default_gps_thingtype",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "autoCreate": true,
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Pants",
+          "thingTypeCode": "pants_code",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "ShippingOrder",
+          "thingTypeCode": "shippingorder_code",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "isParent": true,
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Asset",
+          "thingTypeCode": "asset_code",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Tag",
+          "thingTypeCode": "tag_code",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "ColorFile",
+          "thingTypeCode": "Colour",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "UPC file",
+          "thingTypeCode": "UPC",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Transaction",
+          "thingTypeCode": "Transaction",
+          "archived": false,
+          "modifiedTime": "newDate",
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "Custom Thing Type"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "location",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "location"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "COORDINATES"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "locationXYZ",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "locationXYZ"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "XYZ"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "logicalReader",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "LOGICAL_READER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "zone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "ZONE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "eNode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "lastLocateTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "millisecond",
+          "symbol": "ms",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastLocateTime"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "lastDetectTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "millisecond",
+          "symbol": "ms",
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "lastDetectTime"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "RFID Tag"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "image",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "IMAGE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "registered",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "doorEvent",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "shift",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "SHIFT"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "name": "status",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "location",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "COORDINATES"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          }
+        },
+        {
+          "name": "locationXYZ",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "XYZ"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          }
+        },
+        {
+          "name": "zone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "ZONE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          }
+        },
+        {
+          "name": "lastLocateTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "millisecond",
+          "symbol": "ms",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          }
+        },
+        {
+          "name": "lastDetectTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "unit": "millisecond",
+          "symbol": "ms",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          }
+        },
+        {
+          "name": "shift",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "SHIFT"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          }
+        },
+        {
+          "name": "speed",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          }
+        },
+        {
+          "name": "heading",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_gps_thingtype"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "zpl",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "^XA^RS8^FO50,50^BCN,100,Y,N,N^FD${DocumentId}^FS^RFW,H^FD${serialNumber}^FN3^FS^FN3^RFR,H^FS^HV3^PQ${numCopies}^XZ",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "ZPL_SCRIPT"
+          },
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zpl"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "ZPL"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_zpl_thingtype"
+          }
+        },
+        {
+          "name": "rfidEncode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "true",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "BOOLEAN"
+          },
+          "thingTypeFieldTemplateId": {
+            "innerMethod": "getThingTypeFieldTemplateId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "rfidEncode"
+              },
+              {
+                "innerClass": "ThingTypeTemplate",
+                "getter": "getByNameUnique",
+                "params": "ZPL"
+              }
+            ]
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_zpl_thingtype"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeFieldTemplate",
+      "instances": [
+        {
+          "name": "zpl",
+          "description": "zpl",
+          "typeParent": "THING_TYPE",
+          "dataTypeThingTypeId": {
+            "innerMethod": "getDataTypeThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params":"default_zpl_thingtype"
+              }
+            ]
+          },
+          "timeSeries": false,
+          "type": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "THING_TYPE"
+          },
+          "thingTypeTemplate": {
+            "innerClass": "ThingTypeTemplate",
+            "getter": "getByName",
+            "params": "RFID Printer"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "size",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          }
+        },
+        {
+          "name": "color",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          }
+        },
+        {
+          "name": "material",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          }
+        },
+        {
+          "name": "price",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          }
+        },
+        {
+          "name": "category",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          }
+        },
+        {
+          "name": "brand",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "size",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          }
+        },
+        {
+          "name": "color",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          }
+        },
+        {
+          "name": "material",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          }
+        },
+        {
+          "name": "price",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "unit": "dollar",
+          "symbol": "$",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "NUMBER"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          }
+        },
+        {
+          "name": "category",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          }
+        },
+        {
+          "name": "brand",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "countAsset",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "${count(\"\",\"\")}",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "FORMULA"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          }
+        },
+        {
+          "name": "countOpenAsset",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "${count(\"asset_code\",\"status.value=Open\")}",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "FORMULA"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          }
+        },
+        {
+          "name": "owner",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          }
+        },
+        {
+          "name": "status",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "status",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          }
+        },
+        {
+          "name": "shippingOrderField",
+          "typeParent": "NATIVE_THING_TYPE",
+          "timeSeries": true,
+          "multiple": false,
+          "dataTypeThingTypeId": {
+            "innerMethod": "getDataTypeThingTypeId",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params":"shippingorder_code"
+              }
+            ]
+          },
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "THING_TYPE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "active",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "BOOLEAN"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        },
+        {
+          "name": "lastDetectTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        },
+        {
+          "name": "lastLocateTime",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "TIMESTAMP"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        },
+        {
+          "name": "location",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "COORDINATES"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        },
+        {
+          "name": "locationXYZ",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "XYZ"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        },
+        {
+          "name": "zone",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "ZONE"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "Action",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Colour"
+          }
+        },
+        {
+          "name": "ColorCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": 0,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Colour"
+          }
+        },
+        {
+          "name": "Description",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "node",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Colour"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "CreationDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "PrimarySizePosition",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "01",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "SVGCIndicator",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "P",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UPCNumber",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0787256",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "Price",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0001600",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "ReplenishmentIndicator",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "PrimarySizeDescription",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "1SIZE",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "PackHeight",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "190",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "StrokeNumber",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0020",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "CustomMadeIndicator",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0020",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "CouponIndicator",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "N",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "ReducedSuffix",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "A",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UKVATpersentage2",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "08762",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "SecondarySizePosition",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "00",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "SecondarySizeIndex",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "00",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "PreviousItemNumber",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "06U",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "TransportPackQuantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0024",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "AgeRestriction",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "TVTunerIndicator",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "Y",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "BoxedHangIndicator",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "B",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "QuantityPerPack",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "036",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "DisplaySetQuantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0000",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "PrimarySizeIndex",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "01",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "ItemNumber",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "32C",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UKVATBand2",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "PreReducedIndicator",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "A",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "RangeCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "97",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UKVATpercentage1",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "05264",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "WayStatus",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "1",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "PackLength",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "720",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "ColourCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "A1",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UKVATBand3",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "SecondarySizeDescription",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "TransportSetQuantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0000",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "TaxCode",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "Y",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "ServiceItemIndicator",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "Y",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "ReducedEffDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "21160620",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "Action",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "A",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "DepartmentNumber",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "T01",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UKVATBand1",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UKVATBand4",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "GarmenMultiplies",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0001",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "DisplayPackQuantity",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "0006",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UKVATpercentage3",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "09313",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "UKVATpercentage4",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "01353",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "StoreDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        },
+        {
+          "name": "PackWidth",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "580",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "UPC"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeField",
+      "instances": [
+        {
+          "name": "transactionStart",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Transaction"
+          }
+        },
+        {
+          "name": "siteNo",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": 0,
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Transaction"
+          }
+        },
+        {
+          "name": "naturalDate",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "node",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Transaction"
+          }
+        },
+        {
+          "name": "upc",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "node",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Transaction"
+          }
+        },
+        {
+          "name": "transactionEnd",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "node",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Transaction"
+          }
+        },
+        {
+          "name": "filenumber",
+          "typeParent": "DATA_TYPE",
+          "timeSeries": false,
+          "multiple": false,
+          "defaultValue": "node",
+          "dataType": {
+            "innerClass": "DataType",
+            "getter": "getByCode",
+            "params": "STRING"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "Transaction"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypeMap",
+      "instances": [
+        {
+          "parent": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          },
+          "child": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "parent": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "child": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingtype"
+          }
+        },
+        {
+          "parent": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          },
+          "child": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "thingTypes",
+      "innerClass": "ThingTypePath",
+      "instances": [
+        {
+          "path": "parent",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingType"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          }
+        },
+        {
+          "path": "children",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "jackets_code"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingType"
+          }
+        },
+        {
+          "path": "parent",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingType"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          }
+        },
+        {
+          "path": "children",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "pants_code"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "default_rfid_thingType"
+          }
+        },
+        {
+          "path": "shippingOrderField.value",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          }
+        },
+        {
+          "path": "asset_code_children",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          }
+        },
+        {
+          "path": "children",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        },
+        {
+          "path": "parent",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "asset_code"
+          }
+        },
+        {
+          "path": "parent.shippingOrderField.value",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          }
+        },
+        {
+          "path": "asset_code_children.children",
+          "originThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "shippingorder_code"
+          },
+          "destinyThingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "tag_code"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

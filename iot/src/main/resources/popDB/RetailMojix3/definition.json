@@ -1,0 +1,24 @@
+{
+  "dependsOn": "RetailMojix2",
+  "preProcess": [],
+  "executeModules": [
+
+
+    {
+      "module": "things",
+      "definitionFile": "thingsDefinitionUPCCategoryBase.json"
+    },
+
+    {
+      "module": "things",
+      "definitionFile": "thingsDefinitionUPCBase.json"
+    },
+
+    {
+      "module": "things",
+      "definitionFile": "thingsDefinitionDeptBase.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "smartContractDefinition",
+      "innerClass": "SmartContractDefinition",
+      "instances": [
+        {
+          "name": "Supply Chain Smart Contract Definition",
+          "enabled": true,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          },
+          "states": "[{\"id\":1,\"name\":\"PO_ISSUED\"},{\"id\":2,\"name\":\"PO_ACKNOWLEDGED\"},{\"id\":3,\"name\":\"ORDER_FULFILLED\"},{\"id\":4,\"name\":\"ASN_ISSUED\"},{\"id\":5,\"name\":\"BOL_REQUESTED\"},{\"id\":6,\"name\":\"BOL_ISSUED\"},{\"id\":7,\"name\":\"ORDER_IN_TRANSIT\"},{\"id\":8,\"name\":\"ORDER_VERIFIED\"},{\"id\":9,\"name\":\"PO_PAID\"}]",
+          "roles": "[{\"id\":1,\"confidentiality\":\"all\",\"name\":\"Retailer\",\"parties\":[{\"name\":\"Walmart\",\"blockchainId\":\"0x67891f98e42f1e4a683b3b2e6788c4f50b8a6627\"}]},{\"id\":2,\"confidentiality\":\"all\",\"name\":\"Supplier\",\"parties\":[{\"name\":\"Levis\",\"blockchainId\":\"0xb6f976803005205ce328433d9157f9ed096b766a\"}]},{\"id\":3,\"confidentiality\":\"all\",\"name\":\"Carrier\",\"parties\":[{\"name\":\"XPO\",\"blockchainId\":\"0xcf6908a88b51bb3796f25c846dd61d09167b6ae3\"}]}]",
+          "transitions" : "[{\"id\":1,\"name\":\"ackPO\",\"roleId\":2,\"startState\":1,\"endState\":2},{\"id\":2,\"name\":\"fulfillPO\",\"roleId\":2,\"startState\":2,\"endState\":3,\"customFields\":[\"palletID\"]},{\"id\":3,\"name\":\"issueASN\",\"roleId\":2,\"startState\":3,\"endState\":4,\"customFields\":[\"ASN_Number\",\"ASN_ShippingDate\"]},{\"id\":4,\"name\":\"requestBOL\",\"roleId\":2,\"startState\":4,\"endState\":5},{\"id\":5,\"name\":\"issueBOL\",\"roleId\":3,\"startState\":5,\"endState\":6,\"customFields\":[\"BOL_Date\",\"BOL_Number\"]},{\"id\":6,\"name\":\"transitPO\",\"roleId\":3,\"startState\":6,\"endState\":7,\"customFields\":[\"containerID\",\"truckID\"]},{\"id\":7,\"name\":\"verifyOrder\",\"roleId\":1,\"startState\":7,\"endState\":8},{\"id\":8,\"name\":\"verifyPO\",\"roleId\":2,\"startState\":8,\"endState\":9}]",
+          "constrains" : "[{\"stateId\":2,\"roleId\":2,\"listIds\":[1]},{\"stateId\":1,\"roleId\":1,\"listIds\":[2]}]",
+          "items":"[{\"id\":1,\"thingType\":{\"name\":\"Smart Item\",\"thingTypeCode\":\"SmartItem\",\"id\":4},\"fields\":[{\"id\":1,\"name\":\"SKU\",\"type\":\"STRING\"},{\"id\":2,\"name\":\"bizLocation\",\"type\":\"STRING\"},{\"id\":3,\"name\":\"bizStep\",\"type\":\"STRING\"},{\"id\":4,\"name\":\"bizTransactionList\",\"type\":\"STRING\"},{\"id\":5,\"name\":\"employeeID\",\"type\":\"STRING\"},{\"id\":6,\"name\":\"epcClass\",\"type\":\"STRING\"},{\"id\":7,\"name\":\"eventTime\",\"type\":\"TIMESTAMP\"},{\"id\":8,\"name\":\"homeGroup\",\"type\":\"GROUP\"},{\"id\":9,\"name\":\"orgID\",\"type\":\"STRING\"}],\"stateId\":2,\"roleId\":2},{\"id\":2,\"thingType\":{\"name\":\"Items Quantity\",\"thingTypeCode\":\"ItemsQuantity\",\"id\":5},\"fields\":[{\"id\":1,\"name\":\"epcClass\",\"type\":\"STRING\"},{\"id\":2,\"name\":\"quantity\",\"type\":\"NUMBER\"}],\"asset\":true,\"stateId\":1,\"roleId\":1}]",
+          "documentThingType" : "{\"name\":\"Supply Chain Contract\",\"thingTypeCode\":\"SupplyChainContract\",\"id\":3,\"selectedFields\":[\"ASN_Carrier\",\"ASN_DeliveryDate\",\"ASN_Number\",\"ASN_ShippingDate\",\"BOL_Consignee\",\"BOL_Date\",\"BOL_Number\",\"BOL_Shipper\",\"PO_Carrier\",\"PO_Customer\",\"PO_Date\",\"PO_DeliveryDate\",\"PO_InCoTerms\",\"PO_Number\",\"TrDate\",\"TrLocation\",\"containerID\",\"kitSerial\",\"kitTransaction\",\"palletID\",\"truckID\"]}",
+          "initialState":1,
+          "finalState":9
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}
+
+

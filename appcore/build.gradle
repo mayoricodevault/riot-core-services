@@ -1,0 +1,114 @@
+//APPCORE BUILD GRADLE VERSION 1.0.0
+
+dependencies {
+
+	compile project( ":commons" )
+	compile project( ":sdk" )
+
+	compile 'com.datastax.cassandra:cassandra-driver-core:2.1.9'
+
+    compile "org.quartz-scheduler:quartz:2.2.1"
+    compile "org.quartz-scheduler:quartz-jobs:2.2.1"
+
+    // mongodb
+//	compile 'org.mongodb:mongo-java-driver:2.13.2'
+//   	compile 'org.mongodb:bson:2.13.2'
+    compile 'org.mongodb:mongodb-driver:3.4.2'
+//    compile 'org.mongodb:bson:3.4.2'
+
+    compile "org.bitbucket.b_c:jose4j:0.4.1"
+    compile 'org.bouncycastle:bcpkix-jdk15on:1.52'
+
+    compile "junit:junit:4.11"
+
+    compile 'org.springframework.security.oauth:spring-security-oauth2:2.1.1.RELEASE'
+    compile 'org.springframework.ldap:spring-ldap-core:2.1.0.RELEASE'
+    compile 'org.springframework:spring-core:4.3.2.RELEASE'
+    compile 'commons-net:commons-net:3.3'
+
+    compile 'org.apache.spark:spark-core_2.11:2.0.2'
+    compile 'org.apache.spark:spark-streaming_2.11:2.0.2'
+
+    compile group: 'javax.cache', name : 'cache-api', version : '1.0.0'
+}
+
+task compileAppgen (type: JavaCompile) {
+    source = sourceSets.main.java.srcDirs
+    include 'com/tierconnect/riot/appcore/appgen/**/*.java'
+    classpath = sourceSets.main.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+}
+
+task appgen {
+	//TODO: do dependency check !
+	doLast {
+    	ant.java( classpath: sourceSets.main.runtimeClasspath.asPath,
+    			  classname: "com.tierconnect.riot.appcore.appgen.AppgenExtends", fork:true,failonerror: true )
+		{
+	    	arg( value: "src/main/java" )
+	    	arg( value: "src/generated/java" )
+		}
+	}
+	dependsOn compileAppgen
+}
+
+task generateQueryDSL(type: JavaCompile, group: 'build', description: 'Generates the QueryDSL query types') {
+    source = sourceSets.main.java + sourceSets.generated.java
+    classpath = configurations.compile + configurations.querydslapt
+    options.compilerArgs = [
+            "-proc:only",
+            "-processor", "com.mysema.query.apt.jpa.JPAAnnotationProcessor"
+    ]
+    destinationDir = sourceSets.generated.java.srcDirs.iterator().next()
+    dependsOn appgen
+}
+
+task compileModel (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/appcore/entities/**/*.java'    
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn generateQueryDSL
+}
+
+task compileDAO (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/appcore/entities/**/*.java'
+    include 'com/tierconnect/riot/appcore/dao/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn compileModel
+}
+
+task compileService (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/appcore/service/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn compileDAO
+}
+
+task compileWebService (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/appcore/controller/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn compileService
+}
+
+task compileAppcore (type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    include 'com/tierconnect/riot/appcore/**/*.java'
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+    dependsOn compileWebService
+}
+
+// overwrite default compileJava, as it will fail
+compileJava 
+{ 
+	actions = []; 
+	doLast { }; 
+	dependsOn compileAppcore
+}
+

@@ -1,0 +1,431 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "shift",
+      "innerClass": "Shift",
+      "instances": [
+        {
+          "name": "DAY-M-W",
+          "code": "DAY-M-W",
+          "startTimeOfDay": 800,
+          "endTimeOfDay": 1700,
+          "daysOfWeek": "23456",
+          "active": true,
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "connections",
+      "innerClass": "Connection",
+      "instances": [
+        {
+          "name": "Mqtt Santa Monica",
+          "code": "MQTTSM",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "qos": 2,
+              "secure": false,
+              "port": 1883
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MQTT"
+          }
+        },
+        {
+          "name": "MongoDB Santa Monica",
+          "code": "MONGOSM",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "mongoReplicaSet": "",
+              "mongoSSL": false,
+              "mongoPrimary": "localhost:27017",
+              "password": "Y29udHJvbDEyMyE=",
+              "mongoAuthDB": "admin",
+              "mongoSecondary": "",
+              "mongoConnectTimeout": 0,
+              "mongoSharding": false,
+              "mongoDB": "riot_main",
+              "mongoMaxPoolSize": 0,
+              "username": "admin"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MONGO"
+          }
+        },
+        {
+          "name": "Ftp",
+          "code": "FTP",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "password": "MTIzNA==",
+              "secure": false,
+              "port": 21,
+              "username": "ftpUser"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "FTP"
+          }
+        },
+        {
+          "name": "Ftp Santa Monica",
+          "code": "FTPSM",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "password": "MTIzNA==",
+              "secure": false,
+              "port": 21,
+              "username": "ftpUser"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "FTP"
+          }
+        },
+        {
+          "name": "ExternalSQLServer",
+          "code": "ExternalSQLServer",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "schema": "AdventureWorks2012",
+              "password": "Y29udHJvbDEyMyE=",
+              "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+              "user": "sa",
+              "url": "jdbc:sqlserver://remoteHost:1433;DatabaseName=AdventureWorks2012"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "DBConnection"
+          }
+        },
+        {
+          "name": "SQLSM",
+          "code": "SQLSM",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "password": "Y29udHJvbDEyMyE=",
+              "dialect": "org.hibernate.dialect.MySQLDialect",
+              "driver": "com.mysql.jdbc.Driver",
+              "url": "jdbc:mysql://localhost:3306/riot_main",
+              "username": "root",
+              "hazelcastNativeClientAddress": "localhost"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "SQL"
+          }
+        },
+        {
+          "name": "ServicesSM",
+          "code": "SERVICESSM",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "apikey": "7B4BCCDC",
+              "secure": false,
+              "port": 8080,
+              "contextpath": "/riot-core-services"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "REST"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "bridges",
+      "innerClass": "Edgebox",
+      "instances": [
+        {
+          "name": "ALE Edge Bridge #2",
+          "code": "ALEB2",
+          "type": "edge",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "zoneDwellFilter": {
+                "lastDetectTimeActive": true,
+                "active": true,
+                "zoneDwellTime": 300,
+                "inZoneDistance": 10,
+                "lastDetectTimeWindow": 0,
+                "unlockDistance": 25,
+                "evictionTime":24
+              },
+              "facilityMapForOrigin": "Map Store Santa Monica",
+              "edgeBridgeStatistics": {"active": true},
+              "thingTypeCode": "default_rfid_thingtype",
+              "storeAleMessages": {"active": false},
+              "numberOfThreads": 2,
+              "httpListener": {
+                "bridgePort": 9090,
+                "socketTimeout": 60000
+              },
+              "mqtt": {
+                "connectionCode": "MQTT"
+              },
+              "kafka": {
+                "active": false,
+                "connectionCode": "KAFKA"
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              },
+              "coreBridge": ""
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "GPS Edge Bridge",
+          "code": "GPS",
+          "type": "GPS",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "thingTypeCode": "default_gps_thingtype",
+              "logRawMessages": false,
+              "mqtt": {
+                "connectionCode": "MQTTSM"
+              },
+              "geoforce": {
+                "host": "app.geoforce.com",
+                "path": "/feeds/asset_inventory.xml",
+                "port": 443,
+                "user": "datafeed@mojix.com",
+                "password": "AHmgooCk8l0jo95f7YSo",
+                "period": 60
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Core Bridge Mojix",
+          "code": "CB1",
+          "type": "core",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "shiftZoneRule": {
+                "active": false,
+                "shiftProperty": "shift",
+                "zoneViolationStatusProperty": "zoneViolationStatus",
+                "zoneViolationFlagProperty": "zoneViolationFlag"
+              },
+              "mongo": {
+                "connectionCode": "MONGO"
+              },
+              "coreBridgeStatistics": {"active": true},
+              "cepChangeLogs": {"active": false},
+              "numberOfThreads": 2,
+              "mqtt": {
+                "connectionCode": "MQTTSM",
+                "topics": [
+                  "/v1/data/APP2/#",
+                  "/v1/data/ALEB2/#"
+                ]
+              },
+              "swarmRule": {
+                "thingTypes": [{
+                  "thingTypeCode": "default_rfid_thingtype",
+                  "udfGroup": "grouping",
+                  "distanceFilter": 10000,
+                  "udfGroupStatus": "groupStatus"
+                }],
+                "timeInterval": 5000,
+                "active": false,
+                "algorithm": "followLastDetect"
+              },
+              "thingCache": {
+                "size": 1000000,
+                "evictionTime": 60
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICESSM",
+                "sqlConnectionCode": "SQLSM",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              },
+              "outOfOrderRule": {
+                "active": false
+              },
+              "thingInsertRestApi": {
+                "retryAttemptLimit": 10,
+                "retryIntervalPeriodSecs": 5000
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          }
+        },
+        {
+          "name": "FTP Bridge Colour",
+          "code": "FTPcolour",
+          "type": "FTP",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "thingTypeCode": "Colour",
+              "processingType": "full",
+              "remoteFTPFolders": {
+                "source": "/StoreReferenceData",
+                "destination": "/ProcessedData"
+              },
+              "filePattern": "*.COLOUR",
+              "patternCaseSensitive":false,
+              "configParser": {
+                "ignoreHeader": true,
+                "ignoreFooter": false,
+                "parserType": "fixedlength",
+                "fieldLengths": "3,16,1",
+                "separator": null,
+                "fieldNames": [
+                  "Code",
+                  "Description",
+                  "Action"
+                ],
+                "columnNumberAsSerial": 0
+              },
+              "cronSchedule": "0 0/10 * 1/1 * ? *",
+              "mqtt": {
+                "connectionCode": "MQTTSM"
+              },
+              "ftp": {
+                "connectionCode": "FTPSM"
+              },
+              "bridgeStartupOptions": {
+                "servicesConnectionCode": "SERVICES",
+                "jvmHeapMemory": {
+                  "Xms": "512m",
+                  "Xmx": "1024m"
+                }
+              },
+              "bridgeAgent": {
+                "agentCode": ""
+              },
+              "coreBridge": ""
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

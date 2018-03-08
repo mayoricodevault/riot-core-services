@@ -1,0 +1,1 @@
+{"options":{"capped":true,"size":10000128,"autoIndexId":true},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"riot_main.ALEBLog"}]}

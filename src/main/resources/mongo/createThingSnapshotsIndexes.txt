@@ -1,0 +1,4 @@
+db.collection.createIndex( { "value._id": 1 } );
+db.collection.createIndex( { "value.serialNumber": 1 } );
+db.collection.createIndex( { "time": 1 } );
+db.collection.createIndex( { "parent": 1 } );

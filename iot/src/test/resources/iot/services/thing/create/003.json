@@ -1,0 +1,13 @@
+{
+  "group": ">mojix>SM",
+  "name": "CT003",
+  "serialNumber": "CT003",
+  "udfs": {
+    "Action": {
+      "value": "Another action"
+    }
+  },
+  "thingTypeCode": "Colour",
+  "children": [
+  ]
+}

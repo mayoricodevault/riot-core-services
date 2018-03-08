@@ -1,0 +1,59 @@
+{
+  "dependsOn": "CoreTenant",
+  "preProcess": [],
+  "executeModules": [
+
+    {
+      "module": "thingTypeTemplates",
+      "definitionFile": "thingTypeTemplatesDefinitionConfig.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesDefinitionConfig.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesDefinitionRetail.json"
+    },
+    {
+      "module": "thingTypes",
+      "definitionFile": "thingTypesDefinitionSync.json"
+    },
+    {
+      "module": "things",
+      "definitionFile": "thingsDefinition.json"
+    },
+
+    {
+      "module": "things",
+      "definitionFile": "thingsDefinitionTilesConfiguration.json"
+    },
+
+    {
+      "module": "reports",
+      "definitionFile": "reportDefinition.json"
+    },
+    {
+      "module": "reports",
+      "definitionFile": "reportDefinitionJob.json"
+    },
+    {
+      "module": "reports",
+      "definitionFile": "reportDefinitionBaseFunctions.json"
+    },
+    {
+      "module": "reports",
+      "definitionFile": "reportDefinitionDataEntry.json"
+    },
+    {
+      "module": "usersAndRoles",
+      "definitionFile": "userDefinition.json"
+    },
+    {
+      "module": "reports",
+      "definitionFile": "reportDefinitionTableDetailColumns.json"
+    }
+  ],
+  "postProcess": [
+  ]
+}

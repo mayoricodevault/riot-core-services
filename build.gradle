@@ -1,0 +1,880 @@
+//
+// RIOT CORE SERVICES BUILD GRADLE VERSION 1.0.20150128
+//
+apply plugin: 'war'
+apply from: "querydsl.gradle"
+apply plugin: 'net.saliman.properties'
+apply plugin: 'maven-publish'
+
+// load gradle-<NAME>.properties
+def overridenProps = new Properties()
+task init << {
+    if(project.hasProperty("propertiesFile")){
+        print "*********************** propertiesFile argument set, using " + propertiesFile + " file\n"
+        file(propertiesFile).withInputStream {
+            stream -> overridenProps.load(stream)
+        }
+        overridenProps.each { prop, val ->
+            project.ext.set(prop, val)
+        }
+    }else{
+        print "*********************** propertiesFile argument not set, using gradle-default.properties file\n"
+        file("gradle-default.properties").withInputStream {
+            stream -> overridenProps.load(stream)
+        }
+        overridenProps.each { prop, val ->
+            project.ext.set(prop, val)
+        }
+    }
+}
+tasks.init.execute()
+
+import org.apache.tools.ant.taskdefs.condition.Os
+
+def gitBranch() {
+
+    if (System.env.CI_BRANCH != null) {
+        def branch = ""
+        branch = System.env.CI_BRANCH.replaceAll("/", "_")
+        branch
+    }else{
+        def branch = ""
+        def proc = "git rev-parse --abbrev-ref HEAD".execute()
+        proc.in.eachLine { line -> branch = line }
+        proc.err.eachLine { line -> println line }
+        proc.waitFor()
+        branch = branch.replaceAll("/", "_")
+        branch
+    }
+}
+
+
+war {
+    baseName = project.name
+    version = ''
+    classifier = ''
+    from 'src/main/webapp-services'
+}
+
+//we are using slf4j-log4j so we must exclude other incompatible bridges
+configurations {
+    //we must exclide jsr311-api as ther is another dependency does the job (jaxrs-api) from rest easy
+    all*.exclude group: 'javax.ws.rs', module: 'jsr311-api'
+
+    //exclude group: 'org.scala-lang', module: 'scala-library'
+
+    all*.exclude group: 'javax.servlet', module: 'javax.servlet-api'
+    all*.exclude group: 'javax.servlet', module: 'servlet-api'
+}
+
+
+test {
+    //So unit test can get system property information from command line
+    systemProperties = System.properties
+
+    //TODO garivera: enable visibility tests
+    exclude 'com/tierconnect/riot/visibility/**'
+    exclude 'com/tierconnect/riot/controllers/DogControllerTest.class'
+}
+
+buildscript {
+    repositories {
+        //TODO skochanski: check if this can be downloaded from nexus
+        mavenCentral();
+    }
+
+    dependencies {
+        classpath 'net.saliman:gradle-properties-plugin:1.4.2'
+    }
+}
+
+dependencies {
+
+	compile project(':commons')
+    compile project(':sdk')
+    compile project(':appcore')
+    compile project(':iot')
+
+    compile 'commons-fileupload:commons-fileupload:1.3.1'
+    compile 'javax.transaction:jta:1.0.1B'
+    compile 'org.reflections:reflections:0.9.8'
+
+    providedCompile 'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0'
+
+    //RestEasy
+    compile "org.jboss.resteasy:jaxrs-api:${verResteasy}"
+    compile("org.jboss.resteasy:resteasy-jaxrs:${verResteasy}")
+    compile("org.jboss.resteasy:resteasy-jaxb-provider:${verResteasy}")
+    compile("org.jboss.resteasy:resteasy-jackson-provider:${verResteasy}")
+    compile("org.jboss.resteasy:resteasy-servlet-initializer:${verResteasy}")
+    providedCompile("org.jboss.resteasy:resteasy-hibernatevalidator-provider:${verResteasy}")
+    testCompile("org.jboss.resteasy:tjws:${verResteasy}")
+    testCompile("org.jboss.resteasy:resteasy-client:${verResteasy}")
+    testCompile("org.jboss.resteasy:resteasy-cdi:${verResteasy}")
+    testCompile('javax:javaee-api:7.0')
+
+    //CORS
+    compile 'com.thetransactioncompany:cors-filter:1.9.2'
+
+    //Swagger
+//    compile "com.wordnik:swagger-jersey-jaxrs_2.10:${swaggerversion}"
+    compile "com.wordnik:swagger-annotations:${swaggerversion}"
+    compile("com.wordnik:swagger-core_2.10:${swaggerversion}")
+    compile("com.wordnik:swagger-jaxrs_2.10:${swaggerversion}")
+
+    //GeoJson
+    compile 'de.grundid.opendatalab:geojson-jackson:1.2'
+
+    compile 'com.github.dblock:oshi-core:2.3'
+
+}
+
+allprojects
+        {
+            apply plugin: 'java'
+            apply plugin: 'eclipse-wtp'
+            apply plugin: 'ivy-publish'
+            apply plugin: 'idea'
+            apply plugin: 'maven'
+
+
+//          Version number for commons deprecated
+//            version = "${versionNumber}"
+            //classifier = ''
+
+            sourceCompatibility = 1.8
+            targetCompatibility = 1.8
+
+            repositories {
+                //if (portIsOpen("${nexusCacheHost}", Integer.valueOf("${nexusCachePort}"), 500)) {
+                //    println "Using Nexus server for the appcore project [${nexusCacheUrl}]"
+                //    maven { url "${nexusCacheUrl}" }
+                //} else {
+                println "Using maven repos directly for the appcore project (not the Nexus server [${nexusCacheUrl}])"
+                mavenLocal()
+//                maven { url "http://maven.oschina.net/content/groups/public/" }
+//                maven { url "https://maven.alfresco.com/nexus/content/groups/public/" }
+//                maven { url "http://maven.antelink.com/content/groups/public/" }
+                jcenter()
+                mavenCentral()
+                maven { url "http://mirrors.ibiblio.org/maven2/" }
+                maven { url "http://maven.thebuzzmedia.com" }
+                maven { url "https://repo.eclipse.org/content/repositories/paho-releases/" }
+                maven { url "http://clojars.org/repo" }
+                maven { url "http://jenkins2.riotplatform.com/repository/" }//incubator-storm dependencies
+                maven { url "http://dist.codehaus.org/" }
+                //}
+            }
+
+            sourceSets {
+                main {
+                    java {
+                        srcDirs = [projectDir.toString() + "/src/main/java"]
+                    }
+                }
+                generated {
+                    java {
+                        srcDirs = [projectDir.toString() + "/src/generated/java"]
+                    }
+                }
+            }
+
+            configurations {
+
+                mavenLocalArchives
+                //we are using slf4j-log4j so we must exclude other incompatible bridges
+                compile.exclude group: 'commons-logging', module: 'commons-logging'
+                compile.exclude group: 'org.slf4j', module: 'slf4j-jdk14'
+                compile.exclude group: 'org.slf4j', module: 'slf4j-jcl'
+                compile.exclude group: 'ch.qos.logback', module: 'logback-classic'
+                compile.exclude group: 'javax.ws.rs', module: 'jsr311-api'
+                compile.exclude group: 'javax.ws.rs', module: 'jersey-core'
+                runtime.exclude group: 'org.mockito', module: 'mockito-all'
+                querydslapt
+            }
+
+            configurations {
+                mavenLocalArchives
+            }
+
+            task sourceJar(type: Jar) {
+                from sourceSets.main.java
+                classifier = 'sources'
+            }
+
+            //please do no remove the following lines. It is used on the gradle/maven install
+            artifacts {
+                archives jar
+                mavenLocalArchives jar
+            }
+
+            install.configuration = configurations.mavenLocalArchives
+
+            dependencies {
+
+                compile 'commons-cli:commons-cli:1.2'
+                compile "commons-lang:commons-lang:2.5"
+                compile 'commons-io:commons-io:2.4'
+                //csv commons
+                compile "org.apache.commons:commons-csv:1.1"
+
+                compile 'org.apache.httpcomponents:httpclient:4.3.5'
+                compile 'org.jdom:jdom2:2.0.5'
+
+                compile "org.slf4j:slf4j-api:1.6.6"
+                compile "org.slf4j:slf4j-log4j12:1.6.6"
+                runtime "org.slf4j:jcl-over-slf4j:1.6.6"
+                runtime "org.slf4j:jul-to-slf4j:1.6.6"
+
+                testCompile "junit:junit:4.11"
+                testCompile 'org.hamcrest:hamcrest-library:1.3'
+                testCompile "org.mockito:mockito-all:1.9.5"
+                testCompile('pl.pragmatists:JUnitParams:0.3.6')
+
+                compile 'org.apache.shiro:shiro-core:1.2.4'
+                compile 'com.jayway.jsonpath:json-path:2.3.0'
+
+                //commons
+                compile 'commons-beanutils:commons-beanutils:1.8.3'
+                compile 'commons-collections:commons-collections:3.2.1'
+                compile 'joda-time:joda-time:2.2'
+                compile group: 'commons-validator', name: 'commons-validator', version: '1.5.1'
+
+        //ValidatorService
+        compile 'javax.validation:validation-api:1.0.0.GA'
+        //compile "org.hibernate:hibernate-validator-annotation-processor:${verHibernateValidator}"
+        //compile "org.hibernate:hibernate-validator:${verHibernateValidator}"
+
+                //Hibernate
+                compile "org.hibernate:hibernate-entitymanager:${verHibernate}"
+                //compile "org.hibernate:hibernate-ehcache:${verHibernate}"
+
+                //EHCACHE
+                //compile 'net.sf.ehcache:ehcache-core:2.4.7'
+
+                //HAZELCAST
+                compile 'com.hazelcast:hazelcast-hibernate4:3.5.5'
+                compile 'com.hazelcast:hazelcast-client:3.5.5'
+
+                //C3PP0 Pool
+                //compile "org.hibernate:hibernate-c3p0:${verHibernate}"
+
+                //BoneCP Pool
+                //compile 'com.jolbox:bonecp:0.8.0.RELEASE'
+
+                //HikariCP Pool
+                compile 'com.zaxxer:HikariCP:2.4.3'
+
+                //JDBC
+                runtime 'mysql:mysql-connector-java:5.1.30' //mysql driver
+                runtime 'net.sourceforge.jtds:jtds:1.3.1' //ms sql driver
+
+                //QueryDSL JPA
+                compile "com.mysema.querydsl:querydsl-apt:${verQuerydsl}"
+                compile "com.mysema.querydsl:querydsl-jpa:${verQuerydsl}"
+                querydslapt "com.mysema.querydsl:querydsl-apt:${verQuerydsl}"
+
+                //providedCompile("javax.servlet:javax.servlet-api:3.0.1" )
+
+                compile "javax.servlet:javax.servlet-api:3.0.1"
+
+                //RestEasy
+                compile "org.jboss.resteasy:jaxrs-api:${verResteasy}"
+                compile("org.jboss.resteasy:resteasy-jaxrs:${verResteasy}")
+                compile("org.jboss.resteasy:resteasy-multipart-provider:${verResteasy}")
+
+
+//                compile "com.wordnik:swagger-jersey-jaxrs_2.10:${swaggerversion}"
+                compile "com.wordnik:swagger-annotations:${swaggerversion}"
+                compile("com.wordnik:swagger-core_2.10:${swaggerversion}")
+                compile("com.wordnik:swagger-jaxrs_2.10:${swaggerversion}")
+
+                compile("org.apache.commons:commons-email:1.3.3")
+
+                compile 'org.reflections:reflections:0.9.10'
+
+                //compile("com.espertech:esper:${esperversion}")
+
+                //To sanitize strings
+                compile group: 'org.jsoup', name: 'jsoup', version: '1.10.2'
+
+                compile 'com.google.guava:guava:22.0'
+            }
+
+            jar {
+                manifest.attributes provider: 'gradle'
+            }
+
+            install.configuration = configurations.mavenLocalArchives
+
+            test {
+                //So unittest can get system property information from command line
+                systemProperties = System.properties
+            }
+
+            task cleanGenerated(type: Delete) {
+                // this seems to delete the files, but not the sub-dirs
+                delete sourceSets.generated.java
+            }
+            clean.dependsOn cleanGenerated
+
+
+
+        }
+
+    apply plugin: "findbugs"
+
+    task customFindbugs(type: FindBugs)  {
+        ignoreFailures = false
+        effort = "max"
+        reportLevel = "high"
+        classes = files(
+                project(':appcore').sourceSets.main.output.classesDir,
+                project(':sdk').sourceSets.main.output.classesDir,
+                project(':iot').sourceSets.main.output.classesDir,
+                project(':commons').sourceSets.main.output.classesDir,
+                project(':reporting-api').sourceSets.main.output.classesDir,
+                rootProject.sourceSets.main.output.classesDir)
+
+
+        source = fileTree('src/main/java/')
+
+        classpath = files(
+                project(':appcore').sourceSets.main.output.classesDir,
+                project(':sdk').sourceSets.main.output.classesDir,
+                project(':iot').sourceSets.main.output.classesDir,
+                project(':commons').sourceSets.main.output.classesDir,
+                project(':reporting-api').sourceSets.main.output.classesDir,
+                rootProject.sourceSets.main.output.classesDir)
+
+        reports {
+
+            xml.enabled = false
+            html.enabled = true
+            html.destination = "$project.buildDir/reports/findbugs/findbugs-output.html"
+        }
+    }
+
+
+
+
+//dependencies {
+//	compile project( ":examples" )
+//}
+
+task compileAll(type: JavaCompile) {
+    source = sourceSets.main.java + sourceSets.generated.java
+    classpath = sourceSets.main.compileClasspath + sourceSets.generated.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+}
+
+//delete first
+task cleanProperties(type: Delete) {
+    delete 'src/main/resources/conf.properties', 'src/main/resources/hibernate.properties'
+}
+
+//profiles are parsed and populates the conf.properties file
+task copyProperties(type: Copy) {
+    requiredProperties "mqttHost", "mqttPort", /*"cassandraHost",*/
+            "riotHost", "riotPort",
+            "hibernateConnectionDriver", "hibernateConnectionUrl", "hibernateConnectionUsername",
+            "hibernateConnectionPassword","popdbOption","popdbErase"
+
+    from('src/main/templates') {
+        include 'hibernate.properties'
+        include 'conf.properties'
+    }
+    into 'src/main/resources'
+    filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [
+              "mqtt.host"                           : mqttHost
+            , "mqtt.port"                           : mqttPort
+            , "mqtt.client.name"                    : mqttClientidSuffix
+            , "broker.connection.wait"              : brokerWaitConnections
+
+//            Mongo parameters
+            , "mongo.primary"                       : mongoPrimary
+            , "mongo.secondary"                     : mongoSecondary
+            , "mongo.replicaset"                    : mongoReplicaSet
+            , "mongo.ssl"                           : mongoSSL
+            , "mongo.username"                      : mongoUsername
+            , "mongo.password"                      : mongoPassword
+            , "mongo.authdb"                        : mongoAuthDB
+            , "mongo.db"                            : mongoDb
+            , "mongo.controlReadPreference"         : mongoControlReadPreference
+            , "mongo.reportsReadPreference"         : mongoReportsReadPreference
+            , "mongo.sharding"                      : mongoSharding
+            , "mongo.connectiontimeout"             : mongoConnectionTimeout
+            , "mongo.maxpoolsize"                   : mongoMaxPoolSize
+
+
+//            SparkCB parameters
+            , "spark.enabled"                    : sparkEnabled
+
+//            KafkaCB parameters
+            , "kafka.enabled"                    : kafkaEnabled
+
+            , "cassandra.host"                   : cassandraHost
+            , "cassandra.port"                   : cassandraPort
+            , "cassandra.keyspace"               : cassandraKeyspace
+            , "riot.host"                        : riotHost
+            , "riot.port"                        : riotPort
+            , "spark.host"                       : sparkHost
+            , "spark.port"                       : sparkPort
+            , "kafka.zookeeper"                  : kafkaZookeeper
+            , "kafka.servers"                    : kafkaServers
+            , "jars.path"                        : jarsPath
+            , "extractions.path"                 : extractionsPath
+            , "trainings.path"                   : trainingsPath
+            , "predictions.path"                 : predictionsPath
+            , "responses.path"                   : responsesPath
+            , "hibernate.connection.driver_class": hibernateConnectionDriver
+            , "hibernate.connection.url"         : hibernateConnectionUrl
+            , "hibernate.connection.username"    : hibernateConnectionUsername
+            , "hibernate.connection.password"    : hibernateConnectionPassword
+            , "hibernate.dialect"                : hibernateDialect
+            , "hazelcast.member.list"            : hazelcastMemberList
+            , "forceStartUpt"                    : forceStartUp
+            , "vizix.hazelcast.distributed.enable" : vizixHazelcastDistributedEnable
+            , "hibernate.cache.provider_configuration_file_resource_path" : distributedHazelcastProviderConfigurationFileResourcePath
+            , "hibernate.cache.hazelcast.client.config" : distributedHazelcastProviderConfigurationFileResourcePath
+            , "hibernate.cache.hazelcast.native_client_address" : distributedHazelcastNativeClientAddress
+            , "hibernate.cache.hazelcast.use_native_client" : distributedHazelcastUseNativeClient
+            , "hibernate.cache.hazelcast.native_client_group" : distributedHazelcastNativeClientGroup
+            , "hibernate.cache.hazelcast.native_client_password" : distributedHazelcastNativeClientPassword
+            , "vizix.hazelcast.managementcenter.enable" : servicesHazelcastCacheManagementCenterEnable
+            , "vizix.hazelcast.managementcenter.url" : servicesHazelcastCacheManagementCenterURL
+            , "vizix.hazelcast.services.multicast.enable" : servicesHazelcastCacheMulticastEnable
+            , "cronSchedule.TokenCleanUp" : cronScheduleTokenCleanUp
+            ,  "popdb.option" : popdbOption
+            ,  "popdb.erase" : popdbErase
+            , "git.branch" : gitBranch()
+            , "authentication.mode" : authenticationMode
+            , "scheduledrule.enabled" : scheduledruleEnabled
+    ])
+    dependsOn cleanProperties
+}
+
+task gitinfo(type: Exec) {
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        //TODO skochanski: make it work in Windows
+        commandLine 'cmd', '/c', "echo 'WARNING: gitinfo is not implemented in windows'"
+    } else {
+        commandLine './git-info.sh', version
+        ignoreExitValue true
+    }
+}
+
+task copyLog4j(type: Copy) {
+    from 'src/main/resources/log4j.properties.prod'
+    into 'src/main/resources'
+    rename { String fileName ->
+        fileName.replace("log4j.properties.prod", "log4j.properties")
+    }
+
+    from 'src/main/resources/log4j.properties.local'
+    into 'src/main/resources'
+    rename { String fileName ->
+        fileName.replace("log4j.properties.local", "log4j.properties")
+    }
+}
+
+task copyApplicationResources(type: Copy) {
+    from('src/main/resources')
+    into('build/resources/main')
+    include('ApplicationResources_en.xml')
+    rename('ApplicationResources_en.xml', 'ApplicationResources.xml')
+}
+
+task mongoIndexes(type: Copy) {
+    from('src/main/resources')
+    into('build/resources/main')
+    include('mongoIndexes.json')
+}
+
+task mongoReports(type: Copy) {
+    from('src/main/resources')
+    into('build/resources/main')
+    include('mongoReports')
+}
+
+task copyPopDB(type: Copy) {
+    from('iot/src/main/resources')
+    into('build/resources/main/popDB')
+}
+
+task copyIconset(type: Copy) {
+    from('src/main/webapp-services/resources')
+    into('build/resources/main')
+}
+
+task copyPasswordDictionaries(type: Copy) {
+    from('appcore/src/main/resources/passwordDictionaries')
+    into('build/resources/main/passwordDictionaries')
+}
+
+//copy and process before processing
+processResources.dependsOn copyProperties, copyLog4j, copyApplicationResources, gitinfo, mongoIndexes, mongoReports, copyPopDB, copyPasswordDictionaries, copyIconset
+
+// overwrite default compileJava, as it will fail
+compileJava
+        {
+            actions = [];
+            doLast {};
+            dependsOn compileAll
+        }
+
+eclipse {
+    wtp {
+        component {
+            //sourceDirs += file('appcore/build/classes/main')
+            //sourceDirs += file('examples/build/classes/main')
+            //sourceDirs += file('iot/build/classes/main')
+            //sourceDirs += file('sdk/build/classes/main')
+            sourceDirs += file('appcore/bin')
+            sourceDirs += file('examples/bin')
+            sourceDirs += file('iot/bin')
+            sourceDirs += file('sdk/bin')
+        }
+    }
+}
+
+task testqa(type: Test) {
+    include 'com/tierconnect/riot/visibility/**'
+    include 'com/tierconnect/riot/controllers/DogControllerTest.class'
+}
+
+
+task fatJar(type: Jar) {
+    zip64 true
+    baseName = project.name + '-all'
+    from "conf.properties"
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    } {
+        exclude '*slf4j*', 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+    }
+    manifest { attributes 'Main-Class': 'com.tierconnect.riot.popdb.PopDBAll' }
+    with jar
+    dependsOn assemble
+    //entryCompression ZipEntryCompression.STORED
+}
+
+// bridges no loger depend on services
+// reimplment for bridge hibernate cache
+task commonsJar(type: Jar) {
+    baseName = project.name + '-for-bridges'
+    from( 'commons/build/classes/main' ) {
+    	include "com/tierconnect/riot/commons/**"
+    }
+    from( 'sdk/build/classes/main' ) {
+    	//include "com/tierconnect/riot/sdk/utils/Version.class"
+    	include "com/tierconnect/riot/sdk/entities/SurrogateKey**"
+    	include "com/tierconnect/riot/sdk/dao/HibernateSessionFactory.class"
+    	include "com/tierconnect/riot/appgen/service/Getter.class"
+    }
+    from( 'appcore/build/classes/main' ) {
+    	//include "com/tierconnect/riot/appcore/dao/CassandraUtils.class"
+    	//include "com/tierconnect/riot/appcore/utils/Configuration.class"
+    	//include "com/tierconnect/riot/appcore/utils/LoggingUtils.class"
+    	//include "com/tierconnect/riot/appcore/entities/Group**"
+    	include "com/tierconnect/riot/appcore/entities/**"
+    }
+    from( 'iot/build/classes/main' ) {
+    	//include "com/tierconnect/riot/iot/cassandra/dao/**"
+    	//include "com/tierconnect/riot/iot/entities/Edgebox**"
+    	//include "com/tierconnect/riot/iot/entities/LogicalReader**"
+    	//include "com/tierconnect/riot/iot/entities/Shift**"
+    	//include "com/tierconnect/riot/iot/entities/Thing**"
+   		//include "com/tierconnect/riot/iot/entities/Zone**"
+    	//include "com/tierconnect/riot/iot/services/EdgeboxStatusService**"
+    	//include "com/tierconnect/riot/iot/entities/LocalMap**"
+    	include "com/tierconnect/riot/iot/entities/**"
+    	include "com/tierconnect/riot/iot/utils/**"
+    }
+    from( 'build/classes/main' ) {
+    	include "com/jolbox/bonecp/provider/BoneCPConnectionProvider.class"
+    }
+    dependsOn assemble
+}
+
+task dist(type: Exec) {
+    description = "Builds the distribution tar.gz file"
+    dependsOn commonsJar
+    // fat jar is still needed for popdb !!!!
+    dependsOn fatJar
+    dependsOn customFindbugs
+
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        //TODO skochanski: make it work in Windows
+        commandLine 'cmd', '/c', "echo 'WARNING: creating the tar file is not implemented in windows'"
+    } else {
+        executable "./tar.sh"
+    }
+}
+
+task dist2(type: Copy) {
+    from('build/tar/riot-core-services') {
+        include 'hibernate.properties'
+        include 'conf.properties'
+    }
+    into '.'
+    dependsOn dist
+}
+
+task rpm(type: Exec) {
+    description = "Builds the distribution rpm file"
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        //TODO skochanski: make it work in Windows
+        commandLine 'cmd', '/c', "echo 'WARNING: creating the tar file is not implemented in windows'"
+    } else {
+        executable "./rpmbuildservices.sh"
+    }
+}
+
+task(popdbRequired, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.tierconnect.riot.appcore.popdb.PopDBRequired'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+task(popdbRequiredIOT, dependsOn: popdbRequired, type: JavaExec) {
+    main = 'com.tierconnect.riot.iot.popdb.PopDBRequiredIOT'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+task(popdbCompany, dependsOn: 'classes', type: JavaExec) {
+    main = "${popdbClass}"
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+task(popdbBase, dependsOn: 'classes', type: JavaExec) {
+    main = "com.tierconnect.riot.iot.popdb.PopDBBase"
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+// Spark tasks.
+task(popdbSpark, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.tierconnect.riot.appcore.popdb.PopDBSpark'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+task(popdbRequiredIOTSpark, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.tierconnect.riot.iot.popdb.PopDBRequiredIOTSpark'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+// Kafka tasks.
+task(popdbKafka, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.tierconnect.riot.iot.popdb.PopDBKafka'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.driver_class', "${hibernateConnectionDriver}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty 'hibernate.cache.hazelcast.native_client_address', "${distributedHazelcastNativeClientAddress}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'mongo.primary', "${mongoPrimary}"
+    systemProperty 'mongo.secondary', "${mongoSecondary}"
+    systemProperty 'mongo.replicaset', "${mongoReplicaSet}"
+    systemProperty 'mongo.ssl', "${mongoSSL}"
+    systemProperty 'mongo.username', "${mongoUsername}"
+    systemProperty 'mongo.password', "${mongoPassword}"
+    systemProperty 'mongo.authdb', "${mongoAuthDB}"
+    systemProperty 'mongo.db', "${mongoDb}"
+    systemProperty 'mongo.controlReadPreference', "${mongoControlReadPreference}"
+    systemProperty 'mongo.reportsReadPreference', "${mongoReportsReadPreference}"
+    systemProperty 'mongo.sharding', "${mongoSharding}"
+    systemProperty 'mongo.connectiontimeout', "${mongoConnectionTimeout}"
+    systemProperty 'mongo.maxpoolsize', "${mongoMaxPoolSize}"
+    systemProperty 'mqtt.host', "${mqttHost}"
+    systemProperty 'mqtt.port', "${mqttPort}"
+    systemProperty 'kafka.zookeeper', "${kafkaZookeeper}"
+    systemProperty 'kafka.servers', "${kafkaServers}"
+    systemProperty 'user.timezone', "UTC"
+}
+
+task(popdbCompanySpark, dependsOn: 'classes', type: JavaExec) {
+    main = "${popdbClass}Spark"
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+task(popdbSimulator, dependsOn: 'classes', type: JavaExec) {
+    main = "${popdbSimulatorClass}"
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+
+task popdbClean(type: Exec) {
+    ignoreExitValue true
+    workingDir projectDir.toString()
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        //on windows:
+        commandLine 'cmd', '/c', 'popdb_clean.bat', "${hibernateConnectionUsername}/${hibernateConnectionPassword}@${dbHost}:${dbPort}/${hibernateConnectionDBName}", "${mongoUsername}/${mongoPassword}@${mongoPrimary}/${mongoDb}"
+    } else {
+        //on linux
+        commandLine './popdb_clean.sh', 'gradle-default.properties'
+    }
+//    //store the output instead of printing to the console:
+//    standardOutput = new ByteArrayOutputStream()
+//    //Extension method stopTomcat.output() can be used to obtain the output:
+//    print(ext)
+//    ext.output = {
+//        return standardOutput.toString()
+//    }
+}
+
+task(popdbRetailApp, dependsOn: 'classes', type: JavaExec) {
+    main = "${popdbClass}"
+
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'log4j.configuration', 'log4j.stdout.properties'
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.url', "${hibernateConnectionUrl}"
+    systemProperty 'hibernate.connection.username', "${hibernateConnectionUsername}"
+    systemProperty 'hibernate.connection.password', "${hibernateConnectionPassword}"
+    systemProperty 'hibernate.dialect', "${hibernateDialect}"
+    systemProperty '2f53086555b7fbb940ce78616ff212e5', "false"
+    systemProperty 'user.timezone', "UTC"
+}
+
+task(oldpopdb) {
+    dependsOn popdbClean
+    dependsOn popdbRequired
+    dependsOn popdbRequiredIOT
+    dependsOn popdbCompany
+    if ("${sparkEnabled}".toBoolean()){
+        println "SPARK"
+        dependsOn popdbSpark
+        dependsOn popdbRequiredIOTSpark
+    }
+
+    if ("${kafkaEnabled}".toBoolean()){
+        println "KAFKA"
+        dependsOn popdbKafka
+    }
+}
+
+task(popdb) {
+    if ("${popdbErase}".toBoolean()) {
+        dependsOn popdbClean
+        dependsOn popdbRequired
+        dependsOn popdbRequiredIOT
+        popdbRequired.mustRunAfter popdbClean
+        popdbRequiredIOT.mustRunAfter popdbRequired
+        popdbBase.mustRunAfter popdbRequiredIOT
+    }
+    dependsOn popdbBase
+}
+
+task(popdbRetail) {
+    dependsOn popdbClean
+    dependsOn popdbRequired
+    dependsOn popdbRequiredIOT
+    dependsOn popdbRetailApp
+
+}
+
+popdbRequiredIOT.mustRunAfter popdbRequired
+popdbCompany.mustRunAfter popdbRequiredIOT
+popdbSpark.mustRunAfter popdbRequiredIOT
+popdbRequiredIOTSpark.mustRunAfter popdbSpark
+
+popdbKafka.mustRunAfter popdbRequiredIOT
+
+// for publishing commons to bridges
+publishing {
+    publications {
+        api(MavenPublication) {
+            groupId 'com.tierconnect.riot'
+            artifactId 'commons'
+            version gitBranch()
+            artifact commonsJar
+        }
+    }
+}
+
+// for publishing commons to bridges
+publishing {
+    repositories {
+        maven {
+            url 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+        }
+    }
+}
+
+//a function to quickly check if can connect to the specified server (i.e. check if can reach webserver)
+def portIsOpen(String ip, int port, int timeout) {
+    try {
+        Socket socket = new Socket();
+        socket.connect(new InetSocketAddress(ip, port), timeout);
+        socket.close();
+        return true;
+    } catch (Exception ex) {
+        return false;
+    }
+}

@@ -1,0 +1,73 @@
+{
+  "_id": 65,
+  "groupTypeId": 3,
+  "groupTypeName": "Store",
+  "groupTypeCode": "Store",
+  "groupId": 3,
+  "groupCode": "SM",
+  "groupName": "Santa Monica",
+  "thingTypeId": 26,
+  "thingTypeCode": "CustomTT002",
+  "thingTypeName": "CustomTT002",
+  "name": "CT005",
+  "serialNumber": "CT005",
+  "modifiedTime": "2017-07-26T18:36:16.770Z",
+  "createdTime": "2017-07-26T18:36:16.770Z",
+  "time": "2017-07-26T18:36:16.732Z",
+  "strStdUDF": {
+    "thingTypeFieldId": 159,
+    "time": "2017-07-26T18:36:16.732Z",
+    "value": "a default string"
+  },
+  "zoneNativeUDF": {
+    "thingTypeFieldId": 160,
+    "time": "2017-07-26T18:36:16.732Z",
+    "value": {
+      "code": "Enance",
+      "zoneGroupTime": "2017-07-26T18:36:16.732Z",
+      "facilityMap": "Map Store Santa Monica",
+      "zoneGroup": "Off-Site",
+      "facilityMapTime": "2017-07-26T18:36:16.732Z",
+      "name": "Entrance",
+      "zoneTypeTime": "2017-07-26T18:36:16.732Z",
+      "zoneType": "DefaultZoneType2",
+      "id": 1
+    }
+  },
+  "thingTypeAttribute": {
+    "thingTypeFieldId": 161,
+    "time": "2017-07-26T18:36:16.732Z",
+    "value": {
+      "_id": 64,
+      "groupTypeId": 3,
+      "groupTypeName": "Store",
+      "groupTypeCode": "Store",
+      "groupId": 3,
+      "groupCode": "SM",
+      "groupName": "Santa Monica",
+      "thingTypeId": 11,
+      "thingTypeCode": "Colour",
+      "thingTypeName": "ColorFile",
+      "name": "colorFilesAsAttribute",
+      "serialNumber": "COLORFILESASATTRIBUTE",
+      "modifiedTime": "2017-07-26T18:30:50.204Z",
+      "createdTime": "2017-07-26T18:30:50.204Z",
+      "time": "2017-07-26T18:30:50.160Z",
+      "Action": {
+        "thingTypeFieldId": 78,
+        "time": "2017-07-26T18:30:50.160Z",
+        "value": "an action from Thing Type As Attribute"
+      },
+      "Description": {
+        "thingTypeFieldId": 80,
+        "time": "2017-07-26T18:30:50.160Z",
+        "value": "node"
+      },
+      "ColorCode": {
+        "thingTypeFieldId": 79,
+        "time": "2017-07-26T18:30:50.160Z",
+        "value": "0"
+      }
+    }
+  }
+}

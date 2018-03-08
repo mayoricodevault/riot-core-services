@@ -1,0 +1,5 @@
+ALTER TABLE version ADD COLUMN prevDbVersion VARCHAR(255) DEFAULT NULL;
+ALTER TABLE migration_step_result ADD COLUMN description VARCHAR(255) DEFAULT NULL;
+ALTER TABLE migration_step_result ADD COLUMN hash VARCHAR(4000) DEFAULT NULL;
+ALTER TABLE migration_step_result ADD COLUMN message VARCHAR(4000) DEFAULT NULL;
+ALTER TABLE migration_step_result ADD COLUMN stackTrace VARCHAR(4000) DEFAULT NULL;

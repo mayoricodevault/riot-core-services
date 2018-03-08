@@ -1,0 +1,64 @@
+////  Query DSL plugin version 2.0
+
+clean.doLast {
+    deleteDirContent(new File(projectDir.toString()+"/src/generated/java"));
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = [projectDir.toString() + "/src/main/java", projectDir.toString() + "/src/generated/java", projectDir.toString() + "/sdk/src/main/java"]
+        }
+    }
+}
+
+task queryDSLJPA {
+    inputs.files files( projectDir.toString() + "/src/main/java/com/tierconnect/riot" )
+    outputs.files file(projectDir.toString() + "/src/generated/java");
+    doLast {
+        def generatedDir = new File(projectDir.toString() + "/src/generated/java");
+        // this causes issues when appgen runs before queryDSLJPA
+        //deleteDirContent(generatedDir)
+        generatedDir.mkdirs()
+
+        def queryDSLJavacCompilerArgs = [
+                "-proc:only", "-processor", "com.mysema.query.apt.jpa.JPAAnnotationProcessor", "-s", projectDir.toString() + "/src/generated/java"
+        ]
+
+        ant.javac(includeAntRuntime: false, classpath: configurations.compile.asPath, target: compileJava.targetCompatibility, source: compileJava.sourceCompatibility) {
+            compileJava.source.addToAntBuilder(ant, "src", FileCollection.AntType.MatchingTask)
+            queryDSLJavacCompilerArgs.each { value ->
+                compilerarg(value: value)
+            }
+        }
+    }
+}
+
+// moved to compileAppcoreDAO
+//compileJava.dependsOn queryDSLJPA
+
+def deleteDirContent(File dir) {
+    if (dir.isDirectory()) {
+        String[] children = dir.list();
+        for (int i = 0; i < children.length; i++) {
+            boolean success = deleteDir(new File(dir, children[i]));
+            if (!success) {
+                return false;
+            }
+        }
+    }
+}
+
+def deleteDir(File dir) {
+    if (dir.isDirectory()) {
+        String[] children = dir.list();
+        for (int i = 0; i < children.length; i++) {
+            boolean success = deleteDir(new File(dir, children[i]));
+            if (!success) {
+                return false;
+            }
+        }
+    }
+    return dir.delete();
+}
+

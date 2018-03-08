@@ -1,0 +1,7 @@
+
+// settings.gradle is required in root project for multi-project builds.
+
+rootProject.name = 'riot-core-services'
+
+include 'commons', 'sdk', 'appcore', 'iot', 'reporting-api'
+

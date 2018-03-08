@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!--
+# As a Recommendation do not put hibernate connection properties or hibernate dialect properties in this file
+# THESE VALUES NOW COME FROM: (LOAD order)
+# 1. hibernate.properties (this file is recommended to be empty of hibernate connection/dialect properties)
+# 2. hibernate.cfg.xml (this file is recommended to be empty of hibernate connection/dialect properties)
+# 3. conf.properties derived file from gradle-default.properties automatically on build process
+# 4. web.xml (this file should is recommended to be empty of hibernate, cassandra, mqtt, other connection properties)
+# 5. TOMCAT context.xml defined in CATALINA_HOME/conf
+# 6. -D property setting from a command line switch (e.g. popdb)
+# (HIGHER load order overrides LOWER load order, meaning has HIGHER priority)
+-->
+
+<hibernate-configuration>
+
+  <session-factory>
+
+    <!-- Database connection settings, it reads first from hibernate.properties-->
+    <property name="connection.release_mode">after_statement</property>
+
+    <!-- JDBC connection pool (use c3p0) -->
+    <!--
+	<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+	<property name="c3p0.acquire_increment">1</property>
+	<property name="c3p0.idle_test_period">5</property>
+	<property name="c3p0.max_size">50</property>
+	<property name="c3p0.max_statements">0</property>
+	<property name="c3p0.min_size">5</property>
+	<property name="c3p0.timeout">5</property>
+ 	-->
+
+    <!-- JDBC connection pool (use bonecp) -->
+	  <!--
+	<property name="connection.provider_class">com.jolbox.bonecp.provider.BoneCPConnectionProvider</property>
+	<property name="bonecp.setIdleMaxAgeInMinutes">48</property>
+	<property name="bonecp.setIdleConnectionTestPeriodInMinutes">12</property>
+	<property name="bonecp.partitionCount">3</property>
+	<property name="bonecp.acquireIncrement">2</property>
+	<property name="bonecp.maxConnectionsPerPartition">14</property>
+	<property name="bonecp.minConnectionsPerPartition">2</property>
+	<property name="bonecp.statementsCacheSize">100</property>
+    <property name="bonecp.releaseHelperThreads">3</property>
+    -->
+
+	  <property name="connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
+	  <property name="hibernate.hikari.minimumIdle">6</property>
+	  <property name="hibernate.hikari.maximumPoolSize">1000</property>
+	  <property name="hibernate.hikari.idleTimeout">3600000</property>
+	  <property name="hibernate.hikari.dataSource.cachePrepStmts">true</property>
+	  <property name="hibernate.jdbc.batch_size">30000</property>
+	  <property name="hibernate.order_updates">true</property>
+
+	  <property name="hibernate.hikari.connectionTimeout">30000</property>
+	  <!--test connection for MYSQL and MSSQL-->
+	  <property name="hibernate.hikari.connectionTestQuery">select 1</property>
+	  <!--
+	  The defaults produce more performance for visix popdb and insert 500 things test
+	  <property name="hibernate.hikari.dataSource.prepStmtCacheSize">250</property>
+	  <property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit">2048</property>
+	  -->
+
+    <!-- Enable Hibernate's automatic session context management -->
+	  <property name="current_session_context_class">thread</property>
+
+    <!-- Echo all executed SQL to stdout -->
+	  <property name="show_sql">false</property>
+
+
+    <!--<mapping resource="model/appcore.hbm.xml" />-->
+
+    <!--Appcore-->
+    <mapping class="com.tierconnect.riot.appcore.entities.Role" />
+	<mapping class="com.tierconnect.riot.appcore.entities.RoleResource" />
+	<mapping class="com.tierconnect.riot.appcore.entities.Resource" />
+	<mapping class="com.tierconnect.riot.appcore.entities.UserRole" />
+	<mapping class="com.tierconnect.riot.appcore.entities.User" />
+	<mapping class="com.tierconnect.riot.appcore.entities.UserPassword" />
+	<mapping class="com.tierconnect.riot.appcore.entities.GroupType" />
+	<mapping class="com.tierconnect.riot.appcore.entities.Group" />
+	<mapping class="com.tierconnect.riot.appcore.entities.GroupResources" />
+	<mapping class="com.tierconnect.riot.appcore.entities.GroupField" />
+	<mapping class="com.tierconnect.riot.appcore.entities.Field" />
+	<mapping class="com.tierconnect.riot.appcore.entities.Favorite" />
+    <mapping class="com.tierconnect.riot.appcore.entities.Token" />
+	<mapping class="com.tierconnect.riot.appcore.entities.UserField" />
+    <mapping class="com.tierconnect.riot.appcore.entities.Version" />
+    <mapping class="com.tierconnect.riot.appcore.entities.MigrationStepResult" />
+	<mapping class="com.tierconnect.riot.appcore.entities.License" />
+	<mapping class="com.tierconnect.riot.appcore.entities.Connection" />
+	<mapping class="com.tierconnect.riot.appcore.entities.ConnectionType" />
+	  <mapping class="com.tierconnect.riot.appcore.entities.Recent" />
+	<!--
+	<mapping class="com.tierconnect.riot.appcore.entities.Datasource" />
+	<mapping class="com.tierconnect.riot.appcore.entities.DatasourceType" />
+	-->
+
+	<!-- IOT -->
+	<mapping class="com.tierconnect.riot.iot.entities.LocalMap" />
+	<mapping class="com.tierconnect.riot.iot.entities.LocalMapPoint" />
+    <mapping class="com.tierconnect.riot.iot.entities.LogicalReader" />
+    <mapping class="com.tierconnect.riot.iot.entities.PickListFields" />
+	<mapping class="com.tierconnect.riot.iot.entities.ReportDefinition" />
+	<mapping class="com.tierconnect.riot.iot.entities.ReportFilter" />
+	<mapping class="com.tierconnect.riot.iot.entities.ReportCustomFilter" />
+	<mapping class="com.tierconnect.riot.iot.entities.ReportGroupBy" />
+	<mapping class="com.tierconnect.riot.iot.entities.ReportProperty" />
+	<mapping class="com.tierconnect.riot.iot.entities.ReportRule" />
+	<mapping class="com.tierconnect.riot.iot.entities.Shift" />
+	<mapping class="com.tierconnect.riot.iot.entities.ShiftZone" />
+	<mapping class="com.tierconnect.riot.iot.entities.ShiftThing" />
+	<mapping class="com.tierconnect.riot.iot.entities.Thing" />
+	<mapping class="com.tierconnect.riot.iot.entities.ThingParentHistory" />
+	<mapping class="com.tierconnect.riot.iot.entities.ThingImage" />
+	<mapping class="com.tierconnect.riot.iot.entities.ThingType" />
+    <mapping class="com.tierconnect.riot.iot.entities.ThingTypeMap" />
+	<mapping class="com.tierconnect.riot.iot.entities.ThingTypeField" />
+	<mapping class="com.tierconnect.riot.iot.entities.Unit" />
+	<mapping class="com.tierconnect.riot.iot.entities.Zone" />
+	<mapping class="com.tierconnect.riot.iot.entities.ZoneGroup" />
+	<mapping class="com.tierconnect.riot.iot.entities.ZonePoint" />
+    <mapping class="com.tierconnect.riot.iot.entities.ZoneProperty" />
+    <mapping class="com.tierconnect.riot.iot.entities.ZonePropertyValue" />
+	<mapping class="com.tierconnect.riot.iot.entities.ZoneType" />
+    <mapping class="com.tierconnect.riot.iot.entities.Edgebox" />
+    <mapping class="com.tierconnect.riot.iot.entities.EdgeboxRule" />
+    <mapping class="com.tierconnect.riot.iot.entities.ImportExport" />
+	<mapping class="com.tierconnect.riot.iot.entities.ThingTypePath" />
+    <mapping class="com.tierconnect.riot.iot.entities.CustomApplication" />
+    <mapping class="com.tierconnect.riot.iot.entities.CustomObject" />
+    <mapping class="com.tierconnect.riot.iot.entities.CustomObjectType" />
+    <mapping class="com.tierconnect.riot.iot.entities.CustomField" />
+    <mapping class="com.tierconnect.riot.iot.entities.CustomFieldType" />
+    <mapping class="com.tierconnect.riot.iot.entities.CustomFieldValue" />
+
+	<mapping class="com.tierconnect.riot.iot.entities.ReportEntryOption" />
+	<mapping class="com.tierconnect.riot.iot.entities.ReportEntryOptionProperty" />
+
+	<mapping class="com.tierconnect.riot.iot.entities.ThingTypeTemplate" />
+	<mapping class="com.tierconnect.riot.iot.entities.ThingTypeFieldTemplate" />
+	<mapping class="com.tierconnect.riot.iot.entities.DataType" />
+	<mapping class="com.tierconnect.riot.iot.entities.EntryFormPropertyData" />
+	<mapping class="com.tierconnect.riot.iot.entities.Sequence" />
+	<mapping class="com.tierconnect.riot.iot.entities.NotificationTemplate" />
+	<mapping class="com.tierconnect.riot.iot.entities.Attachment" />
+  	<mapping class="com.tierconnect.riot.iot.entities.ReportDefinitionConfig"/>
+	<mapping class="com.tierconnect.riot.iot.entities.Parameters"/>
+	<mapping class="com.tierconnect.riot.iot.entities.BackgroundProcess"/>
+	<mapping class="com.tierconnect.riot.iot.entities.BackgroundProcessDetail"/>
+	<mapping class="com.tierconnect.riot.iot.entities.BackgroundProcessDetailLog"/>
+	<mapping class="com.tierconnect.riot.iot.entities.BackgroundProcessEntity"/>
+	<mapping class="com.tierconnect.riot.iot.entities.MlModel"/>
+	<mapping class="com.tierconnect.riot.iot.entities.MlBusinessModel"/>
+	<mapping class="com.tierconnect.riot.iot.entities.MlBusinessModelPredictor"/>
+	<mapping class="com.tierconnect.riot.iot.entities.MlBusinessModelTenant"/>
+  	<mapping class="com.tierconnect.riot.iot.entities.MlExtraction"/>
+    <mapping class="com.tierconnect.riot.iot.entities.MlExtractionPredictor"/>
+    <mapping class="com.tierconnect.riot.iot.entities.MlPrediction"/>
+    <mapping class="com.tierconnect.riot.iot.entities.MlPredictionPredictor"/>
+    <mapping class="com.tierconnect.riot.iot.entities.Folder"/>
+	<mapping class="com.tierconnect.riot.iot.entities.ActionConfiguration"/>
+	<mapping class="com.tierconnect.riot.iot.entities.ReportActions"/>
+	<mapping class="com.tierconnect.riot.iot.entities.LogExecutionAction"/>
+    <mapping class="com.tierconnect.riot.iot.entities.ThingTypeTemplateCategory"/>
+    <mapping class="com.tierconnect.riot.iot.entities.SmartContractDefinition"/>
+    <mapping class="com.tierconnect.riot.iot.entities.SmartContractParty"/>
+    <mapping class="com.tierconnect.riot.iot.entities.SmartContractConfig"/>
+	<mapping class="com.tierconnect.riot.iot.entities.ScheduledRule"/>
+  </session-factory>
+
+</hibernate-configuration>

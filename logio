@@ -1,0 +1,46 @@
+#!/bin/bash
+# Usage: logio start/stop/status
+#
+# chkconfig: 2345 95 05
+# description: log.io
+
+export HOME=/root/
+
+start() {
+    echo "Starting log.io process..."
+    cd $HOME
+    /usr/bin/log.io-server &
+    /usr/bin/log.io-harvester &
+}
+
+stop() {
+    echo "Stopping io-log process..."
+    pkill -f log.io-server
+    pkill -f log.io-harvester
+}
+
+status() {
+    echo "Status io-log process..."
+    netstat -tlp | grep node
+    pgrep -f log.io
+}
+
+case "$1" in
+start)
+    start
+    ;;
+stop)
+    stop
+    ;;
+restart)
+    stop
+    sleep 3
+    start
+    ;;
+status)
+    status
+;;
+*)
+echo "Usage: start|stop|status"
+        ;;
+esac

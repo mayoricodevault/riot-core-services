@@ -1,0 +1,129 @@
+MAJOR TODOS
+
+1. stop using appcore.hbm.xml, begin using annotations
+2. figure out "open session in view" pattern
+3. migrate to struts 2.0. use annotations instead of struts.xml
+
+
+ACTION CLASS ISSUES
+
+1. Actions - partial updates - often an html form only updates a few properties.
+
+2. to-one relationship - html forms return the id, where as the persistent object has the actual normal java code need the actual object
+   current state is to auto-gen a XId property for each X.
+
+INSTALLATION - TOMCAT
+
+1. Using Context XML
+
+   1. copy appcore.xml to conf/Catalina/localhost
+      - the "Realm" element uses the appcore database
+
+2. Using webapp dir
+
+   1. copy the target dir the the TOMCAT_HOME/webapp dir
+   2. Edit TOMCAT_HOME/conf/tomcat.users.xml. Add a role named
+      "appcore" and users as needed, or copy then Realm element from 
+      appcore.xml
+
+
+- FINISH GENERIC aCTION CLASS FOR crud
+
+- tree selector for group list
+- groupSelector tool
+- date picker tool
+- time picker tool
+- i18n crud buttons, test in msie and ff
+
+- make each row of display tag clickable
+- display tag exports
+- display tag export of long list
+
+
+LIST Element
+- implemented using display tag
+
+FORM Element
+
+
+BUGS:
+
+1. fix crud functionality issue with hibernate transaction demarcation
+2. test for javascript truncation issues on model id that loose precision in the form
+3. figure how to override model2form and form2model in actions
+- display tag does not sort nested properties
+
+
+********************************************************************************
+* Steps to add a new domain model object:
+********************************************************************************
+
+1. Hibernate Config:  resources/hibernate.cfg.xml
+
+	write <mapping> element as needed, e.g.:
+
+	<mapping class="com.tierconnect.appcore.model.User" />
+
+2. JAVA Classes:
+
+REQUIRED:
+---------
+User                   implement property methods as needed
+                                    add JPA annotations
+ONLY AS NEEDED
+--------------
+UserDAO                 
+UserDAOImp           
+
+UserService
+UserServiceImp
+
+UserWebService    
+UserWebServiceImp 
+
+
+3. POPDB
+
+    - populate role resource records as needed
+    - populate User instances as needed 
+    
+4. spring config
+
+   //REQUIRED
+   <bean scope="prototype" id="user" class="com.tierconnect.logon.model.User" />
+
+   //AS NEEDED
+   dao's, services
+   
+5. ServicesServlet config:
+   
+   "user", User.class;   
+  
+6. Context class
+  
+  	// used in Action classes and service methods
+  	public User newUser()
+	{
+		return (User) applicationContext.getBean( "user" );
+	}
+  
+  	// used in top level programs (i.e. popdb, unit tests, cli tools, etc.)
+  	public UserService getUserService()
+	{
+		return (UserService) applicationContext.getBean( "userService" );
+	}
+
+	
+REQUIREMNTS
+
+POPDB
+
+1. should be able to drop, create, and popdb mysql, mssql, and oracle on local or remote machines.
+2. should write sql dump to target dir for all db's supported.
+
+VIEW
+
+1. do not use frames. List results or CRUD forms for single records, or any report, should be URL addressable.
+   you should be able to, without being logged in, click on a link and be taken to that page, after entering your login info.
+   
+

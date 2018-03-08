@@ -1,0 +1,1345 @@
+{
+  "codeVersionNumber": 5010300,
+  "codeVersionName": "5.1.3",
+  "steps": [
+    {
+      "from": [
+        30000
+      ],
+      "to": 30001,
+      "name": "Final release for version 3.0.1",
+      "description": "3.0.1",
+      "migrate": [
+        {
+          "path": "licensing/Migrate_ControlResources_NOISSUE",
+          "description": "Adds Control Resource"
+        },
+        {
+          "path": "group/Migrate_HierarchyName_RIOT5781",
+          "description": "Adds hierarchyName with path of group codes"
+        },
+        {
+          "path": "connection/Migrate_ConnectionType_NOISSUE",
+          "description": "Migrates connectionType"
+        },
+        {
+          "path": "sequence/Migrate_SequenceNumber_RIOT4105",
+          "description": "Adds sequence number udf"
+        }
+      ]
+    },
+    {
+      "from": [
+        30100
+      ],
+      "to": 30101,
+      "name": "Final release for version 3.1.1",
+      "description": "3.1.1",
+      "migrate": [
+        {
+          "path": "licensing/Migrate_MonitorResources_NOISSUE",
+          "description": "Adds Monitor Resource"
+        },
+        {
+          "path": "group/Migrate_HierarchyName_NOISSUE",
+          "description": "Refreshes hierarchyName with path of group codes"
+        }
+      ]
+    },
+    {
+      "from": [
+        30101
+      ],
+      "to": 30102,
+      "name": "Final release for version 3.1.2",
+      "description": "3.1.2",
+      "migrate": [
+        {
+          "path": "group/Migrate_DwellTimeFlag_RIOT6340",
+          "description": "Adds flag to turn on/off the dwelltime procsessing"
+        },
+        {
+          "path": "dataType/Migrate_DataType_NOISSUE",
+          "description": "Change Data Type Table, data type 27 for thing type waws added"
+        }
+      ]
+    },
+    {
+      "from": [
+        30102
+      ],
+      "to": 30200,
+      "name": "Final release for version 3.2.0",
+      "description": "3.2.0",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_CoreBridgeConfig_RIOT6535",
+          "description": "Adds notification_template"
+        },
+        {
+          "path": "notification/Migrate_NotificationTemplate_RIOT5797",
+          "description": "Adds notification_template"
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportDefinition_RIOT6741",
+          "description": "Enables a 'Bulk Edit' option in Bulk Options"
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportDefinition_RIOT6782",
+          "description": "Adds Unit column to Report Definition"
+        },
+        {
+          "path": "connection/Migrate_Connection_RIOT4291",
+          "description": "Adds code column to Connection"
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportEntry_NOISSUE",
+          "description": "Adds code column to Connection"
+        }
+      ]
+    },
+    {
+      "from": [
+        30200
+      ],
+      "to": 30201,
+      "name": "Final release for version 3.2.1",
+      "description": "3.2.1",
+      "migrate": [
+        {
+          "path": "licensing/Migrate_ReportDefinitionResources_NOISSUE",
+          "description": "Updates ReportDefinition Label and Description"
+        },
+        {
+          "path": "connection/Migrate_MqttSmtpConnection_RIOT7399",
+          "description": "Removes connection & types MQTT & SMTP from migration"
+        },
+        {
+          "path": "dataType/Migrate_DataType_RIOT8018",
+          "description": "Adds Unit column to Report Definition"
+        }
+      ]
+    },
+    {
+      "from": [
+        30201
+      ],
+      "to": 30300,
+      "name": "Final release for version 3.3.0",
+      "description": "3.3.0",
+      "migrate": [
+        {
+          "path": "dataType/Migrate_ExpressionDataType_RIOT7370",
+          "description": "Changes the Formula data type to 'Expression'"
+        },
+        {
+          "path": "reportDefinition/Migrate_ModifyGroupId_NOISSUE",
+          "description": "Allows field riotentryoption.group_id to accept null"
+        },
+        {
+          "path": "resource/Migrate_ReportResourceName_NOISSUE",
+          "description": "Updates Report resource name"
+        },
+        {
+          "path": "edgebox/Migrate_CoreBridgeBulkImportTickle_RIOT7315",
+          "description": "When using bulk import, tickle is not updating"
+        },
+        {
+          "path": "thingType/Migrate_ZPLThingTypeTemplate_RIOT7309",
+          "description": "Adds rfidEncode to ZPL Thing Type Template"
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportDefinition_RIOT7129",
+          "description": "Tasks due to 'ThingTypeFieldId' and 'hierarquicalPathCode' in ReportFilter, ReportProperty, reportRule"
+        },
+        {
+          "path": "connection/Migrate_MSSQLServerConnection_RIOT7764",
+          "description": "Creates MSSQLServer connection"
+        }
+      ]
+    },
+    {
+      "from": [
+        30300
+      ],
+      "to": 30301,
+      "name": "Final release for version 3.3.1",
+      "description": "3.3.1",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_RunEsperFlagFalse_RIOT7701",
+          "description": "Run Esper flag should be false"
+        },
+        {
+          "path": "connection/Migrate_ConnectionType_RIOT7682",
+          "description": "Migrates Connections MySQL MSSQL"
+        },
+        {
+          "path": "reportDefinition/Migrate_InlineEditReport_RIOT7732",
+          "description": "Inline edit stills working after migrate from any version less than 3.3.0"
+        },
+        {
+          "path": "connection/Migrate_MySQLConnection_RIOT7764",
+          "description": "Migrates MySQL Connection"
+        }
+      ]
+    },
+    {
+      "from": [
+        30301
+      ],
+      "to": 30302,
+      "name": "Final release for version 3.3.2",
+      "description": "3.3.2",
+      "migrate": [
+        {
+          "path": "dataType/Migrate_AttachmentDataType_RIOT7585",
+          "description": "Enables Attachment UDF in Create&Update Thing"
+        }
+      ]
+    },
+    {
+      "from": [
+        30302
+      ],
+      "to": 30303,
+      "name": "Final release for version 3.3.3",
+      "description": "3.3.3",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_AllPropertyData_RIOT10449",
+          "description": "Adds allpropertydata column in reportentryoptionproperty table"
+        },
+        {
+          "path": "reportDefinition/Migrate_ShowThingTypePropertyValues_RIOT8302",
+          "description": "Shows all Thing Type property values by default if pick list was not customized(execution)"
+        },
+        {
+          "path": "sequence/Migrate_SequenceNumberLogging_RIOT8326",
+          "description": "Migrates SequenceNumberLogging"
+        }
+      ]
+    },
+    {
+      "from": [
+        30303,
+        30304
+      ],
+      "to": 30305,
+      "name": "Final release for version 3.3.5",
+      "description": "3.3.5",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_DwellTimeFilter_RIOT6471",
+          "description": "Adds dwellTimeFilter in CoreBridge configuration"
+        }
+      ]
+    },
+    {
+      "from": [
+        30305
+      ],
+      "to": 30400,
+      "name": "Final release for version 3.4.0",
+      "description": "3.4.0",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_ShowHover_RIOT7589",
+          "description": "Adds showHover in report properties (PopDB, Migrator, and ReportDefinition)"
+        },
+        {
+          "path": "reportDefinition/Migrate_PlaybackMaxThing_RIOT6515",
+          "description": "Adds playback max thing in report definition"
+        },
+        {
+          "path": "dataType/Migrate_ClazzColumnDataType_NOISSUE",
+          "description": "Adds and sets clazz column in dataType"
+        },
+        {
+          "path": "dataType/Migrate_BigDecimalDataType_NOISSUE",
+          "description": "Updates DataTypes 4 and 25 to BigDecimal"
+        },
+        {
+          "path": "thingType/Migrate_LastDetectLocateTime_RIOT7493",
+          "description": "Make sure values are saved in Mongo in the correct Data type"
+        },
+        {
+          "path": "reportDefinition/Migrate_ThingTypeColumns_NOISSUE",
+          "description": "Creates thingTypeId, thingTypeFieldId and parentThingTypeId columns"
+        },
+        {
+          "path": "resource/Migrate_MoveReportInstances_NOISSUE",
+          "description": "Moves Report Instances to a new Module (Resources)"
+        },
+        {
+          "path": "edgebox/Migrate_CoreBridgeMultiTenant_RIOT7058",
+          "description": "Sets initial password for Multi-Tenant Core Bridge"
+        },
+        {
+          "path": "edgebox/Migrate_AlienReaderGPIOSubscriber_RIOT7627",
+          "description": "Standardization of AlienReaderGPIOSubscriber"
+        },
+        {
+          "path": "edgebox/Migrate_RemoveCassandraConfig_RIOT7785",
+          "description": "Removes Cassandra configuration from MCB"
+        }
+      ]
+    },
+    {
+      "from": [
+        30400
+      ],
+      "to": 30402,
+      "name": "Final release for version 3.4.2",
+      "description": "3.4.2",
+      "migrate": [
+        {
+          "path": "thingType/Migrate_AddIsParentColumn_RIOT8073",
+          "description": "Adds column 'isParentUdf' in 'ThingType'"
+        },
+        {
+          "path": "group/Migrate_DwellTimeNativeObjects_RIOT8280",
+          "description": "Updates DwelTime and NativeObjects"
+        },
+        {
+          "path": "parentChild/Migrate_ParentChildDenormalization_RIOT8387",
+          "description": "Implements parent/child denormalization"
+        }
+      ]
+    },
+    {
+      "from": [
+        30402
+      ],
+      "to": 40000,
+      "name": "Final release for version 4.0.0",
+      "description": "4.0.0",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_ReportGroupByPartition_RIOT8654",
+          "description": " Adds column byPartition in reportGroupBy for Summary Report"
+        },
+        {
+          "path": "reportDefinition/Migrate_NativeMongoDbScript_RIOT8686",
+          "description": "Adds new table so as to save Native MongoDB Script"
+        },
+        {
+          "path": "reportDefinition/Migrate_NewColumns_NOISSUE",
+          "description": "Migration Fix for new columns on reportDefinition"
+        },
+        {
+          "path": "reportDefinition/Migrate_IsMobileDataEntry_RIOT8901",
+          "description": "Adds isMobileDataEntry to reports"
+        },
+        {
+          "path": "reportDefinition/Migrate_HeatZoneMap_RIOT8738",
+          "description": "Adds 'heat' business logic in Zone Map."
+        },
+        {
+          "path": "thingType/Migrate_AddTimeSeriesTemplate_RIOT8203",
+          "description": "Adds timeSeries in ThingTypeTemplate"
+        },
+        {
+          "path": "role/Migrate_RemoveRoleCode_NOISSUE",
+          "description": "Fixed unnecessary migration steps"
+        },
+        {
+          "path": "thingType/Migrate_DefaultValueSize_RIOT8776",
+          "description": "Increases default value size"
+        },
+        {
+          "path": "migration/Migrate_MongoDbIndexes_RIOT8525",
+          "description": "Denormalizes and migrates indexes order for mongo"
+        },
+        {
+          "path": "edgebox/Migrate_CoreBridgeConfig_RIOT8370",
+          "description": "Adds mongoDB username and password for coreBridge configuration"
+        },
+        {
+          "path": "edgebox/Migrate_StarFlexThingTypeTemplate_RIOT11467",
+          "description": "Changes the popdbRequiredIOT"
+        }
+      ]
+    },
+    {
+      "from": [
+        40000
+      ],
+      "to": 40100,
+      "name": "4.1.0",
+      "description": "Final release for version 4.1.0",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_EdgeBoxPortField_RIOT9432",
+          "description": "Adds port column to edgeBox"
+        },
+        {
+          "path": "attachments/Migrate_AttachmentsDeletion_RIOT8226",
+          "description": "Migrates attachments deletion"
+        },
+        {
+          "path": "group/Migrate_GroupResourcesImages_RIOT8831",
+          "description": "Adds group resources for tenant images"
+        },
+        {
+          "path": "performance/Migrate_CreateIndexesDB_NOISSUE",
+          "description": "Creates indexed in RDBMS tables"
+        }
+      ]
+    },
+    {
+      "from": [
+        40100
+      ],
+      "to": 40200,
+      "name": "4.2.0",
+      "description": "Final release for version 4.2.0",
+      "migrate": [
+        {
+          "path": "version/Migrate_VersionFields_RIOT9654",
+          "description": "Change code field for all zone types."
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportRule_RIOT10463",
+          "description": "Change code field for all zone types."
+        },
+        {
+          "path": "edgebox/Migrate_EdgeBoxRuleSetOutputConf_RIOT10950",
+          "description": "Change code field for all zone types."
+        }
+      ]
+    },
+    {
+      "from": [
+        40200
+      ],
+      "to": 4030001,
+      "name": "4.3.0_RC1",
+      "description": "4.3.0_RC1",
+      "migrate": [
+        {
+          "path": "connection/Migrate_AddFieldToConnection_RIOT10618",
+          "description": "Change code field for all zone types."
+        },
+        {
+          "path": "edgebox/Migrate_RegularizeTypeEdgeBox_RIOT10641",
+          "description": "An error is displayed in logs about connectionType."
+        },
+        {
+          "path": "edgebox/Migrate_MigrateCoreBridgeAndConfiguration_RIOT10609",
+          "description": "Added migration of Connection Types and configuration o the core bridge."
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportDefAddAttribute_RIOT10894",
+          "description": "Changed the TINYTEXT to TEXT in description of reportdefinition table and add a comma in edgebox configuration."
+        },
+        {
+          "path": "thingType/Migrate_AddAutocreateThingTypeTemp_RIOT10894",
+          "description": "Changed the default assign NULL to 0 in autocreate field of thingtypetemplate table."
+        }
+      ]
+    },
+    {
+      "from": [
+        4030001,
+        4030010
+      ],
+      "to": 4030011,
+      "name": "4.3.0_RC11",
+      "description": "4.3.0_RC11",
+      "migrate": [
+        {
+          "path": "thingType/Migrate_ThingTypeChangeNameField_RIOT11770",
+          "description": "Created migration steps to make ThingTypeField.name column case sensitive."
+        }
+      ]
+    },
+    {
+      "from": [
+        4030011
+      ],
+      "to": 4030012,
+      "name": "4.3.0_RC12",
+      "description": "4.3.0_RC12",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_MigrateTableScriptToMongoServer_NOISSUE",
+          "description": "Save all report script in mongo server"
+        },
+        {
+          "path": "group/Migrate_InsertLDAP_RIOT11642",
+          "description": "Change migration insert data for LDAP Authentication from inserts SQL sentences to java sentences."
+        },
+        {
+          "path": "thingType/Migrate_AddNewFieldsToRFID_RIOT11390",
+          "description": "Add new diagnostic UDFs to RFID Tag and other sensors."
+        },
+        {
+          "path": "thingType/Migrate_ParentChild_RIOT11262",
+          "description": "The child is not being displayed after creating andd merge with develop."
+        }
+      ]
+    },
+    {
+      "from": [
+        4030012
+      ],
+      "to": 4030013,
+      "name": "4.3.0_RC13",
+      "description": "4.3.0_RC13",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_UpdateCoreBridge_RIOT12086",
+          "description": "Add new Thing Type Field lpt_cache to CoreBridge in Migration."
+        },
+        {
+          "path": "group/Migrate_InsertAndUpdateLDAPFields_RIOT11927",
+          "description": "Create Migration and popDB for LDAP Deleting and inserting new values on apc_field and groupfield tables."
+        },
+        {
+          "path": "connection/Migrate_DeleteUserFromConnectionType_RIOT12142",
+          "description": "Erase user property from ldap connection to use only userDn."
+        },
+        {
+          "path": "edgebox/Migrate_NewEdgeBoxAndRules_RIOT11430",
+          "description": "Create migration for new edgebox and rule fields edgeBridgeType and conditionType respectively."
+        },
+        {
+          "path": "edgebox/Migrate_FixTopicCoreBridge_RIOT13644",
+          "description": "Topic for services does not register for corebridge after migration from 3.x."
+        }
+      ]
+    },
+    {
+      "from": [
+        4030013
+      ],
+      "to": 40300,
+      "name": "4.3.0",
+      "description": "4.3.0",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_AddorUpdateJsonFormater_RIOT12521",
+          "description": "Fixed migration of JSON Formatter and paths for windows."
+        },
+        {
+          "path": "thingType/Migrate_CreateNewThintTypeTemp_RIOT12388",
+          "description": "Add inserts in RFID Tag thing type field template (zone, lastDetectTime, and lastLocateTime)"
+        }
+      ]
+    },
+    {
+      "from": [
+        40300,
+        40301,
+        40302,
+        40303,
+        40304,
+        40305
+      ],
+      "to": 40400,
+      "name": "4.4.0",
+      "description": "4.4.0",
+      "migrate": [
+        {
+          "path": "group/Migrate_MigrateLdapParameter_NOISSUE",
+          "description": "Change group field."
+        },
+        {
+          "path": "edgebox/Migrate_MigrateAleBridgeConf_NOISSUE",
+          "description": "Change group field."
+        },
+        {
+          "path": "reportDefinition/Migrate_MigrateReportProperties_NOISSUE",
+          "description": "Migrate zoneLocalMap in all report entities"
+        },
+        {
+          "path": "thingType/Migrate_MigrateThingTypeGPIO_NOISSUE",
+          "description": "Migrate thingType GPIO."
+        }
+      ]
+    },
+    {
+      "from": [
+        40400,
+        40401
+      ],
+      "to": 4050001,
+      "name": "4.5.0_RC1",
+      "description": "4.5.0_RC1",
+      "migrate": [
+        {
+          "path": "groupConfiguration/Migrate_MigrateGroupConfBulkProcess_RIOT11654",
+          "description": "Via Data Entry reports, massive quantities across all pages."
+        },
+        {
+          "path": "reportDefinition/Migrate_MigrateReportEntryOptionProp_RIOT12671",
+          "description": "I add a migration process to copy values saved on sortBy to defaultMobileValue of reportentryoptionproperty table."
+        },
+        {
+          "path": "edgebox/Migrate_AddParamToAleBridge_RIOT12910",
+          "description": "Add necessary parameters for features and Add parameter to ALE and Core bridge configuration."
+        },
+        {
+          "path": "connection/Migrate_MigrateNewConnectionType_RIOT13235",
+          "description": "migration connection type MONGO and REMOVE connection Type KAFKA HADOOP."
+        },
+        {
+          "path": "reportDefinition/Migrate_MigrateReport_RIOT12307",
+          "description": "Reports Data Entry > Bulk update ALL records in all pages."
+        }
+      ]
+    },
+    {
+      "from": [
+        4050001
+      ],
+      "to": 4050002,
+      "name": "4.5.0_RC2",
+      "description": "Release Candidate 2 for version 4.5.0",
+      "migrate": [
+        {
+          "path": "connection/Migrate_FixMigrationConnectionTypeMongo_RIOT13235",
+          "description": "Migration connection type MONGO and REMOVE connection Type KAFKA HADOOP"
+        },
+        {
+          "path": "connection/Migrate_MongoToShardingConfig_RIOT11251",
+          "description": "Migration connection for Mongo Sharding"
+        },
+        {
+          "path": "edgebox/Migrate_MigrateBridgeRule_RIOT13253",
+          "description": "Migration for CEP Javascript action should be migrated to Always True"
+        },
+        {
+          "path": "resource/Migrate_DescriptionSizeUp_RIOT13026",
+          "description": "Migration to up size for field description in resources"
+        }
+      ]
+    },
+    {
+      "from": [
+        4050002
+      ],
+      "to": 4050003,
+      "name": "4.5.0_RC3",
+      "description": "Release Candidate 3 for version 4.5.0",
+      "migrate": [
+        {
+          "path": "groupConfiguration/Migrate_GroupConfigurationTreeView_RIOT13279",
+          "description": "Migration to add a new parameter on group configuration for Tree View"
+        },
+        {
+          "path": "importExport/Migrate_InsertImportAsResource_RIOT13183",
+          "description": "Migration to create Import/Export as a resource"
+        }
+      ]
+    },
+    {
+      "from": [
+        4050003
+      ],
+      "to": 4050004,
+      "name": "4.5.0_RC4",
+      "description": "Release Candidate 4 for version 4.5.0",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_FillSortOrderFiledForEdgeboxRules_RIOT13206",
+          "description": "Migration to fill sortOrder in edgeboxrule table and providing an order value for new edgeboxrule added"
+        },
+        {
+          "path": "analytics/Migrate_LicensingForAnalytics_RIOT13649",
+          "description": "Migration licensing for Analytics"
+        }
+      ]
+    },
+    {
+      "from": [
+        4050004,
+        40500,
+        40501,
+        40502
+      ],
+      "to": 5000001,
+      "name": "5.0.0_RC01",
+      "description": "Release Candidate 1 for version 5.0.0",
+      "migrate": [
+        {
+          "path": "thingType/Migrate_ThingTypeTemplateRFIDPrinter_VIZIX325",
+          "description": "Migrates RFIDPrinter ThingTypeTemplate by adding proxy udfs"
+        },
+        {
+          "path": "thingType/Migrate_FlexTagAliasUdf_VIZIX178",
+          "description": "Adds to FlexTag thingTypeTemplate a UDF called alias String data type"
+        },
+        {
+          "path": "reportDefinition/Migrate_CleanZonePropertyValue_VIZIX400",
+          "description": "VIZIX-400, Facilities > Zone Type Properties are dropped after delete associated zones "
+        }
+      ]
+    },
+    {
+      "from": [
+        5000001
+      ],
+      "to": 5000002,
+      "name": "5.0.0_RC02",
+      "description": "Release Candidate 2 for version 5.0.0",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_BulkProcess_VIZIX164",
+          "description": "VIZIX-164, Data Entry > Bulk Delete Process and Bulk Edit Process. Batch Size Bulk Process parameter added in Groups"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000002
+      ],
+      "to": 5000003,
+      "name": "5.0.0_RC03",
+      "description": "Release Candidate 3 for version 5.0.0",
+      "migrate": [
+        {
+          "path": "connection/Migrate_MigrateConnectionType_RIOT12980",
+          "description": "Migration RIOT-12980: migration connection type SPARK, KAFKA, SQL(connection0) and HADOOP"
+        },
+        {
+          "path": "thingType/Migrate_ThingTypePath_VIZIX229",
+          "description": "Migration VIZIX-229, Services>Migration for ThingTypePath Table, it saves all paths for Mongo"
+        },
+        {
+          "path": "migration/Migrate_MigrationRefactor_VIZIX342",
+          "description": "Migrates Migration steps making migration them based on feature instead of version"
+        },
+        {
+          "path": "authentication/Migrate_MigrationLDAPUserIdentifier_VIZIX897",
+          "description": "Migration of LDAP User Identifier"
+        },
+        {
+          "path": "mapMaker/Migrate_MigrationMapMakerMapMode_VIZIX272",
+          "description": "Migration of Map Maker - Map Mode"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000003
+      ],
+      "to": 5000004,
+      "name": "5.0.0_RC04",
+      "description": "Release Candidate 4 for version 5.0.0",
+      "migrate": [
+        {
+          "path": "resource/Migrate_TokenRefactor_VIZIX728",
+          "description": "Migrates Token Refactor to avoid database concurrency"
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportLog_NOISSUE",
+          "description": "Adding fields on Group for report logs"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000004
+      ],
+      "to": 5000005,
+      "name": "5.0.0_RC05",
+      "description": "Release Candidate 5 for version 5.0.0",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_ReportBulkProcessDetailLog_AddFields_VIZIX1736",
+          "description": "Adding fields in ReportBulkProcessDetailLog in order to send tickles after crash in massive delete bulk process"
+        },
+        {
+          "path": "edgebox/Migrate_UpdateAleBridge_VIZIX1852",
+          "description": "VIZIX-1852:  Add \"streaming\" mode to ALEBridges configuration"
+        },
+        {
+          "path": "statusBar/Migrate_StatusBar_VIZIX1098",
+          "description": "Create backgroundProcess tables, data migration and delete of reportBulkProcess tal"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000005
+      ],
+      "to": 5000006,
+      "name": "5.0.0_RC06",
+      "description": "Release Candidate 6 for version 5.0.0",
+      "migrate": [
+        {
+          "path": "migration/Migrate_MigrationImprovements_NOISSUE",
+          "description": "Migration improvements: added git branch column in version, migration now makes honor of step order"
+        },
+        {
+          "path": "connection/Migrate_SQLConnectionType_VIZIX1298",
+          "description": "Create SQL Connection type"
+        },
+        {
+          "path": "edgebox/Migrate_RunOnReorder_NOISSUE",
+          "description": "Migrates run on reorder model for edgebox rules"
+        },
+        {
+          "path": "edgebox/Migrate_OutOfOrderRuleConfig_NOISSUE",
+          "description": "Migrates outOfOrderRule for core edgeboxes type of"
+        },
+        {
+          "path": "edgebox/Migrate_TimeOrderRuleConfig_NOISSUE",
+          "description": "Migrates timeOrderRule for core edgeboxes type of"
+        },
+        {
+          "path": "edgebox/Migrate_ReloadCacheTickleConfig_NOISSUE",
+          "description": "Migrates reloadCacheTickle for core edgeboxes type of"
+        },
+        {
+          "path": "edgebox/Migrate_InterCacheEvictionConfig_NOISSUE",
+          "description": "Migrates interCacheEviction for core edgeboxes type of"
+        },
+        {
+          "path": "edgebox/Migrate_SwarmFilterConfig_NOISSUE",
+          "description": "Migrates swarmFilter for core edgeboxes type of"
+        },
+        {
+          "path": "edgebox/Migrate_ZoneDwellFilterConfig_NOISSUE",
+          "description": "Migrates zoneDwellFilter for StarFLEX edgeboxes type of"
+        },
+        {
+          "path": "mapMaker/Migrate_MigrationMapMakerZones_VIZIX2420",
+          "description": "Add rotationDegrees and LocalMapPoint"
+        },
+        {
+          "path": "reportDefinition/Migrate_ImplementNewMethodForDeleteThing_VIZIX2057",
+          "description": "Service>Implement new method for Delete Thing in order to guarantee data consistency between SQL/NoSQL databases "
+        },
+        {
+          "path": "edgebox/Migrate_AddDwellFilterStarFlexTagBridge_VIZIX3063",
+          "description": "VIZIX-3063, Service>STARflex>Add zoneDwellFilter into Startflex Tag Bridge"
+        },
+        {
+          "path": "reportDefinition/Migrate_MigrationEditTableScriptResource_VIZIX3511",
+          "description": "VIZIX-3511, Resources > Edit Table Script"
+        },
+        {
+          "path": "edgebox/Migrate_AddLastDetectFilterTypesConfig_VIZIX3240",
+          "description": "VIZIX-3240, Service>STARflex>Add lastDetectFilterTypesConfig into Starflex Tag Bridge"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000006
+      ],
+      "to": 5000007,
+      "name": "5.0.0_RC07",
+      "description": "Release Candidate 7 for version 5.0.0 ",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_AddEmailConfigurationError_VIZIX1890",
+          "description": "Adding a new field: Email Configuration Error in SMTP EMAIL CONFIGURATION OF TENANT GROUP'S CONFIGURATION"
+        },
+        {
+          "path": "edgebox/Migrate_CreateBridgeToStarFlex_VIZIX2792",
+          "description": "Create AleBridge and CoreBridge to Starflex"
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportSummaryMaxRowColumn_VIZIX3068",
+          "description": "VIZIX-3068, Add configuration in Groups for \"Max Number of Columns\" and \"Max Number of Rows\" for Summary Report"
+        },
+        {
+          "path": "parameters/Migration_AddParametersAction_VIZIX_3020",
+          "description": "New Parameter with action type HTTP"
+        },
+        {
+          "path": "action/Migrate_CreateTableAction_VIZIX2025",
+          "description": "Create new tables for action"
+        },
+        {
+          "path": "connection/Migrate_RestConnection_VIZIX1957",
+          "description": "Adding a new connectionType to handle generic REST connection parameters"
+        },
+        {
+          "path": "edgebox/Migrate_AddParamsForSmedBridge_VIZIX1957",
+          "description": "Adding parameters for the new Smart Contract Edge Bridge (SMED)"
+        },
+        {
+          "path": "edgebox/Migrate_CreateSlowness_VIZIX4715",
+          "description": "Adding index to column code in table riot_main.edgebox in order to avoid collscan"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000007
+      ],
+      "to": 5000008,
+      "name": "5.0.0_RC08",
+      "description": "Release Candidate 8 for version 5.0.0 ",
+      "migrate": [
+        {
+          "path": "thingType/Migrate_STARflexCombination_VIZIX189",
+          "description": "Migration to Starflex and FlexTag Bridges into one Bridge"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000008
+      ],
+      "to": 5000009,
+      "name": "5.0.0_RC09",
+      "description": "Release Candidate 9 for version 5.0.0 ",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_StartStopBridges_VIZIX1604",
+          "description": "Adding parameters for define times for StartStopBridges feature"
+        },
+        {
+          "path": "group/Migrate_MigrateRegionalSettings_VIZIX2475",
+          "description": "Services>Add Group Configuration for Time Zone Configuration, VIZIX-2475 and new column in report definition"
+        },
+        {
+          "path": "connection/Migrate_Connection_VIZIX3318",
+          "description": "Modify the kafka connection"
+        },
+        {
+          "path": "edgebox/Migrate_EdgeBoxConfiguration_VIZIX3318",
+          "description": "Update the configurations of Core Bridges and Ale Bridges"
+        },
+        {
+          "path": "edgebox/Migrate_NewEdgeBoxes_VIZIX3612",
+          "description": "Create the new Parameters for the edge boxes Thing Joiner, Rule Processor and Mongo Ingestor"
+        },
+        {
+          "path": "role/Migrate_DecoupledMenues_VIZIX2195",
+          "description": "Migrate old resources according to decoupled menus definition"
+        },
+        {
+          "path": "group/Migrate_SaveDwellTime_VIZIX4144",
+          "description": "Delete in migration the DATA STORAGE CONFIGURATION section's parameter in Tenant Group Configuration"
+        },
+        {
+          "path": "edgebox/Migrate_RemoveReloadCacheTickleAndThreadDispatchMode_VIZIX3468_3627",
+          "description": "Remove reloadCacheTickle and threadDispatchMode from popDB and migration."
+        }
+      ]
+    },
+    {
+      "from": [
+        5000009
+      ],
+      "to": 5000010,
+      "name": "5.0.0_RC10",
+      "description": "Release Candidate 10 for version 5.0.0 ",
+      "migrate": [
+        {
+          "path": "thingType/Migrate_ThigTypeTemplate_starFlexConfig_VIZIX_4417",
+          "description": "New properties definitions has been implemented in  thingtypefieldtemplate MySql table for STARflex Config name."
+        },
+        {
+          "path": "thingType/Migrate_AddNewStatisticsToCoreBridge_VIZIX3244",
+          "description": "New diagnostic udfs added to CoreBridge (Thing Type Template and Thing Types)"
+        },
+        {
+          "path": "thingTypeTemplate/Migrations_ThingTypeTemplate_VIZIX4077",
+          "description": "add Category to thing type template and new items"
+        },
+        {
+          "path": "parameters/Migrate_NewJSConditions_VIZIX4308",
+          "description": "Services>, Add JS condition type and updates ALWAYS_TRUE and CEP, VIZIX-4308"
+        },
+        {
+          "path": "connection/Migrate_ConnectionType_VIZIX_4270",
+          "description": "New properties definitions has been implemented in connectiontype MySql table for MQTT code."
+        },
+        {
+          "path": "connection/Migrate_RequiredConnectionTypes_VIZIX3930",
+          "description": "Adds required field for connection type properties"
+        },
+        {
+          "path": "reportDefinition/Migrate_DismissIndexAnalysisSchedule_VIZIX4837",
+          "description": "The parameter in configuration of root and tenants: Index Analysis Schedule, must be dismissed"
+        },
+        {
+          "path": "connection/Migrate_SQLConnectionType_VIZIX4774",
+          "description": "Modifies the password from SQL connection into it hash version."
+        },
+        {
+          "path": "reportDefinition/Migrate_ReportTypeOrder_VIZIX3811",
+          "description": "Update typeOrder column of reportDefinition to allow sort by report type"
+        },
+        {
+          "path": "edgebox/Migrate_StarFlex_Add_LogRawMessage_VIZIX2154",
+          "description": "The Log Raw Message has been implemented for StarFlex."
+        },
+        {
+          "path": "groupConfiguration/Migrate_StopAlertsChangeName_VIZIX3951",
+          "description": "Change name of stopAlerts to Alert in group configuration"
+        },
+        {
+          "path": "parameters/Migrate_BridgeParameters_VIZIX3932",
+          "description": "Changing parameters structure to validate required fields."
+        },
+        {
+          "path": "reportDefinition/Migrate_Operators_VIZIX4949",
+          "description": "Changed isDefined operator by isNotEmpty and isNotDefined by isEmpty"
+        },
+        {
+          "path": "reportDefinition/Migrate_MigrateTableScriptTimeSeries_VIZIX4475",
+          "description": "Changed label UTC in all time series reports."
+        },
+        {
+          "path": "connection/Migrate_ConnectionRequiredFields_VIZIX5062",
+          "description": "Services > Migration MnS backup from 5.0.0 RC07 to 5.0.0 RC10 mandatory parameters for mongo connections are not being created."
+        },
+        {
+          "path": "reportDefinition/Migrate_BulkDelete_VIZIX5101",
+          "description": "Analytics > Reports > Table Detail > Bulk: 400 Error when I save."
+        },
+        {
+          "path": "parameters/Migrate_StarFlexPlaySyncJobParameters_VIZIX5108",
+          "description": "This adds the parameter playStarFlexSync and its options into the parameters table."
+        },
+        {
+          "path": "edgebox/Migrate_AddBridgePortALEBridge_VIZIX4818",
+          "description": "Edgebox > Add bridgePort to edge type edgeboxes."
+        },
+        {
+          "path": "edgebox/Migrate_RemoveParamsForSmedBridge_VIZIX5137",
+          "description": "Blockchain > Remove SMED bridge from parameters."
+        },
+        {
+          "path": "thingTypeTemplate/Migrate_RemoveSmartContractThingTypeTemplate_VIZIX5137",
+          "description": "Blockchain > Remove smart contract thing template resources."
+        },
+        {
+          "path": "connection/Migrate_RestConnection_VIZIX5137",
+          "description": "Remove blockchain connection instance"
+        },
+        {
+          "path": "group/Migrate_ConsortiumGroupType_VIZIX5137",
+          "description": "Blockchain > Remove blockchain consortium"
+        },
+        {
+          "path": "groupConfiguration/Migrate_AutoLoadThingAndThingType_VIZIX4990",
+          "description": "Add configuration to enable/disable auto-load in thing & thing type"
+        },
+        {
+          "path": "edgebox/Migrate_UpdateAllBooleanParameters_VIZIX5179",
+          "description": "update coreBridge configuration for boolean parameters"
+        },
+        {
+          "path": "resource/Migrate_BlockchainResources_VIZIX5226",
+          "description": "Migrate Blockchain resources"
+        },
+        {
+          "path": "group/Migrate_BlockchainConsortiumOwnershipLevel_VIZIX5226",
+          "description": "Migrate Blockchain consortium ownership level"
+        },
+        {
+          "path": "edgebox/Migrate_CamelCaseTTCSwarmRule_VIZIX5238",
+          "description": "Update coreBridgeConfiguration of SwarmRule thingTypeCode parameter"
+        },
+        {
+          "path": "edgebox/Migrate_CoreBridgeTopicsParametersEmpty_VIZIX5258",
+          "description": "Remove topics from coreBridgeConfiguration parameters"
+        },
+        {
+          "path": "thingType/Migrate_ThingTypeField_VIZIX5140",
+          "description": "Migrate default date of thingtypefield table with value 0  to null"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000010
+      ],
+      "to": 5000000,
+      "name": "5.0.0",
+      "description": "Release for version 5.0.0",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_RenameSuperSubscriberRulesDef_VIZIX5507",
+          "description": "Migration of packages of RestEndpointSubscriber and SuperSubscriber"
+        },
+        {
+          "path": "edgebox/Migrate_RemoveDeprecatedConfBridges_VIZIX5319",
+          "description": "Remove deprecated properties from edgeBridges"
+        },
+        {
+          "path": "groupConfiguration/Migrate_ModifyValueOfHomeUrl_NOISSUE",
+          "description": "Modify value of homeUrl configuration"
+        },
+        {
+          "path": "connection/Migrate_RemoveHadoopSparkConnections_VIZIX5298",
+          "description": "Remove Hadoop connection type and connections"
+        }
+      ]
+    },
+    {
+      "from": [
+        5000000,
+        5000100,
+        5000200
+      ],
+      "to": 5010001,
+      "name": "5.1.0_RC01",
+      "description": "Release Candidate 1 for version 5.1.0",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_GooglePubSubSubscriber_VIZIX5227",
+          "description": "Migration of ConnectionType and Parameters for Google PubSub"
+        },
+        {
+          "path": "reportDefinition/Migrate_TableConnectionReport_VIZIX4549",
+          "description": "Migration New Table Connection Report Type"
+        },
+        {
+          "path": "thingType/Migrate_ThingTypeTemplate_VIZIX6082",
+          "description": "Migration Thing Type Template name from StarFlex to STARflex"
+        }
+      ]
+    },
+    {
+      "from": [
+        5010001
+      ],
+      "to": 5010002,
+      "name": "5.1.0_RC02",
+      "description": "Release Candidate 2 for version 5.1.0",
+      "migrate": [
+        {
+          "path": "thingType/Migrate_RemoveDeprecatedFieldsFromSmartContractDocument_VIZIX4861",
+          "description": "Remove deprecated UDFs from SmartContractDocument template ant thing types"
+        },
+        {
+          "path": "resource/Migrate_SmartContractConfigResource_VIZIX4861",
+          "description": "Add resources for Smart Contract Config"
+        },
+        {
+          "path": "parameters/Migrate_BridgeParameters_VIZIX5000",
+          "description": "Changing parameters structure to validate required fields and show in order."
+        },
+        {
+          "path": "parameters/Migrate_BridgeParameters_VIZIX5577",
+          "description": "Added extra fields to bridge parameters."
+        },
+        {
+          "path": "edgebox/Migrate_SQL_group_connection_VIZIX6076",
+          "description": "Migrate SQL connection for claimed tenant groups"
+        },
+        {
+          "path": "edgebox/Migrate_EdgeboxRuleSortOrderByConditionType_VIZIX5712",
+          "description": "Migration of rule sortOrder value by conditionType group."
+        },
+        {
+          "path": "reportDefinition/Migrate_DeleteIndex_VIZIX4948",
+          "description": "Migrate auto delete index parameters."
+        },
+        {
+          "path": "scheduledRule/Migrate_MigrationScheduledRule_VIZIX140",
+          "description": "Migration of Scheduled Rule"
+        },
+        {
+          "path": "edgebox/Migrate_AddRestConnectionToCB_VIZIX140",
+          "description": "Migration of rest connection on CoreBridges if not exists"
+        }
+      ]
+    },
+    {
+      "from": [
+        5010002
+      ],
+      "to": 5010003,
+      "name": "5.1.0_RC03",
+      "description": "Release Candidate 3 for version 5.1.0",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_McbAlebGroupLevel_VIZIX6579",
+          "description": "Migration of MCB and ALEB group level"
+        },
+        {
+          "path": "favorite/Migrate_CreateFavoriteTable_VIZIX6921",
+          "description": "Creates favorite table during migration if it doesn't exist."
+        },
+        {
+          "path": "favorite/Migrate_foldersForFavoritesByGroup_VIZIX6283",
+          "description": "Migrate elementGroupId to Group foreign key on favorites table."
+        },
+        {
+          "path": "user/Migrate_PasswordPolicies_VIZIX5932",
+          "description": "Migration of new password policies"
+        },
+        {
+          "path": "group/Migrate_OAuth2Authentication_VIZIX1781",
+          "description": "Migration step for OAuth 2.0 authentication"
+        },
+        {
+          "path": "thingType/Migrate_DiagnosticReports_VIZIX6137",
+          "description": "Migrate Diagnostic Reports and update Core Bridge Thing Type and Thing Type Template with new values."
+        },
+        {
+          "path": "edgebox/Migrate_EdgeboxRuleSortOrderByConditionType_NOISSUE",
+          "description": "Migration Rules Grouped by CEP and Always True, JS"
+        },
+        {
+          "path": "edgebox/Migrate_MigrationSTARflexBridgeSetup_VIZIX6267",
+          "description": "Removed mongo and number of threats properties from STARflex definition"
+        },
+        {
+          "path": "thingTypeTemplate/Migrate_MojixRetailAndCustomThingTypeTemplate_VIZIX6615",
+          "description": "Removed Template Mojix Retail App and Added Retail Things Template, changed name an order of Custom Template"
+        },
+        {
+          "path": "groupConfiguration/Migrate_GroupFieldConfiguration_VIZIX6330",
+          "description": "Add missing fields on tenant configuration for root tenant"
+        }
+      ]
+    },
+    {
+      "from": [
+        5010003
+      ],
+      "to": 5010000,
+      "name": "5.1.0",
+      "description": "Release for version 5.1.0",
+      "migrate": [
+        {
+          "path": "thingTypeTemplate/Migrate_StarflexThingTypeTemplate_VIZIX7459",
+          "description": "Changed ${macId} to ${serialNumber} in Starflex ThingTypeTemplates"
+        },
+        {
+          "path": "folder/Migrate_FolderAddColumn_VIZIX7442",
+          "description": "Add createdByUser field to folders"
+        }
+      ]
+    },
+    {
+      "from": [
+        5010000
+      ],
+      "to": 5010100,
+      "name": "5.1.1",
+      "description": "Release for version 5.1.1",
+      "migrate": [
+        {
+          "path": "edgebox/Migrate_KafkaBridges_VIZIX5605",
+          "description": "Migration kafka bridges, removed thing joiner and rules processor and created SARP"
+        },
+        {
+          "path": "edgebox/Migrate_AddCacheEvictionProperties_VIZIX6645",
+          "description": "Add new cache eviction properties, by time and size"
+        },
+        {
+          "path": "parameters/Migrate_BridgeParameters_VIZIX6437",
+          "description": "Migration of parameters, Core and Edge bridges"
+        },
+        {
+          "path": "connection/Migrate_ConnectionValidator_VIZIX4437",
+          "description": "Remove ViZix REST Connection type and add flag for required test"
+        },
+        {
+          "path": "smartContractDefinition/Migrate_PartiesFormat_VIZIX_5224",
+          "description": "Migration parties format in roles column for smart contract definitions"
+        },
+        {
+          "path": "migration/Migrate_MissingMigrationSameVersion_VIZIX7538",
+          "description": "Missing Migration Steps execution"
+        },
+        {
+          "path": "thingType/Migrate_ThingTypeCreateViewDirectionMap_VIZIX6537",
+          "description": "Create a view for thing list."
+        },
+        {
+          "path": "folder/Migrate_FolderAddColumn_VIZIX7442",
+          "description": "Add createdByUser field to folders"
+        }
+      ]
+    },
+    {
+      "from": [
+        5010100
+      ],
+      "to": 5010200,
+      "name": "5.1.2",
+      "description": "Release for version 5.1.2",
+      "migrate": [
+        {
+          "path": "dataType/Migrate_IconColorDataType_VIZIX7670_VIZIX7264",
+          "description": "Create Icon and Color data types."
+        },
+        {
+          "path": "thingTypeTemplate/Migrate_DepartmentCategoryAndRetailThingsConfig_VIZIX7671",
+          "description": "Delete Department Category and Retail Things Config thing type template."
+        },
+        {
+          "path": "thingTypeTemplate/Migrate_UserActivity_VIZIX7514",
+          "description": "Create the User Activity thing type template."
+        },
+        {
+          "path": "thingTypeTemplate/Migrate_RemoveColorThingTypeAndCreateTilesTemplate_VIZIX7517",
+          "description": "Remove Color Thing Type and Create Tiles Thing Template."
+        },
+        {
+          "path": "thingType/Migrate_ThingTypeTemplate_SFTag_VIZIX5508",
+          "description": "ThingTypeField 'SeqNum' added to thingTypeTemplate and thingTypes STARflexTag"
+        },
+        {
+          "path": "thingType/Migrate_MakeTimeseriesTrueForThingTypeUdf_VIZIX7845",
+          "description": "Configuration of Thing Type UDF should be always 'Timeseries' = TRUE"
+        },
+        {
+          "path": "action/Migrate_ActionReport_VIZIX7849",
+          "description": "Add attribute 'executionType' in action configuration"
+        },
+        {
+          "path": "edgebox/Migrate_CleanupSFBridgeConf_VIZIX7760",
+          "description": "Cleanup Starflex Bridge and parameters"
+        },
+        {
+          "path": "user/Migrate_DefaultPasswords_VIZIX7545",
+          "description": "Force to users and default passwords to change after next login"
+        },
+        {
+          "path": "edgebox/Migrate_AddSerialExecutionColumn_VIZIX6767",
+          "description": "Add a new column 'serialExecution' (boolean) in EdgeboxRule table"
+        },
+        {
+          "path": "reportDefinition/Migrate_AllReportsFolder_VIZIX7488",
+          "description": "Update group of all reports from ViZiX Diagnostics and ViZix Tutorials folders to Root Group."
+        },
+        {
+          "path": "edgebox/Migrate_CleanupConfigurationFTP_VIZIX7349",
+          "description": "Cleanup FTP Bridge and parameters, insert Operators parameters"
+        }
+      ]
+    },
+    {
+      "from": [
+        5010200
+      ],
+      "to": 5010300,
+      "name": "5.1.3",
+      "description": "Release for version 5.1.3",
+      "migrate": [
+        {
+          "path": "reportDefinition/Migrate_ReportEntryOptionThingType_VIZIX7426",
+          "description": "Data Entry > Serial Number and Name > Improved Configuration"
+        },
+        {
+          "path": "thingTypeTemplate/Migrate_SkuCategorySkuAndItemThingType_VIZIX7585",
+          "description": "Add SkuCategory and Sku Thing Type Template and update Item Thing Type Template"
+        },
+        {
+          "path": "thingTypeTemplate/Migrate_UserSettingsRetailAppConfig_VIZIX7512",
+          "description": "Update Thing Type Templates: userSettings, priorityConfig, retailAppConfig and userActivity"
+        },
+        {
+          "path": "edgebox/Migrate_FixEvictionTimeInSTARflexZDF_VIZIX8765",
+          "description": "Fixing evictionTime parameter in STARFlex ZDF"
+        }
+      ]
+    }
+  ]
+}

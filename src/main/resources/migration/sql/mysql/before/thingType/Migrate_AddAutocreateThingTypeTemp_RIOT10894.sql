@@ -1,0 +1,1 @@
+ALTER TABLE thingtypetemplate ADD `autoCreate` bit(1) DEFAULT 0;

@@ -1,0 +1,128 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "connections",
+      "innerClass": "Connection",
+      "instances": [
+        {
+          "name": "Mqtt Blockchain Azure Cloud",
+          "code": "MQTTNRSC",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "host": "localhost",
+              "qos": 2,
+              "secure": false,
+              "port": 1883
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "MQTT"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "bridges",
+      "innerClass": "Edgebox",
+      "instances": [
+        {
+          "name": "Rules Processor Blockchain Azure Cloud",
+          "code": "RulesProcessorBAC",
+          "type": "Rules_Processor",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": {
+            "innerMethod": "toString",
+            "params": {
+              "inputTopic": "/v1/data2",
+              "outputTopic": "/v1/data3",
+              "shiftZoneRule": {
+                "active": false,
+                "shiftProperty": "shift",
+                "zoneViolationStatusProperty": "zoneViolationStatus",
+                "zoneViolationFlagProperty": "zoneViolationFlag"
+              },
+              "sourceRule": {
+                "active": true
+              },
+              "swarmFilter": {
+                "active": false,
+                "outputTopic": "/v1/data1",
+                "timeGroupTimer": 25000,
+                "algorithm": "followLastDetect",
+                "thingTypes": [
+                  {
+                    "thingTypeCode": "default_rfid_thingtype ",
+                    "udfGroup": "grouping",
+                    "distanceFilter": 10000,
+                    "udfGroupStatus": "groupStatus"
+                  }
+                ]
+              },
+              "outOfOrderRule": {
+                "active": false
+              },
+              "CEPLogging": {
+                "active": false
+              },
+              "CEPEngineConfiguration": {
+                "insertIntoDispatchPreserveOrder": false,
+                "multipleInstanceMode": false,
+                "listenerDispatchPreserveOrder": false
+              },
+              "streamConfig": {
+                "appId": "RulesProcessorBAC-app",
+                "lingerMs": 5,
+                "numStreamThreads": 4,
+                "batchSize": 65536,
+                "stateDirPath": "/var/RulesProcessorBAC/store"
+              },
+              "kafka": {
+                "active": false,
+                "connectionCode": "KAFKA"
+              },
+              "mongo": {
+                "connectionCode": "MONGO"
+              },
+              "notificationService": {
+                "active": false,
+                "connectionCode": "MQTT",
+                "recipients": []
+              }
+            }
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        },
+        {
+          "name": "SMED",
+          "code": "SMED",
+          "type": "smed",
+          "port": 0,
+          "parameterType": "BRIDGE_TYPE",
+          "configuration": "{\"documentUdfNamePrefix\":\"scd\",\"mqtt\":{\"active\":false,\"connectionCode\":\"MQTTNRSC\"},\"outputTopic\":\"/v1/data1\",\"inputTopic\":\"/v1/data2\",\"outputFormat\":\"JSON\",\"numberOfThreads\":1,\"kafka\":{\"checkpoint\":false,\"connectionCode\":\"KAFKA\",\"active\":true,\"consumerGroup\":\"group1\"},\"listener\":{\"kafkaCode\":\"KAFKA\",\"topic\":\"___v1___events,1,1\"},\"commands\":{\"kafkaCode\":\"KAFKA\",\"topic\":\"/v1/commands/SMED,1,1\",\"consortiumCode\":\"TEST_RETAILER\",\"adapterCode\":\"BlockchainAdapter\"}}",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "NRSC"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

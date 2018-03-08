@@ -1,0 +1,16 @@
+#
+# for testing TimeZoneFilter.java on ALEBridge
+#
+# Usage: cat src/test/scripts/test-timezone-filter.dat | ./alexml.sh | ./alepost.sh
+#
+
+EPOCH,2015-01-28 11:00:00 EST
+DELT,REL
+
+CS,-118.443969,34.048092,0.0,20.0,ft
+LOC, 00:00:00,000000000000000000001,10,10,0,LR5,x3ed9371
+
+CS
+LOC, 00:01:00,000000000000000000001,10,10,0,LR5,x3ed9371
+
+

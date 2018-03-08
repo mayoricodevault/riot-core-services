@@ -1,0 +1,37 @@
+{
+  "_id": 50,
+  "groupTypeId": 3,
+  "groupTypeName": "Store",
+  "groupTypeCode": "Store",
+  "groupId": 3,
+  "groupCode": "SM",
+  "groupName": "Santa Monica",
+  "thingTypeId": 18,
+  "thingTypeCode": "CustomTT001",
+  "thingTypeName": "CustomTT001",
+  "name": "CT004",
+  "serialNumber": "CT004",
+  "modifiedTime": "2017-07-26T16:16:02.485Z",
+  "createdTime": "2017-07-26T16:16:02.485Z",
+  "time": "2017-07-26T16:14:54.427Z",
+  "strStdUDF": {
+    "thingTypeFieldId": 142,
+    "time": "2017-07-26T16:14:54.427Z",
+    "value": "a default string"
+  },
+  "zoneNativeUDF": {
+    "thingTypeFieldId": 143,
+    "time": "2017-07-26T16:14:54.427Z",
+    "value": {
+      "code": "Enance",
+      "zoneGroupTime": "2017-07-26T16:14:54.427Z",
+      "facilityMap": "Map Store Santa Monica",
+      "zoneGroup": "Off-Site",
+      "facilityMapTime": "2017-07-26T16:14:54.427Z",
+      "name": "Entrance",
+      "zoneTypeTime": "2017-07-26T16:14:54.427Z",
+      "zoneType": "DefaultZoneType2",
+      "id": 1
+    }
+  }
+}

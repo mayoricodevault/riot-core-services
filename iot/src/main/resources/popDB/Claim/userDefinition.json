@@ -1,0 +1,1589 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "roles",
+      "innerClass": "Role",
+      "instances": [
+        {
+          "name": "Role${tenant.name}",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "description": ""
+        }
+      ]
+    },
+    {
+      "moduleName": "resources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Things"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tenants"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Gateway"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Model"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Services"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Analytics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "user"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "group"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "groupType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "role"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "resource"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "license"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "connection"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","r"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thing"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thing_editOwn"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thingType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Thing Types"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "importExport"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mapMaker"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zoneType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zoneGroup"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zonePoint"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "localMap"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "logicalReader"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Bridges & Rules"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "parameters"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "edgebox"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "edgeboxRule"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Reports"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a","p","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_editOwn"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_emailRecipients"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_editTableScript"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Report Instances"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","r"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "dataType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SF_${tenant.code}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SFS_${tenant.code}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SFT_${tenant.code}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${tenant.code}"
+              }
+            ]
+          }
+        },
+
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Dashboard - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Monitor - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Status - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "STARflex Unique Tags - ${tenant.name}"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "users",
+      "innerClass": "User",
+      "instances": [
+        {
+          "username": "${user.username}",
+          "password": "${user.password}",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "${tenant.code}"
+          },
+          "firstName": "${user.firstName}",
+          "lastName": "${user.lastName}",
+          "email": "${user.email}",
+          "archived": false,
+          "roamingGroup": null
+        }
+      ]
+    },
+    {
+      "moduleName": "userRoles",
+      "innerClass": "UserRole",
+      "instances": [
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "${user.username}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Role${tenant.name}"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "${tenant.code}"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

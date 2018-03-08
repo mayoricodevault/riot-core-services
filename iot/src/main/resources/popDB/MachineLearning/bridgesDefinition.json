@@ -1,0 +1,45 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "connections",
+      "innerClass": "Connection",
+      "instances": [
+        {
+          "name": "Analytics",
+          "code": "ANALYTICS",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "root"
+          },
+          "properties": {
+            "innerMethod": "toString",
+            "params": {
+              "mongo.port": "27017",
+              "mongo.dbname": "riot_main",
+              "extractions.path": "/var/local/riot/extractions",
+              "responses.path": "/var/local/riot/responses",
+              "trainings.path": "/var/local/riot/trainings",
+              "predictions.path": "/var/local/riot/predictions",
+              "password": "Y29udHJvbDEyMyE=",
+              "mongo.secure": "true",
+              "jars.path": "/var/local/riot/jars",
+              "mongo.host": "localhost",
+              "mongo.username": "admin",
+              "extraction.collection": "thingSnapshots"
+            }
+          },
+          "connectionType": {
+            "innerClass": "ConnectionType",
+            "getter": "getConnectionTypeByCode",
+            "params": "ANALYTICS"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

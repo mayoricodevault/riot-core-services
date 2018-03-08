@@ -1,0 +1,1 @@
+ALTER TABLE attachment ADD COLUMN  operationOverFile varchar(255) DEFAULT NULL;

@@ -1,0 +1,624 @@
+{
+  "preProcess": [],
+  "executeModules": [
+    {
+      "moduleName": "CustomThing",
+      "innerClass": "CustomThing",
+      "instances": [
+        {
+          "name": "TECH1",
+          "serial": "1261",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image1.png|1"
+            },
+            "backImage": {
+              "value": "image1.png|1"
+            },
+            "sideImage": {
+              "value": "image1.png|1"
+            }
+          }
+        },
+        {
+          "name": "TECH2",
+          "serial": "1135",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image2.png|2"
+            },
+            "backImage": {
+              "value": "image2.png|2"
+            },
+            "sideImage": {
+              "value": "image2.png|2"
+            }
+          }
+        },
+        {
+          "name": "TECH3",
+          "serial": "4075",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image2.png|2"
+            },
+            "backImage": {
+              "value": "image2.png|2"
+            },
+            "sideImage": {
+              "value": "image2.png|2"
+            }
+          }
+        },
+        {
+          "name": "TECH4",
+          "serial": "1967N",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image2.png|2"
+            },
+            "backImage": {
+              "value": "image2.png|2"
+            },
+            "sideImage": {
+              "value": "image2.png|2"
+            }
+          }
+        },
+        {
+          "name": "TECH5",
+          "serial": "2421",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image2.png|2"
+            },
+            "backImage": {
+              "value": "image2.png|2"
+            },
+            "sideImage": {
+              "value": "image2.png|2"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES1",
+          "serial": "4003B",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image3.png|3"
+            },
+            "backImage": {
+              "value": "image3.png|3"
+            },
+            "sideImage": {
+              "value": "image3.png|3"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES2",
+          "serial": "0836C",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image4.png|4"
+            },
+            "backImage": {
+              "value": "image4.png|4"
+            },
+            "sideImage": {
+              "value": "image4.png|4"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES3",
+          "serial": "0910O",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image5.png|5"
+            },
+            "backImage": {
+              "value": "image5.png|5"
+            },
+            "sideImage": {
+              "value": "image5.png|5"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES4",
+          "serial": "0801A",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image6.png|6"
+            },
+            "backImage": {
+              "value": "image6.png|6"
+            },
+            "sideImage": {
+              "value": "image6.png|6"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES5",
+          "serial": "0900M",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image7.png|7"
+            },
+            "backImage": {
+              "value": "image7.png|7"
+            },
+            "sideImage": {
+              "value": "image7.png|7"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES6",
+          "serial": "0920O",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image1.png|1"
+            },
+            "backImage": {
+              "value": "image1.png|1"
+            },
+            "sideImage": {
+              "value": "image1.png|1"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES7",
+          "serial": "1120M",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image2.png|2"
+            },
+            "backImage": {
+              "value": "image2.png|2"
+            },
+            "sideImage": {
+              "value": "image2.png|2"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES8",
+          "serial": "1123M",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image3.png|3"
+            },
+            "backImage": {
+              "value": "image3.png|3"
+            },
+            "sideImage": {
+              "value": "image3.png|3"
+            }
+          }
+        },
+        {
+          "name": "ACCESSORIES9",
+          "serial": "1921B",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image5.png|5"
+            },
+            "backImage": {
+              "value": "image5.png|5"
+            },
+            "sideImage": {
+              "value": "image5.png|5"
+            }
+          }
+        },
+        {
+          "name": "FORMALSHIRT1",
+          "serial": "1089U",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image6.png|6"
+            },
+            "backImage": {
+              "value": "image6.png|6"
+            },
+            "sideImage": {
+              "value": "image6.png|6"
+            }
+          }
+        },
+        {
+          "name": "FORMALSHIRT2",
+          "serial": "1089I",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image7.png|7"
+            },
+            "backImage": {
+              "value": "image7.png|7"
+            },
+            "sideImage": {
+              "value": "image7.png|7"
+            }
+          }
+        },
+        {
+          "name": "FORMALSHIRT3",
+          "serial": "P001",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image1.png|1"
+            },
+            "backImage": {
+              "value": "image1.png|1"
+            },
+            "sideImage": {
+              "value": "image1.png|1"
+            }
+          }
+        },
+        {
+          "name": "FORMALSHIRT5",
+          "serial": "0001O",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image3.png|3"
+            },
+            "backImage": {
+              "value": "image3.png|3"
+            },
+            "sideImage": {
+              "value": "image3.png|3"
+            }
+          }
+        },
+        {
+          "name": "SUITS1",
+          "serial": "1269",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image4.png|4"
+            },
+            "backImage": {
+              "value": "image4.png|4"
+            },
+            "sideImage": {
+              "value": "image4.png|4"
+            }
+          }
+        },
+        {
+          "name": "SUITS2",
+          "serial": "0985T",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image5.png|5"
+            },
+            "backImage": {
+              "value": "image5.png|5"
+            },
+            "sideImage": {
+              "value": "image5.png|5"
+            }
+          }
+        },
+        {
+          "name": "SUITS3",
+          "serial": "2582T",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image6.png|6"
+            },
+            "backImage": {
+              "value": "image6.png|6"
+            },
+            "sideImage": {
+              "value": "image6.png|6"
+            }
+          }
+        },
+        {
+          "name": "CASUALSHIRT1",
+          "serial": "2379S",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image7.png|7"
+            },
+            "backImage": {
+              "value": "image7.png|7"
+            },
+            "sideImage": {
+              "value": "image7.png|7"
+            }
+          }
+        },
+        {
+          "name": "CASUALSHIRT2",
+          "serial": "6968I",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image1.png|1"
+            },
+            "backImage": {
+              "value": "image1.png|1"
+            },
+            "sideImage": {
+              "value": "image1.png|1"
+            }
+          }
+        },
+        {
+          "name": "JACKET1",
+          "serial": "3831",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image2.png|2"
+            },
+            "backImage": {
+              "value": "image2.png|2"
+            },
+            "sideImage": {
+              "value": "image2.png|2"
+            }
+          }
+        },
+        {
+          "name": "JACKET2",
+          "serial": "0504A",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image3.png|3"
+            },
+            "backImage": {
+              "value": "image3.png|3"
+            },
+            "sideImage": {
+              "value": "image3.png|3"
+            }
+          }
+        },
+        {
+          "name": "JACKET3",
+          "serial": "2608Q",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image4.png|4"
+            },
+            "backImage": {
+              "value": "image4.png|4"
+            },
+            "sideImage": {
+              "value": "image4.png|4"
+            }
+          }
+        },
+        {
+          "name": "ENERGY1",
+          "serial": "7700",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image5.png|5"
+            },
+            "backImage": {
+              "value": "image5.png|5"
+            },
+            "sideImage": {
+              "value": "image5.png|5"
+            }
+          }
+        },
+        {
+          "name": "ENERGY2",
+          "serial": "8206",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image6.png|6"
+            },
+            "backImage": {
+              "value": "image6.png|6"
+            },
+            "sideImage": {
+              "value": "image6.png|6"
+            }
+          }
+        },
+        {
+          "name": "ENERGY3",
+          "serial": "8400",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image7.png|7"
+            },
+            "backImage": {
+              "value": "image7.png|7"
+            },
+            "sideImage": {
+              "value": "image7.png|7"
+            }
+          }
+        },
+        {
+          "name": "ENERGY4",
+          "serial": "9207",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image1.png|1"
+            },
+            "backImage": {
+              "value": "image1.png|1"
+            },
+            "sideImage": {
+              "value": "image1.png|1"
+            }
+          }
+        },
+        {
+          "name": "ENERGY5",
+          "serial": "8503",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image2.png|2"
+            },
+            "backImage": {
+              "value": "image2.png|2"
+            },
+            "sideImage": {
+              "value": "image2.png|2"
+            }
+          }
+        },
+        {
+          "name": "ENERGY6",
+          "serial": "9903",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image3.png|3"
+            },
+            "backImage": {
+              "value": "image3.png|3"
+            },
+            "sideImage": {
+              "value": "image3.png|3"
+            }
+          }
+        },
+        {
+          "name": "TRAINING1",
+          "serial": "67",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image4.png|4"
+            },
+            "backImage": {
+              "value": "image4.png|4"
+            },
+            "sideImage": {
+              "value": "image4.png|4"
+            }
+          }
+        },
+        {
+          "name": "TRAINING2",
+          "serial": "56",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image5.png|5"
+            },
+            "backImage": {
+              "value": "image5.png|5"
+            },
+            "sideImage": {
+              "value": "image5.png|5"
+            }
+          }
+        },
+        {
+          "name": "TRAINING3",
+          "serial": "1314",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image6.png|6"
+            },
+            "backImage": {
+              "value": "image6.png|6"
+            },
+            "sideImage": {
+              "value": "image6.png|6"
+            }
+          }
+        },
+        {
+          "name": "TRAINING4",
+          "serial": "3050",
+          "thingTypeCode": "upcCategory",
+          "groupHierarchyCode": ">mojix>SM",
+          "udfs": {
+            "frontImage": {
+              "value": "image7.png|7"
+            },
+            "backImage": {
+              "value": "image7.png|7"
+            },
+            "sideImage": {
+              "value": "image7.png|7"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": []
+}

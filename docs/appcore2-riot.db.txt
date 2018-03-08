@@ -1,0 +1,79 @@
+
+
+Field         
+Group                             
+GroupContact                      
+GroupField
+GroupResource
+Resource
+ResourceType
+Role
+RoleResource
+Type
+User
+UserContact
+UserField
+UserResource
+
+Address
+Attachment
+
+? DataStore
+? GroupShiftBillingCode
+? BillingCode
+
+? Module            
+? ResourceModule
+
+
+
+
+? UserPage
+? ApplicationPage
+
+GroupRelationshipType
+GroupRelationship
+RelationShip
+RelationShipCondition
+RelationShipType
+RelationShipTypeDefaultValue
+OperandField
+
+ContextSample
+
+AlertConfig
+UnitOfMeasure
+UnitsType
+
+SkinTemplate
+SkinItem
+Skin
+SkinTemplateItemValue
+SkinItemValue
+
+EventType
+EventContextDef
+
+AlertAppcore
+AlertDeliverDays
+AlertCondition
+AlertSubscriptor
+AlertMessageAppcore
+AlertMessageContactAppcore
+
+EventHistory
+EventHistoryContext
+
+Shift
+ShiftConfiguration
+NonWorkingDay
+
+
+Version
+
+RestoreControl
+PrecedenceControl
+
+
+
+

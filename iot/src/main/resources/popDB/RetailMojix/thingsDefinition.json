@@ -1,0 +1,269 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "things",
+      "innerClass": "Thing",
+      "instances": [
+        {
+          "name": "Retail App Configuration",
+          "serial": "RETAILAPPCONFIGURATION",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "retailAppConfig"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Retail User Settings",
+          "serial": "MOJIX",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "userSettings"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+
+        {
+          "name": "PriorityHighPrice",
+          "serial": "PRIORITYHIGHPRICE",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "PriorityHighQuantity",
+          "serial": "PRIORITYHIGHQUANTITY",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "PriorityLowPrice",
+          "serial": "PRIORITYLOWPRICE",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+
+        {
+          "name": "PriorityLowQuantity",
+          "serial": "PRIORITYLOWQUANTITY",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "PriorityMediumPrice",
+          "serial": "PRIORITYMEDIUMPRICE",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "PriorityMediumQuantity",
+          "serial": "PRIORITYMEDIUMQUANTITY",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "priorityConfig"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+
+        {
+          "name": "Replenishment",
+          "serial": "REPLENISHMENT",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "replenishment"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Hot Replenishment",
+          "serial": "HOTREPLENISHMENT",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "hotReplenishment"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Sell Thru Replenishment",
+          "serial": "SELLTHRUREPLENISHMENT",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "sellThruReplenishment"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        },
+        {
+          "name": "Dressing Room",
+          "serial": "DRESSINGROOM",
+          "modifiedTime": "newDate",
+          "activated": false,
+          "createdByUser": {
+            "innerClass": "User",
+            "getter": "selectByUsername",
+            "params": "root"
+          },
+          "thingType": {
+            "innerClass": "ThingType",
+            "getter": "getByCode",
+            "params": "dressingRoom"
+          },
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

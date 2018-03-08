@@ -1,0 +1,1 @@
+ALTER TABLE reportdefinition ADD `description` TEXT NOT NULL;

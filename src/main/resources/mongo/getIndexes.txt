@@ -1,0 +1,29 @@
+//Run in mongo shell
+db.system.js.save(
+   {
+		"_id" : "getIndexes",
+		"value" : function(timeParam){
+                  	return db.getCollection('thingSnapshotIds').find({
+                  		blinks: {
+                  			$elemMatch: {
+                  				time: {
+                  					$lte: timeParam
+                  				}
+                  			}
+                  		}
+                  	},
+                  	{
+                  		_id: 0,
+                  		blinks: {
+                  			$elemMatch: {
+                  				time: {
+                  					$lte: timeParam
+                  				}
+                  			}
+                  		}
+                  	}).map(function(u){
+                  		return u.blinks[0].blink_id;
+                  	});
+                  }
+	}
+)

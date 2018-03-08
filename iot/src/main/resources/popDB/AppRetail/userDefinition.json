@@ -1,0 +1,3190 @@
+{
+  "preProcess": [
+  ],
+  "executeModules": [
+    {
+      "moduleName": "roles",
+      "innerClass": "Role",
+      "instances": [
+        {
+          "name": "Store User",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "groupTypeCeiling": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "description": "Store User"
+        },
+        {
+          "name": "Store Administrator",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "groupTypeCeiling": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "description": "Store Administrator"
+        },
+        {
+          "name": "Store Manager",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "groupTypeCeiling": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "description": "Role store manager"
+        },
+        {
+          "name": "Store Employee",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "groupTypeCeiling": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "description": "Role store employee"
+        },
+        {
+          "name": "Pants Manager",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "groupTypeCeiling": {
+            "innerClass": "GroupType",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "tenant"
+              }
+            ]
+          },
+          "description": "Pants Manager"
+        },
+        {
+          "name": "Report Manager",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "description": "Report Manager"
+        }
+      ]
+    },
+    {
+      "moduleName": "roleResources",
+      "innerClass": "RoleResource",
+      "instances": [
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_gps_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_zpl_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Things"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Tenants"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Gateway"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Model"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Services"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Analytics"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Folder"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "user"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "user_editRoamingGroup"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "group"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "groupType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "role"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "resource"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "field"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "connection"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "connectionType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","r"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thing"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thing_editOwn"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "dataType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thingType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thingTypeTemplate"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "thingTypeFieldTemplate"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Thing Types"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "shift"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "importExport"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "healthAndStatus"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "logs"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "mapMaker"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zone"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zoneType"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zoneGroup"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "zonePoint"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "localMap"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "logicalReader"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Bridges & Rules"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "scheduledRule"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "parameters"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "edgebox"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "edgeboxRule"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Flows"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Reports"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_editOwn"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_emailRecipients"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_editTableScript"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Report Instances"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_inlineEdit"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","u"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_assignUnAssignThing"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition_inlineEditGroup"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["u","i","d"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportFolder"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "coreBridge"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "edgeBridge"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_rfid_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_gps_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "default_zpl_thingtype"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "pants_code"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "jackets_code"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "shippingorder_code"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "asset_code"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tag_code"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Colour"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "UPC"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getThingTypeResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Transaction"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "SM"
+              }
+            ]
+          }
+        },
+
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "All RFID Tags"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Clothing by Zone"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Jackets & Pants Dwell"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "map"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Test_exit_report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "tableTimeSeries"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","u","x","p"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerMethod": "getReportDefinitionResource",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Multilevel Report"
+              },
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "table"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","r"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Employee"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","r"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Employee"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+
+        {
+          "permissions":["r","i","u","d","a"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Pants Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "localMap"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["x","x"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Report Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        },
+        {
+          "permissions":["r","r"],
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Report Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "resource":{
+            "innerClass": "Resource",
+            "getter": "getByNameAndGroup",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "reportDefinition"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "root"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "users",
+      "innerClass": "User",
+      "instances": [
+        {
+          "username": "samuel",
+          "password": "samuel",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "firstName": "Samuel",
+          "lastName": "Levy",
+          "email": "samuel.levy@mojix.com",
+          "archived": false,
+          "roamingGroup": null,
+          "lastPasswordChange": "newDate"
+        },
+        {
+          "username": "paul",
+          "password": "paul",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "C"
+          },
+          "firstName": "Paul",
+          "lastName": "Barriga",
+          "email": "paul.barriga@mojix.com",
+          "archived": false,
+          "roamingGroup": null,
+          "lastPasswordChange": "newDate"
+        },
+        {
+          "username": "adminc",
+          "password": "adminc",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "mojix"
+          },
+          "firstName": "Hugo",
+          "lastName": "Pena",
+          "email": "hugo.pena@company.com",
+          "archived": false,
+          "roamingGroup": null,
+          "lastPasswordChange": "newDate"
+        },
+        {
+          "username": "adminp",
+          "password": "adminp",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "firstName": "Johanna",
+          "lastName": "Mckinney",
+          "email": "johanna.mckinney@company.com",
+          "archived": false,
+          "roamingGroup": null,
+          "lastPasswordChange": "newDate"
+        },
+        {
+          "username": "employee",
+          "password": "employee",
+          "group": {
+            "innerClass": "Group",
+            "getter": "getByCode",
+            "params": "SM"
+          },
+          "firstName": "Neal",
+          "lastName": "Henderson",
+          "email": "neal.henderson@company.com",
+          "archived": false,
+          "roamingGroup": null,
+          "lastPasswordChange": "newDate"
+        }
+      ]
+    },
+    {
+      "moduleName": "userRoles",
+      "innerClass": "UserRole",
+      "instances": [
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "samuel"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "samuel"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Employee"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "paul"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "C"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Pants Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "paul"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "C"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Report Manager"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "adminc"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Company Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "adminp"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Administrator"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        },
+        {
+          "user": {
+            "innerClass": "User",
+            "getter": "getByUsername",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "employee"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "SM"
+              }
+            ]
+          },
+          "role": {
+            "innerClass": "Role",
+            "getter": "getByName",
+            "params": [
+              {
+                "innerClass": "String",
+                "getter": "valueOf",
+                "params": "Store Employee"
+              },
+              {
+                "innerClass": "Group",
+                "getter": "getByCode",
+                "params": "mojix"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "postProcess": [
+  ]
+}

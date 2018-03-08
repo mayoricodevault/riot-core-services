@@ -1,0 +1,17 @@
+{
+  "_id" : 79,
+  "groupTypeId" : 3,
+  "groupTypeName" : "Store",
+  "groupTypeCode" : "Store",
+  "groupId" : 3,
+  "groupCode" : "SM",
+  "groupName" : "Santa Monica",
+  "thingTypeId" : 3,
+  "thingTypeCode" : "default_rfid_thingtype",
+  "thingTypeName" : "Default RFID Thing Type",
+  "name" : " ct 001 ",
+  "serialNumber" : "CT001",
+  "modifiedTime" : "2017-07-25T14:28:04.856Z",
+  "createdTime" : "2017-07-25T14:28:04.856Z",
+  "time" : "2017-07-25T14:28:03.828Z"
+}
